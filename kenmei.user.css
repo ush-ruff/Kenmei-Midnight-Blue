@@ -1,0 +1,813 @@
+/* ==UserStyle==
+@name           Kenmei Ash Dark
+@namespace      github.com/ush-ruff
+@homepageURL    https://github.com/ush-ruff/
+@updateURL      https://github.com/ush-ruff/
+@version        0.8.1
+@description    A new userstyle
+@author         ushruff
+@preprocessor   stylus
+@var            checkbox customBG "Enable Custom Dashboard Background" 1
+@var            checkbox enableTransparency "Enable Dashboard Transparency" 1
+@var            range topdrawerOpacity "Top Drawer Opacity" [0.95, 0, 1, 0.05]
+@var            range dashboardOpacity "Dashboard Background Opacity" [0.9, 0, 1, 0.05]
+==/UserStyle== */
+@-moz-document domain("kenmei.co") {
+  $bg1=#2e3947;
+  $bg2=#222f41;
+  $bg3=#1c2633;
+  $bg4=#141d29;
+  $bg5=#3c5474;
+
+  :root {
+    /*
+    --bg-1: #7400B8;
+    --bg-2: #6930C3;
+    --bg-3: #5E60CE;
+    --bg-4: #5390D9;
+    --bg-5: #4EA8DE;
+    --bg-6: #48BFE3;
+    --bg-7: #56CFE1;
+    --bg-8: #64DFDF;
+    --bg-9: #72EFDD;
+    --bg-10: #80FFDB; 
+    */
+    /*
+    --bg-1: #334154;
+    --bg-2: #1f2936;
+    --bg-3: #23262c;
+    --bg-4: #1a1d21; 
+    */
+    /*
+    --bg-1: #2e3947;
+    --bg-2: #222f41;
+    --bg-3: #1c2633;
+    --bg-4: #141d29;
+    --bg-5: #3c5474;
+    */
+    --bg-1: $bg1;
+    --bg-2: $bg2;
+    --bg-3: $bg3;
+    --bg-4: $bg4;
+    --bg-5: $bg5;
+
+    scrollbar-color: var(--bg-5) var(--bg-3);
+    scrollbar-width: thin;
+  }
+  html {
+    background: var(--bg-4);
+  }
+  .bg-white {
+    background-color: var(--bg-3);
+  }
+  .dark_bg-blueGray-700, .dark_bg-slate-700 {
+    background-color: var(--bg-1);
+  }
+  .dark_bg-gray-900 {
+    background-color: var(--bg-4);
+  }
+  .text-black {
+    color: #e3eaf2;
+  }
+  .hover_text-gray-300:hover {
+    color: #d4dce6;
+  }
+  .text-gray-400 {
+    color: #9dabbe;
+  }
+  .text-gray-500 {
+    color: #8f9db0;
+  }
+  .text-gray-700 {
+    color: #7a8696;
+  }
+  .text-gray-900 {
+    color: #6d798a;
+  }
+  .dark_text-white {
+    color: #d4dce6;
+  }
+  .border-gray-100 {
+    border-color: var(--bg-5);
+  }
+  .border-gray-200 {
+    border-color: var(--bg-1);
+  }
+  .border-gray-300 {
+    border-color: #6d798a;
+  }
+  .text-blue-600 {
+    color: #4EA8DE;
+  }
+  
+  /* LOGIN */
+  [data-form-type="login"] {
+    a {
+      color: #4EA8DE;
+      
+      &:hover {
+        color: #48BFE3;
+      }
+    }
+    label {
+      color: #9dabbe !important;
+    }
+    input[data-v-e32367a8]:focus {
+      --tw-ring-offset-color: var(--bg-4);
+    }
+  }
+
+  /* SKELETON LOADING */
+  .bg-gray-400 {
+    background-color: var(--bg-5);
+  }
+  .list-row__regular:hover .bg-gray-400 {
+    background-color: var(--bg-4);
+  }
+
+
+  /* FOOTER */
+  #app footer {
+    background-color: var(--bg-4);
+    border-color: var(--bg-3);
+    
+    h5 {
+      color: #d4dce6;
+    }
+    .link {
+      color: #7a8696;
+
+      &:hover {
+        color: #9dabbe;
+      }
+    }
+  }
+
+
+  /* POPUP */
+  .el-message {
+    background-color: var(--bg-5);
+    border-color: var(--bg-1);
+    color: #d4dce6;
+  }
+  .el-message .el-icon-info,
+  .el-message--info .el-message__content {
+    color: inherit;
+  }
+
+
+  /* HEADER */
+  #app header {
+    .desktop-links > div:first-child img {
+      filter: brightness(2);
+    }
+    .desktop-link {
+      color: #9dabbe;
+      
+      &:focus, &:hover {
+        border-color: currentColor;
+        color: #d4dce6;
+      }
+      &.router-link-active {
+        border-color: #4EA8DE;
+        color: #e3eaf2;
+      }
+    }
+    .profile-dropdown-wrapper {
+      background-color: var(--bg-2);
+      
+      .dark_text-white:not(.text-gray-900) {
+        color: #d4dce6;
+      }
+      .profile-link {
+        color: #9dabbe;
+        
+        &:focus, &:hover {
+          background-color: var(--bg-5);
+          color: #d4dce6;
+        }
+      }
+    }
+  }
+  .router-link-active img {
+    filter: brightness(1.65)
+  }
+
+
+  /* LANDING PAGE */
+  #landing-page {
+    h2, h3, h4, h5 {
+      color: #d4dce6;
+    }
+    p {
+      color: #9dabbe;
+    }
+    .secondary-text {
+      color: #7a8696;
+    }
+    .btn-action {
+      background-color: #4EA8DE;
+      color: #e3eaf2;
+      
+      &:hover {
+        background-color: #48BFE3;
+      }
+      &:focus {
+        --tw-ring-offset-color: var(--bg-3);
+      }
+    }
+    .icon {
+      background-color: #4EA8DE;
+      color: #e3eaf2;
+    }
+    .stats-container {
+      background-color: var(--bg-2);
+      border: 1px solid var(--bg-1);
+      
+      stat-count {
+        color: #4EA8DE;
+      }
+      .stat-text {
+        color: #9dabbe;
+      }
+    }
+    .card {
+      background-color: #4EA8DE;
+      
+      .text-blue-200 {
+        color: #e3eaf2;
+      }
+      h2 {
+        color: #fff;
+      }
+      a {
+        font-weight: 600;
+        background-color: #e3eaf2;
+        color: #4EA8DE;
+        
+        &:hover {
+          background-color: #d4dce6;
+        }
+      }
+    }
+  }
+
+
+  /* SUPPORTED SITES */
+  a[data-v-e2b2ceba] {
+    background-color: var(--bg-3);
+    color: #d4dce6;
+  }
+
+
+  /* DASHBOARD */
+  #app {
+    .top-drawer {
+      background-color: var(--bg-3);
+      border-color: var(--bg-4);
+    }
+    .the-dashboard {
+      background-color: var(--bg-2);
+    }
+    .the-dashboard,
+    .the-dashboard-header,
+    .the-dashboard-footer,
+    .divide-gray-200 > :not([hidden]) ~ :not([hidden]) {
+      border-color: var(--bg-4);
+    }
+    .list-row__regular:hover {
+      background-color: var(--bg-5);
+    }
+    .list-row__selected {
+      background-color: var(--bg-4);
+    }
+    .series-link {
+      color: #d4dce6;
+      
+      &:hover {
+        color: #4EA8DE
+      }
+    }
+  }
+
+  /* Checkboxes */
+  .the-dashboard {
+    input[type="checkbox"] {
+      background-color: var(--bg-1);
+      border-color: var(--bg-4);
+      color: #8f9db0;
+      
+      &:focus {
+        background-color: var(--bg-1);
+        border-color: var(--bg-4);
+        --tw-ring-color: #4EA8DE;
+        --tw-ring-offset-color: var(--bg-5);
+        --tw-ring-offset-width: 0px;
+      }
+      &:checked, &:checked:focus, &:checked:hover {
+        background-color: #4EA8DE;
+        border-color: #4EA8DE;
+        --tw-ring-offset-color: var(--bg-4);
+        --tw-ring-offset-width: 2px;
+      }
+      &:indeterminate {
+        background-color: #4EA8DE;
+        
+        &:focus, &:hover {
+          background-color: #4EA8DE;
+          border-color: #4EA8DE;
+          outline-color: transparent;
+          --tw-ring-offset-width: 2px;
+        }
+      }
+    }
+  }
+
+  /* Unread */
+  .the-dashboard {
+    .unread-indicator-ping, .unread-indicator {
+      background-color: #4EA8DE;
+    }
+  }
+
+  /* Status */
+  .the-dashboard {
+    .primary,
+    .success,
+    .warning,
+    .warning-light,
+    .danger {
+      padding: 0.25rem 0.75rem;
+      font-size: 0.8rem;
+    }
+    .primary {
+      background-color: #203ea2;
+      color: #b4c3d7;
+    }
+    .success {
+      background-color: #144a44;
+      color: #34d399;
+    }
+    .warning {
+      background-color: #bb5031;
+      color: #fdc;
+    }
+    .warning-light {
+      background-color: #cb733e;
+      color: #f9f8c9;
+    }
+    .danger {
+      background-color: #822222;
+      color: #d8b7b7;
+    }
+  }
+
+  /* Chapters */
+  .the-dashboard {
+    .chapter, .chapter-classes {
+      background-color: #133a8b;
+      color: #79a7e1;
+      
+      &:hover {
+        background-color: #135ff9;
+        color: #a2cafb;
+      }
+    }
+    .chapter__none {
+      background-color: #294684;
+      color: #9ec4f5;
+    }
+    .chapter-meta {
+      color: #9dabbe;
+    }
+  }
+
+  /* Row Actions */
+  .the-dashboard .row-actions {
+    button.group {
+      background-color: var(--bg-3);
+      border-color: var(--bg-1);
+      color: #9dabbe;
+    }
+    button:active {
+      background-color: var(--bg-4);
+      color: #d4dce6;
+    }
+    .button__primary:hover {
+      color: #d4dce6;
+    }
+    .button__success:hover {
+        color: #34d399;
+    }
+    .button__danger:hover {
+        color: #ff6565;
+    }
+    .disabled:active {
+      background-color: var(--bg-4);
+    }
+  }
+
+  /* Actions */
+  .the-dashboard {
+    button.group {
+      background-color: var(--bg-4);
+      border-color: var(--bg-1);
+      color: #9dabbe;
+      
+      &:hover {
+        color: #9dabbe;
+        
+        .group-hover_text-gray-800 {
+          color: #d4dce6;
+        }
+      }
+    }
+  }
+
+  /* Tooltip */
+  .tippy-tooltip.light-theme, 
+  .tippy-box[data-theme~="light"] {
+    background-color: var(--bg-5);
+    color: #d4dce6;
+    box-shadow: 0 0 20px 4px rgba(63, 66, 73, .15), 0 4px 80px -8px rgba(36, 40, 47, .25), 0 4px 4px -2px rgba(36, 36, 37, .15);
+  }
+  
+  /* Notification */
+  .notification .notification-content {
+    background-color: var(--bg-4);
+    
+    button {
+      background-color: transparent;
+      
+      &:hover {
+        color: #d4dce6;
+      }
+      
+      &:focus {
+        --tw-ring-offset-color: var(--bg-4);
+        --tw-ring-color: #4EA8DE;
+        --tw-ring-offset-width: 0px;
+      }
+    }
+  }
+
+  /* Select, Filter & Sort Button */
+  #app {
+    .list-button {
+      background-color: var(--bg-1);
+      border-color: var(--bg-3);
+      color: #9dabbe;
+      
+      &:hover, &:active, &[aria-expanded="true"] {
+        color: #d4dce6;
+      }
+      &:focus {
+        border-color: #4EA8DE;
+        --tw-ring-color: #4EA8DE;
+      }
+      .primary {
+        background-color: #4EA8DE;
+        color: var(--bg-4);
+        
+        button {
+          background-color: var(--bg-2);
+          color: #d4dce6;
+          
+          &:hover {
+            background-color: var(--bg-5);
+          }
+        }
+      }
+    }
+    .options {
+      background-color: var(--bg-4);
+      border: 1px solid var(--bg-4);
+      scrollbar-width: thin;
+      
+      li {
+        color: #9dabbe;
+        
+        &:focus, &:hover {
+          background-color: var(--bg-2);
+          color: #d4dce6;
+        }
+      }
+      .checkmark {
+        color: #4EA8DE;
+      }
+      &-active {
+        background-color: var(--bg-3);
+      }
+    }
+  }
+
+  /* Modals - Edit, Import, Add Manga */
+  #app {
+    .modal-body {
+      background-color: var(--bg-3);
+      box-shadow: 0 0 10px 4px var(--bg-4);
+      
+      .bg-white {
+        background-color: inherit;
+      }
+      .modal-actions {
+        background-color: var(--bg-1);
+      }
+      .online-indicator-ping, .online-indicator {
+        background-color: #29c778;
+      }
+      .offline-indicator {
+        background-color: #7a8696;
+      }
+      h3, .label {
+        color: #d4dce6;
+      }
+      .tab {
+        color: #9dabbe;
+
+        &:hover {
+          border-color: #d4dce6;
+          color: #d4dce6;
+        }
+      }
+      .active-tab {
+        border-color: #4EA8DE;
+        color: #4EA8DE;
+      }
+      .not-found, label {
+        color: #7a8696;
+      }
+      .selection-button {
+        background-color: var(--bg-1);
+        border-color: var(--bg-3);
+      }
+      &:focus {
+        border-color: #4EA8DE;
+        --tw-ring-color: #4EA8DE;
+      }
+      .selected-value {
+        color: #d4dce6;
+      }
+      .dropdown-body {
+        .dropdown-body_content {
+          background-color: var(--bg-4);
+          border: 1px solid var(--bg-4);
+        }
+        a {
+          color: #9dabbe;
+
+          &:focus, &:hover {
+            background-color: var(--bg-2);
+            color: #d4dce6;
+          }
+        }
+      }
+      .os-scrollbar .os-scrollbar-handle {
+          background-color: hsla($bg5, 0.4);
+      }
+    }
+  }
+
+
+  /* SETTINGS */
+  #settings {
+    .desktop-svg {
+      color: #9dabbe;
+    }
+    .regular {
+      color: #d4dce6;
+      
+      &:hover {
+        background-color: var(--bg-3);
+        color: #d4dce6;
+      }
+    }
+    .active {
+      background-color: var(--bg-3);
+      color: #e3eaf2;
+      
+      &:hover {
+        color: #e3eaf2;
+      }
+    }
+  }
+  .settings .primary {
+    background-color: var(--bg-5);
+    color: #d4dce6;
+  }
+  .vld-overlay .vld-background {
+    background: var(--bg-2);
+  }
+  .group:hover .group-hover_text-gray-500 {
+    color: #9dabbe;
+  }
+
+  /* Dropdown */
+  .base-dropdown {
+    button {
+      color: #9dabbe;
+      
+      &:focus, &:hover {
+        color: #d4dce6;
+      }
+    }
+    .dropdown-content {
+      background-color: var(--bg-4);
+      border: 1px solid var(--bg-4);
+    }
+    a {
+      color: #9dabbe;
+      
+      &:focus, &:hover {
+        background-color: var(--bg-2);
+        color: #d4dce6;
+      }
+    }
+    .icon {
+      color: #9dabbe;
+    }
+  }
+
+  /* Inputs */
+  #app {
+    input[type="text"], input[type="password"] {
+      background: var(--bg-1);
+      border-color: var(--bg-4);
+      color: #9dabbe;
+      
+      &:focus, &:hover {
+        border-color: #4EA8DE;
+        --tw-ring-color: #4EA8DE;
+      }
+      &::placeholder {
+        color: #6d798a;
+      }
+    }
+    label {
+      color: #9dabbe;
+    }
+    .error {
+      border-color: #dc2626;
+      color: #dc2626;
+    }
+  }
+
+  /* Primary Button */
+  #app {
+    .btn-primary {
+      background-color: #4EA8DE;
+      
+      &:hover {
+        background-color: #48BFE3;
+      }
+      &:focus {
+        --tw-ring-offset-color: var(--bg-4);
+      }
+    }
+  }
+
+  /* Secondary Button */
+  #app {
+    .btn-secondary {
+      background: var(--bg-5);
+      border-color: var(--bg-5);
+      color: #d4dce6;
+      
+      &:hover {
+        color: #e3eaf2;
+      }
+      &:focus {
+        --tw-ring-color: #4EA8DE;
+        --tw-ring-offset-color: var(--bg-2);
+      }
+    }
+  }
+}
+
+@-moz-document url-prefix("https://www.kenmei.co/dashboard") {
+  /* Dashboard Custom Background */
+  if customBG==1 {
+    #home .dark_bg-blueGray-700 {
+      background: var(--bg-1) center / cover no-repeat fixed; 
+      // background-image: url(https://images.hdqwalls.com/wallpapers/anime-dark-witch-nm.jpg);background-blend-mode: darken;
+      // background-image: url(https://images6.alphacoders.com/106/thumb-1920-1065654.png);
+      background-image: url(https://i.imgur.com/qLj5Z9b.jpg)
+    }
+  }
+  if enableTransparency==1 {
+    #home {
+      .top-drawer {
+        background-color: hsla($bg3, topdrawerOpacity);
+        border-color: hsla($bg4, topdrawerOpacity);
+      }
+      .the-dashboard {
+        background-color: hsla($bg2, dashboardOpacity);
+      }
+      .list-row__regular:hover {
+        background-color: hsla($bg5, dashboardOpacity);
+      }
+    }
+  }
+}
+@-moz-document url("https://www.kenmei.co/pricing") {
+  #app {
+    h1 {
+      color: #9dabbe;
+    }
+    .bg-gray-100 {
+      background-color: var(--bg-1);
+    }
+    .billing-switch {
+      color: #9dabbe;
+    }
+    .billing-switch__active {
+      background-color: var(--bg-4);
+      color: #d4dce6;
+    }
+    .tier-box-wrapper {
+      border-width: 2px;
+      border-color: var(--bg-5);
+    }
+    .tier-box-wrapper .bg-white,
+    .middle-tier-box .bg-white {
+      background-color: var(--bg-1);
+    }
+    .text-gray-900 {
+      color: #d4dce6;
+    }
+    .text-gray-500 {
+      color: #9dabbe;
+    }
+    .border-blue-600 {
+      border-color: #4EA8DE;
+    }
+    .bg-blue-600 {
+      background-color: #4EA8DE;
+    }
+    .features-list-body {
+      background-color: var(--bg-4);
+      border-color: var(--bg-5);
+      
+      p.bg-gray-400 {
+        padding: 0.25rem 1rem;
+        font-weight: 200;
+        color: #d4dce6;
+        border-radius: 100vw;
+      }
+    }
+    .feature-text {
+      color: #9dabbe;
+    }
+    .discount-badge {
+      background-color: #29c778;
+      color: #193f41;
+    }
+    .text-green-500 {
+      color: #29c778;
+    }
+  }
+}
+
+@-moz-document url("https://www.kenmei.co/privacy"), url("https://www.kenmei.co/terms") {
+  .prose h2, .prose h3, .prose h4, .prose strong, .prose thead {
+    color: #d4dce6;
+  }
+  .prose p {
+    color: #9dabbe;
+  }
+  .prose thead, .prose tbody tr {
+    border-color: var(--bg-4);
+  }
+  .prose a {
+    color: #4EA8DE;
+  }
+  .prose ol > li::before {
+    color: #9dabbe;
+  }
+}
+
+@-moz-document url("https://status.kenmei.co/") {
+  .card {
+    background-color: var(--bg-2);
+    color: #9dabbe;
+  }
+  a:not(.uk-button):not(.psp-monitor-name), .uk-link, .uk-h3 {
+    color: #d4dce6 !important;
+  }
+  .psp-monitor-name {
+    color: #9dabbe !important;
+  }
+  .uk-text-muted {
+    color: #6d798a;
+  }
+  .psp-monitor-row,
+  .uk-grid-divider > :not(.uk-first-column)::before {
+    border-color: var(--bg-5);
+  }
+  #main-footer a {
+    color: #6d798a !important;
+  }
+  .uk-link:hover, a:hover {
+    text-shadow: 0 5px 30px rgba(78, 168, 222, .3);
+  }
+}

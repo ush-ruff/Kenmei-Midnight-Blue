@@ -3,7 +3,7 @@
 @namespace      github.com/ush-ruff
 @homepageURL    https://github.com/ush-ruff/Kenmei-Midnight-Blue
 @updateURL      https://github.com/ush-ruff/Kenmei-Midnight-Blue/raw/main/kenmei.user.css
-@version        0.8.4
+@version        0.8.5
 @description    A new userstyle
 @author         ushruff
 @preprocessor   stylus
@@ -224,7 +224,7 @@
       background-color: var(--bg-2);
       border: 1px solid var(--bg-1);
       
-      stat-count {
+      .stat-count {
         color: #4EA8DE;
       }
       .stat-text {
@@ -632,6 +632,19 @@
   .settings .primary {
     background-color: var(--bg-5);
     color: #d4dce6;
+  }
+  .settings .btn-danger {
+    background-color: #aa2727;
+    color: #d8d0d0;
+
+    &:hover, &:focus {
+      background-color: #c72828;
+      color: #edd5d5;
+    }
+    &:focus {
+      --tw-ring-color: #ff6565;
+      --tw-ring-offset-color: var(--bg-1);
+    }
   }
   .vld-overlay .vld-background {
     background: var(--bg-2);

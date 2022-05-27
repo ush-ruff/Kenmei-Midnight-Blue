@@ -1,9 +1,9 @@
 /* ==UserStyle==
-@name           Kenmei Ash Dark
+@name           Kenmei Midnight Blue
 @namespace      github.com/ush-ruff
-@homepageURL    https://github.com/ush-ruff/
-@updateURL      https://github.com/ush-ruff/
-@version        0.8.1
+@homepageURL    https://github.com/ush-ruff/Kenmei-Midnight-Blue
+@updateURL      https://github.com/ush-ruff/Kenmei-Midnight-Blue/kenmei.user.css
+@version        0.8.2
 @description    A new userstyle
 @author         ushruff
 @preprocessor   stylus
@@ -519,7 +519,7 @@
       .offline-indicator {
         background-color: #7a8696;
       }
-      h3, .label {
+      h3, label, .label {
         color: #d4dce6;
       }
       .tab {
@@ -534,32 +534,48 @@
         border-color: #4EA8DE;
         color: #4EA8DE;
       }
-      .not-found, label {
+      .not-found, .selector-toggle {
         color: #7a8696;
       }
-      .selection-button {
+      a {
+        color: #4EA8DE;
+
+        &:hover, &:focus {
+          color: #48BFE3;
+        }
+      }
+      .vs__dropdown-toggle {
         background-color: var(--bg-1);
         border-color: var(--bg-3);
-      }
-      &:focus {
-        border-color: #4EA8DE;
-        --tw-ring-color: #4EA8DE;
-      }
-      .selected-value {
-        color: #d4dce6;
-      }
-      .dropdown-body {
-        .dropdown-body_content {
-          background-color: var(--bg-4);
-          border: 1px solid var(--bg-4);
+        
+        &[aria-expanded="true"] {
+          border-color: #4EA8DE;
         }
-        a {
+        
+        .vs__selected {
           color: #9dabbe;
-
-          &:focus, &:hover {
-            background-color: var(--bg-2);
+          
+          &:hover, &:focus {
             color: #d4dce6;
           }
+        }
+      }
+      .vs__dropdown-menu {
+        background-color: var(--bg-4);
+        border: 1px solid var(--bg-4);
+        
+        span:not(.checkmark) {
+          color: #9dabbe;
+        }
+        .checkmark {
+          color: #4EA8DE;
+        }
+      }
+      .vs__dropdown-option--highlight {
+        background-color: var(--bg-2);
+        
+        span:not(.checkmark) {
+          color: #d4dce6;
         }
       }
       .os-scrollbar .os-scrollbar-handle {
@@ -687,7 +703,7 @@
 @-moz-document url-prefix("https://www.kenmei.co/dashboard") {
   /* Dashboard Custom Background */
   if customBG==1 {
-    #home .dark_bg-blueGray-700 {
+    #home .dark_bg-slate-700 {
       background: var(--bg-1) center / cover no-repeat fixed; 
       // background-image: url(https://images.hdqwalls.com/wallpapers/anime-dark-witch-nm.jpg);background-blend-mode: darken;
       // background-image: url(https://images6.alphacoders.com/106/thumb-1920-1065654.png);

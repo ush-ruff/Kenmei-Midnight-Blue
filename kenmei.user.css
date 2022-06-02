@@ -3,7 +3,7 @@
 @namespace      github.com/ush-ruff
 @homepageURL    https://github.com/ush-ruff/Kenmei-Midnight-Blue
 @updateURL      https://github.com/ush-ruff/Kenmei-Midnight-Blue/raw/main/kenmei.user.css
-@version        0.8.5
+@version        0.9.0
 @description    A new userstyle
 @author         ushruff
 @preprocessor   stylus
@@ -154,6 +154,39 @@
   .el-message--info .el-message__content {
     color: inherit;
   }
+
+
+  /* UPDATE PROMPT */
+  #app .prompt-wrapper {
+  background-color: var(--bg-4);
+  box-shadow: 0 0 10px rgba(black,0.4);
+
+  button {
+    padding: 0.25rem 0.5rem;
+    background-color: var(--bg-4);
+
+    &:focus {
+      --tw-ring-offset-color: var(--bg-4);
+      --tw-ring-color: #4EA8DE;
+    }
+  }
+  
+  .button--primary {
+    color: #4EA8DE;
+    
+    &:hover, &:focus {
+      color: #48BFE3;
+    }
+  }
+  
+  .button--secondary {
+    color: #9dabbe;
+    
+    &:hover, &:focus {
+      color: #d4dce6;
+    }
+  }
+}
 
 
   /* HEADER */
@@ -553,6 +586,22 @@
           color: #48BFE3;
         }
       }
+      .dropdown-body {
+        background-color: var(--bg-4);
+        border: 1px solid var(--bg-4);
+
+        .dropdown-body_content {
+          background-color: transparent;
+        }
+        a {
+          color: #9dabbe;
+
+          &:focus, &:hover {
+            background-color: var(--bg-2);
+            color: #d4dce6;
+          }
+        }
+      }
       .vs__dropdown-toggle {
         background-color: var(--bg-1);
         border-color: var(--bg-3);
@@ -588,7 +637,37 @@
         }
       }
       .os-scrollbar .os-scrollbar-handle {
-          background-color: hsla($bg5, 0.4);
+        background-color: hsla($bg5, 0.4);
+      }
+      .selection-button {
+        background-color: var(--bg-1);
+        border-color: var(--bg-4);
+      }
+      .selected-value {
+        color: #d4dce6;
+      }
+      .button--disclosure {
+        span {
+          background-color: var(--bg-3);
+          color: #9dabbe;
+        }
+        .icon--chevron {
+          color: #9dabbe;
+        }
+      }
+      .vue-number-input {
+        .vue-number-input__input {
+          background-color: var(--bg-1);
+          border-color: var(--bg-4);
+          color: #9dabbe;
+          
+          &:hover {
+            color: #d4dce6;
+          }
+        }
+        .vue-number-input__button:hover::before, .vue-number-input__button:hover::after {
+          background-color: #4EA8DE;
+        }
       }
       .btn-danger {
         background-color: #822222;

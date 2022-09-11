@@ -3,7 +3,7 @@
 @namespace      github.com/ush-ruff
 @homepageURL    https://github.com/ush-ruff/Kenmei-Midnight-Blue
 @updateURL      https://github.com/ush-ruff/Kenmei-Midnight-Blue/raw/main/kenmei.user.css
-@version        0.9.1
+@version        0.10.0
 @description    A new userstyle
 @author         ushruff
 @preprocessor   stylus
@@ -11,6 +11,7 @@
 @var            checkbox enableTransparency "Enable Dashboard Transparency" 1
 @var            range topdrawerOpacity "Top Drawer Opacity" [0.95, 0, 1, 0.05]
 @var            range dashboardOpacity "Dashboard Background Opacity" [0.9, 0, 1, 0.05]
+@var            text customBgImage "Custom Background Image" "Enter url within quotes"
 ==/UserStyle== */
 @-moz-document domain("kenmei.co") {
   $bg1=#2e3947;
@@ -831,7 +832,8 @@
       background: var(--bg-1) center / cover no-repeat fixed; 
       // background-image: url(https://images.hdqwalls.com/wallpapers/anime-dark-witch-nm.jpg);background-blend-mode: darken;
       // background-image: url(https://images6.alphacoders.com/106/thumb-1920-1065654.png);
-      background-image: url(https://i.imgur.com/qLj5Z9b.jpg)
+      // background-image: url(https://i.imgur.com/qLj5Z9b.jpg);
+      background-image: url(customBgImage);
     }
   }
   if enableTransparency==1 {

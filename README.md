@@ -1,4 +1,7 @@
 # Kenmei Midnight Blue
+
+![Preview](images/preview.png)
+
 This is a dark userstyle for Kenmei with a blue color palette. It completely restyles all elements of the website to dark with slight tweaks to some elements to better fit in with the theme. 
 
 [![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-00adad.svg?longCache=true&style=for-the-badge)](https://github.com/ush-ruff/Kenmei-Midnight-Blue/raw/main/kenmei.user.css)

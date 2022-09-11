@@ -1,14 +1,26 @@
 # Kenmei Midnight Blue
 This is a dark userstyle for Kenmei with a blue color palette. It completely restyles all elements of the website to dark with slight tweaks to some elements to better fit in with the theme. 
 
+[![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-00adad.svg?longCache=true&style=for-the-badge)](https://github.com/ush-ruff/Kenmei-Midnight-Blue/raw/main/kenmei.user.css)
+  >Installs directly from this repository.
+  >This is only available using Stylus (see the [documentation](https://github.com/openstyles/stylus/wiki/Usercss)).
+
+## Features
+* All element restyled in theme colors. 
+* Option to customize your dashboard with a custom background image. (Please make sure to enter the URL within quotation marks to avoid errors) 
+* Option to create a semi-transparent dashboard. (Only available to use alongside custom background image) 
+
+![Style Settings](images/style-settings.png)
+
 ## Install and setup
 In order to use this theme or any other userstyles you will need to install a browser extension. I recommend using the following.
 
-### Browser extension: 
-Stylus - get the addon for: 
-* [Firefox](https://addons.mozilla.org/en-US/firefox/addon/styl-us/)
-* [Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne) 
-* [Opera](https://addons.opera.com/en-gb/extensions/details/stylus/)
+### Stylus Browser extension: 
+Stylus - Get the addon for: 
+
+[![Firefox](https://github.com/ush-ruff/YouTube-Ash-Dark/raw/main/images/firefox.png)](https://addons.mozilla.org/en-US/firefox/addon/styl-us/)
+[![Chrome](https://github.com/ush-ruff/YouTube-Ash-Dark/raw/main/images/chrome.png)](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne) 
+[![Opera](https://github.com/ush-ruff/YouTube-Ash-Dark/raw/main/images/opera.png)](https://addons.opera.com/en-gb/extensions/details/stylus/)
 
 ### Install this theme:
 Once you have installed the browser extension click on the link below to install this theme.

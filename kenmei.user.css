@@ -3,7 +3,7 @@
 @namespace      github.com/ush-ruff
 @homepageURL    https://github.com/ush-ruff/Kenmei-Midnight-Blue
 @updateURL      https://github.com/ush-ruff/Kenmei-Midnight-Blue/raw/main/kenmei.user.css
-@version        0.10.0
+@version        0.10.1
 @description    A new userstyle
 @author         ushruff
 @preprocessor   stylus
@@ -288,7 +288,7 @@
 
 
   /* SUPPORTED SITES */
-  a[data-v-13416b1e] {
+  a[data-v-78223fd5] {
     background-color: var(--bg-3);
     color: #d4dce6;
   }
@@ -728,6 +728,9 @@
   }
   .vld-overlay .vld-background {
     background: var(--bg-2);
+  }
+  .vl-overlay .vl-background {
+    background: var(--bg-3);
   }
   .group:hover .group-hover_text-gray-500 {
     color: #9dabbe;

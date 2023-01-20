@@ -3,7 +3,7 @@
 @namespace      github.com/ush-ruff
 @homepageURL    https://github.com/ush-ruff/Kenmei-Midnight-Blue
 @updateURL      https://github.com/ush-ruff/Kenmei-Midnight-Blue/raw/main/kenmei.user.css
-@version        0.10.1
+@version        0.11.0
 @description    A new userstyle
 @author         ushruff
 @preprocessor   stylus
@@ -954,5 +954,68 @@
   }
   .uk-link:hover, a:hover {
     text-shadow: 0 5px 30px rgba(78, 168, 222, .3);
+  }
+}
+
+@-moz-document url("https://www.kenmei.co/supported-sites") {
+  /* Supported Sites - Header Images */
+  #app #home {
+    a[href*="hunlight-scans"] img.object-cover {
+      padding-left: 176px;
+      background-image: url(https://i.imgur.com/5w4e4w0.png);
+      background-size: 178px;
+      background-position: center -3px;
+    }
+    a[href*="kireicake"] img.object-cover {
+      --size: 7px;
+      padding-left: 176px;
+      background-image: url(https://kireicake.com/cake/kc_headimage.png), linear-gradient(to right,#a458d7d4 1px,transparent 1px),linear-gradient(to bottom,#c353b3b5 1px,transparent 1px);
+      background-size: 250px, var(--size) var(--size), var(--size) var(--size);
+      background-position: bottom center, top left, top left;
+    }
+    a[href*="lhtranslation"] img.object-cover {
+      padding-left: 176px;
+      background-color: #164577;
+      background-image: url(https://i.redd.it/49rdoj8b09071.jpg);
+      background-size: 110px;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    a[href*="mangadex"] img.object-cover {
+      padding-left: 176px;
+      background-image: url(https://i.imgur.com/Cxld8Qk.png);
+      background-size: cover;
+    }
+    a[href*="mangahub"] img.object-cover {
+      padding-left: 176px;
+      background-color: #0e131f;
+      background-image: url(https://mangahub.io/logo.png);
+      background-size: 170px;
+      background-position: 20px center;
+      background-repeat: no-repeat;
+    }
+    a[href*="mangasushi"] img.object-cover {
+      padding-left: 176px;
+      background-image: url(https://mangasushi.org/wp-content/uploads/2017/10/MangaSushi.png), linear-gradient(to right, #eb3349 40%, #f45c43);
+      background-size: 160px, cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    a[href*="naniscans"] img.object-cover {
+      padding-left: 176px;
+      background-color: #0e131f;
+      background-image: url(https://i.imgur.com/gwK1BEV.png);
+      background-size: 145px;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    a[href*="webtoon"] img.object-cover {
+      padding-left: 176px;
+      background-color: #0e131f;
+      background-image: url(https://i.imgur.com/F14hbZz.png);
+      background-size: 150px;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
   }
 }

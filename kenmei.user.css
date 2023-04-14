@@ -3,7 +3,7 @@
 @namespace      github.com/ush-ruff
 @homepageURL    https://github.com/ush-ruff/Kenmei-Midnight-Blue
 @updateURL      https://github.com/ush-ruff/Kenmei-Midnight-Blue/raw/main/kenmei.user.css
-@version        0.11.1
+@version        0.11.2
 @description    A new userstyle
 @author         ushruff
 @preprocessor   stylus
@@ -972,14 +972,14 @@
     a[href*="kireicake"] img.object-cover {
       --size: 7px;
       padding-left: 176px;
-      background-image: url(https://kireicake.com/cake/kc_headimage.png), linear-gradient(to right,#a458d7d4 1px,transparent 1px),linear-gradient(to bottom,#c353b3b5 1px,transparent 1px);
+      background-image: url(https://i.imgur.com/TR61TR2.png), linear-gradient(to right,#a458d7d4 1px,transparent 1px),linear-gradient(to bottom,#c353b3b5 1px,transparent 1px);
       background-size: 250px, var(--size) var(--size), var(--size) var(--size);
       background-position: bottom center, top left, top left;
     }
     a[href*="lhtranslation"] img.object-cover {
       padding-left: 176px;
       background-color: #164577;
-      background-image: url(https://i.redd.it/49rdoj8b09071.jpg);
+      background-image: url(https://i.imgur.com/PtuDRek.jpg);
       background-size: 110px;
       background-position: center;
       background-repeat: no-repeat;
@@ -999,7 +999,7 @@
     }
     a[href*="mangasushi"] img.object-cover {
       padding-left: 176px;
-      background-image: url(https://mangasushi.org/wp-content/uploads/2017/10/MangaSushi.png), linear-gradient(to right, #eb3349 40%, #f45c43);
+      background-image: url(https://i.imgur.com/MUtGWhP.png), linear-gradient(to right, #eb3349 40%, #f45c43);
       background-size: 160px, cover;
       background-position: center;
       background-repeat: no-repeat;

@@ -3,12 +3,12 @@
 @namespace      github.com/ush-ruff
 @homepageURL    https://github.com/ush-ruff/Kenmei-Midnight-Blue
 @updateURL      https://github.com/ush-ruff/Kenmei-Midnight-Blue/raw/main/kenmei.user.css
-@version        0.11.0
+@version        0.11.1
 @description    A new userstyle
 @author         ushruff
 @preprocessor   stylus
-@var            checkbox customBG "Enable Custom Dashboard Background" 1
-@var            checkbox enableTransparency "Enable Dashboard Transparency" 1
+@var            checkbox customBG "Custom Dashboard Background" 1
+@var            checkbox enableTransparency "Dashboard Transparency" 1
 @var            range topdrawerOpacity "Top Drawer Opacity" [0.95, 0, 1, 0.05]
 @var            range dashboardOpacity "Dashboard Background Opacity" [0.9, 0, 1, 0.05]
 @var            text customBgImage "Custom Background Image" "Enter url within quotes"
@@ -284,13 +284,6 @@
         }
       }
     }
-  }
-
-
-  /* SUPPORTED SITES */
-  a[data-v-78223fd5] {
-    background-color: var(--bg-3);
-    color: #d4dce6;
   }
 
 
@@ -854,7 +847,9 @@
     }
   }
 }
+
 @-moz-document url("https://www.kenmei.co/pricing") {
+  /* ---- Pricing ---- */
   #app {
     h1 {
       color: #9dabbe;
@@ -914,6 +909,7 @@
 }
 
 @-moz-document url("https://www.kenmei.co/privacy"), url("https://www.kenmei.co/terms") {
+  /* ---- Privacy & Terms of Service ---- */
   .prose h2, .prose h3, .prose h4, .prose strong, .prose thead {
     color: #d4dce6;
   }
@@ -932,6 +928,7 @@
 }
 
 @-moz-document url("https://status.kenmei.co/") {
+  /* ---- Status ---- */
   .card {
     background-color: var(--bg-2);
     color: #9dabbe;
@@ -958,6 +955,12 @@
 }
 
 @-moz-document url("https://www.kenmei.co/supported-sites") {
+  /* ---- Supported Sites ---- */
+  .grid-container > a {
+    background-color: var(--bg-3);
+    color: #d4dce6;
+  }
+
   /* Supported Sites - Header Images */
   #app #home {
     a[href*="hunlight-scans"] img.object-cover {

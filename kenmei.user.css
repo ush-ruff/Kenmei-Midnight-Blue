@@ -3,7 +3,7 @@
 @namespace      github.com/ush-ruff
 @homepageURL    https://github.com/ush-ruff/Kenmei-Midnight-Blue
 @updateURL      https://github.com/ush-ruff/Kenmei-Midnight-Blue/raw/main/kenmei.user.css
-@version        0.11.2
+@version        0.12.0
 @description    A new userstyle
 @author         ushruff
 @preprocessor   stylus
@@ -230,6 +230,9 @@
 
   /* LANDING PAGE */
   #landing-page {
+    h1 {
+      color: #e3eaf2;
+    }
     h2, h3, h4, h5 {
       color: #d4dce6;
     }
@@ -282,6 +285,25 @@
         &:hover {
           background-color: #d4dce6;
         }
+      }
+    }
+  }
+
+  /* Hero Image */
+  .hero-text + div {
+    .svg--wrapper {
+      background-color: var(--bg-2);
+    }
+    
+    .img-wrapper {
+      margin-inline-start: 3rem;
+      padding: unset;
+      background-image: url(https://raw.githubusercontent.com/ush-ruff/Kenmei-Midnight-Blue/main/images/sc-01.png);
+      border-radius: 0.25rem;
+      box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
+      
+      picture {
+        display: none;
       }
     }
   }

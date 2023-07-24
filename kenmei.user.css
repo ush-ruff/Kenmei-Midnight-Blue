@@ -3,7 +3,7 @@
 @namespace      github.com/ush-ruff
 @homepageURL    https://github.com/ush-ruff/Kenmei-Midnight-Blue
 @updateURL      https://github.com/ush-ruff/Kenmei-Midnight-Blue/raw/main/kenmei.user.css
-@version        0.12.0
+@version        0.13.0
 @description    A new userstyle
 @author         ushruff
 @preprocessor   stylus
@@ -324,6 +324,7 @@
     .divide-gray-200 > :not([hidden]) ~ :not([hidden]) {
       border-color: var(--bg-4);
     }
+    /* List Style */
     .list-row__regular:hover {
       background-color: var(--bg-5);
     }
@@ -337,10 +338,29 @@
         color: #4EA8DE
       }
     }
+    /* Card Style */
+    .skeleton-card {
+      background-color: var(--bg-4);
+    }
+    .shadow-card {
+      --tw-shadow: 0 3px 10px 2px rgba(0, 0, 0, 0.35);
+    }
+    .shadow-card.cover__selected {
+      --tw-ring-color: #4EA8DE;
+      --tw-ring-offset-color: var(--bg-5);
+      --tw-ring-offset-width: 3px;
+    }
+    .cover__indicator {
+      border-radius: unset;
+    }
+    .group .overlay {
+      background-color: hsla($bg2, 0.5);
+    }
   }
 
   /* Checkboxes */
-  .the-dashboard {
+  .the-dashboard, 
+  .top-drawer + div > div:nth-child(2) {
     input[type="checkbox"] {
       background-color: var(--bg-1);
       border-color: var(--bg-4);
@@ -373,14 +393,15 @@
   }
 
   /* Unread */
-  .the-dashboard {
+  .the-dashboard, .top-drawer + div > div:nth-child(2) {
     .unread-indicator-ping, .unread-indicator {
       background-color: #4EA8DE;
     }
   }
 
   /* Status */
-  .the-dashboard {
+  .the-dashboard, 
+  .top-drawer + div > div:nth-child(2) {
     .primary,
     .success,
     .warning,
@@ -412,7 +433,8 @@
   }
 
   /* Chapters */
-  .the-dashboard {
+  .the-dashboard, 
+  .top-drawer + div > div:nth-child(2) {
     .chapter, .chapter-classes {
       background-color: #133a8b;
       color: #79a7e1;
@@ -432,7 +454,8 @@
   }
 
   /* Row Actions */
-  .the-dashboard .row-actions {
+  .the-dashboard .row-actions, 
+  .top-drawer + div > div:nth-child(2) .lg_group-hover_block {
     button.group {
       background-color: var(--bg-3);
       border-color: var(--bg-1);
@@ -460,7 +483,8 @@
   }
 
   /* Actions */
-  .the-dashboard {
+  .the-dashboard, 
+  .top-drawer + div > div:nth-child(2) {
     button.group {
       background-color: var(--bg-4);
       border-color: var(--bg-1);
@@ -556,6 +580,23 @@
       &-active {
         background-color: var(--bg-3);
       }
+    }
+  }
+
+  /* List Style Switch Button */
+  #app {
+    .switch {
+      background-color: var(--bg-1);
+    }
+    .mode-select-btn {
+      color: #9dabbe;
+    }
+    .mode-select-btn:is(:hover, :focus, .mode-select-btn__active) {
+      background-color: var(--bg-3);
+    }
+    .mode-select-btn:focus {
+      border-color: #4EA8DE;
+      --tw-ring-color: #4EA8DE;
     }
   }
 
@@ -866,6 +907,30 @@
       .list-row__regular:hover {
         background-color: hsla($bg5, dashboardOpacity);
       }
+    }
+  }
+
+  /* Card Style */
+  if customBG==1 {
+    .grid-cols-2 > li > div {
+      --_br: 0.25rem;
+      > div:not(:first-child)  {
+        padding: 0.75rem 0.75rem;
+        background-color: var(--bg-2);
+      }
+      > div:nth-child(2) {
+        padding-block-end: unset;
+        border-radius: var(--_br) var(--_br) 0 0;
+      }
+      > div:nth-child(3) {
+        padding-block-start: unset;
+        border-radius: 0 0 var(--_br) var(--_br);
+      }
+    }
+  }
+  if customBG==1 && enableTransparency==1 {
+    .grid-cols-2 > li > div > div:not(:first-child)  {
+      background-color: hsla($bg2, dashboardOpacity);
     }
   }
 }

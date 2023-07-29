@@ -3,7 +3,7 @@
 @namespace      github.com/ush-ruff
 @homepageURL    https://github.com/ush-ruff/Kenmei-Midnight-Blue
 @updateURL      https://github.com/ush-ruff/Kenmei-Midnight-Blue/raw/main/kenmei.user.css
-@version        0.15.0
+@version        0.15.1
 @description    A new userstyle
 @author         ushruff
 @preprocessor   stylus
@@ -825,6 +825,9 @@
   dd > p {
     color: #d4dce6;
   }
+  .image-wrapper img {
+    background-color: var(--bg-4);
+  }
   
   /* Header Tabs */
   .tab {
@@ -843,6 +846,9 @@
   /* Main Content */
   .divide-gray-200 > :not([hidden]) ~ :not([hidden]) {
     border-color: var(--bg-1);
+  }
+  h1 {
+    color: #e3eaf2;
   }
   h2, .series-title {
     color: #d4dce6;

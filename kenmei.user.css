@@ -3,7 +3,7 @@
 @namespace      github.com/ush-ruff
 @homepageURL    https://github.com/ush-ruff/Kenmei-Midnight-Blue
 @updateURL      https://github.com/ush-ruff/Kenmei-Midnight-Blue/raw/main/kenmei.user.css
-@version        0.13.0
+@version        0.14.0
 @description    A new userstyle
 @author         ushruff
 @preprocessor   stylus
@@ -99,6 +99,12 @@
   }
   .text-blue-600 {
     color: #4EA8DE;
+  }
+  .sm_bg-transparent {
+    background-color: transparent;
+  }
+  .sm_divide-gray-100 > :not([hidden]) ~ :not([hidden]) {
+    border-color: var(--bg-1);
   }
   
   /* LOGIN */
@@ -205,6 +211,25 @@
       &.router-link-active {
         border-color: #4EA8DE;
         color: #e3eaf2;
+      }
+    }
+    .btn--search {
+      --_size: 32px;
+      display: grid;
+      place-items: center;
+      width: var(--_size);
+      height: var(--_size);
+      background-color: var(--bg-1);
+      color: #9dabbe;
+      
+      &:hover, &:active, &:focus {
+        color: #d4dce6;
+      }
+      &:focus {
+        border-color: #4EA8DE;
+        --tw-ring-color: #4EA8DE;
+        --tw-ring-offset-color: var(--bg-4);
+        --tw-ring-offset-width: 3px;
       }
     }
     .profile-dropdown-wrapper {
@@ -469,13 +494,13 @@
       color: #d4dce6;
     }
     .button__success:hover {
-        color: #34d399;
+      color: #34d399;
     }
     .button__warning:hover {
       color: #f6d47e;
     }
     .button__danger:hover {
-        color: #ff6565;
+      color: #ff6565;
     }
     .disabled:active {
       background-color: var(--bg-4);
@@ -483,8 +508,8 @@
   }
 
   /* Actions */
-  .the-dashboard, 
-  .top-drawer + div > div:nth-child(2) {
+  .the-dashboard { 
+  // .top-drawer + div > div:nth-child(2) {
     button.group {
       background-color: var(--bg-4);
       border-color: var(--bg-1);
@@ -738,6 +763,40 @@
           --tw-ring-color: #ff6565;
           --tw-ring-offset-color: var(--bg-1);
         }
+      }
+    }
+  }
+
+  /* Search */
+  #app .modal-body {
+    .panel {
+      background-color: transparent;
+    }
+    .wrapper--search-input {
+      background-color: var(--bg-4);
+      background-color: transparent;
+    }
+  }
+  #app .modal-body .wrapper--search-input + div {
+    .list--item:hover {
+      background-color: var(--bg-1);
+    }
+    .list--item_title {
+      color: #9dabbe;
+    }
+    .highlight {
+      color: #4EA8DE;
+    }
+    .primary {
+      background-color: var(--bg-5);
+      color: #b4c3d7;
+    }
+    .actions svg {
+      color: #9dabbe;
+      
+      &:hover, &:focus {
+        background-color: var(--bg-4);
+        color: #b4c3d7; 
       }
     }
   }

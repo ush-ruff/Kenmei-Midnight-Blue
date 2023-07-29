@@ -3,7 +3,7 @@
 @namespace      github.com/ush-ruff
 @homepageURL    https://github.com/ush-ruff/Kenmei-Midnight-Blue
 @updateURL      https://github.com/ush-ruff/Kenmei-Midnight-Blue/raw/main/kenmei.user.css
-@version        0.14.0
+@version        0.15.0
 @description    A new userstyle
 @author         ushruff
 @preprocessor   stylus
@@ -66,6 +66,9 @@
   }
   .dark_bg-gray-900 {
     background-color: var(--bg-4);
+  }
+  .bg-blue-500 {
+    background-color: #4EA8DE;
   }
   .text-black {
     color: #e3eaf2;
@@ -130,6 +133,11 @@
   }
   .list-row__regular:hover .bg-gray-400 {
     background-color: var(--bg-4);
+  }
+  #app {
+    .skeleton-loader, .skeleton-loader--text, .skeleton-loader--badge {
+      background-color: var(--bg-5);
+    }
   }
 
 
@@ -210,7 +218,7 @@
       }
       &.router-link-active {
         border-color: #4EA8DE;
-        color: #e3eaf2;
+        color: #4EA8DE;
       }
     }
     .btn--search {
@@ -799,7 +807,66 @@
         color: #b4c3d7; 
       }
     }
+    .img-wrapper {
+      background-color: var(--bg-5);
+    }
   }
+
+
+  /* SERIES DETAILS */
+#app .series-details--wrapper {
+  /* Sidebar */
+  dl {
+    background-color: var(--bg-3);
+  }
+  dt > p {
+    color: #9dabbe;
+  }
+  dd > p {
+    color: #d4dce6;
+  }
+  
+  /* Header Tabs */
+  .tab {
+    color: #9dabbe;
+    
+    &:not(.disabled):hover {
+      border-color: #d4dce6;
+      color: #d4dce6;
+    }
+  }
+  .active-tab {
+    border-color: #4EA8DE;
+    color: #4EA8DE;
+  }
+  
+  /* Main Content */
+  .divide-gray-200 > :not([hidden]) ~ :not([hidden]) {
+    border-color: var(--bg-1);
+  }
+  h2, .series-title {
+    color: #d4dce6;
+  }
+  .prose, .series-subtitle {
+    color: #9dabbe;
+  }
+  .title--link {
+    color: #4EA8DE;
+    
+    &:hover {
+      color: #48BFE3;
+    }
+  }
+  .primary {
+    background-color: var(--bg-5);
+    color: #b4c3d7;
+  }
+  
+  /* Card Skeleton */
+  .bg-gray-400.animate-pulse, .subtitle {
+    background-color: var(--bg-4);
+  }
+}
 
 
   /* SETTINGS */

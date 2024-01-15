@@ -3,7 +3,7 @@
 @namespace      github.com/ush-ruff
 @homepageURL    https://github.com/ush-ruff/Kenmei-Midnight-Blue
 @updateURL      https://github.com/ush-ruff/Kenmei-Midnight-Blue/raw/main/kenmei.user.css
-@version        0.15.2
+@version        0.15.3
 @description    A new userstyle
 @author         ushruff
 @preprocessor   stylus
@@ -1022,7 +1022,7 @@
 @-moz-document url-prefix("https://www.kenmei.co/dashboard") {
   /* Dashboard Custom Background */
   if customBG==1 {
-    #home .dark_bg-slate-700 {
+    #home .router--wrapper > div {
       background: var(--bg-1) center / cover no-repeat fixed; 
       // background-image: url(https://images.hdqwalls.com/wallpapers/anime-dark-witch-nm.jpg);background-blend-mode: darken;
       // background-image: url(https://images6.alphacoders.com/106/thumb-1920-1065654.png);

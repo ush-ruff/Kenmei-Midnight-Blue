@@ -3,7 +3,7 @@
 @namespace      github.com/ush-ruff
 @homepageURL    https://github.com/ush-ruff/Kenmei-Midnight-Blue
 @updateURL      https://github.com/ush-ruff/Kenmei-Midnight-Blue/raw/main/kenmei.user.css
-@version        0.15.1
+@version        0.15.2
 @description    A new userstyle
 @author         ushruff
 @preprocessor   stylus
@@ -57,6 +57,9 @@
   }
   html {
     background: var(--bg-4);
+  }
+  #app .router--wrapper {
+    background-color: var(--bg-1)
   }
   .bg-white {
     background-color: var(--bg-3);
@@ -240,7 +243,7 @@
         --tw-ring-offset-width: 3px;
       }
     }
-    .profile-dropdown-wrapper {
+    .dropdown-wrapper {
       background-color: var(--bg-2);
       
       .dark_text-white:not(.text-gray-900) {
@@ -876,19 +879,19 @@
 
 
   /* SETTINGS */
-  #settings {
-    .desktop-svg {
-      color: #9dabbe;
-    }
-    .regular {
+  #home .router--wrapper > div nav {
+    .desktop-link {
       color: #d4dce6;
       
       &:hover {
         background-color: var(--bg-3);
         color: #d4dce6;
       }
+      svg {
+        color: #9dabbe;
+      }
     }
-    .active {
+    .active, .router-link-active {
       background-color: var(--bg-3);
       color: #e3eaf2;
       

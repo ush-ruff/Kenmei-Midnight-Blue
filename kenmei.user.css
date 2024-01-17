@@ -3,7 +3,7 @@
 @namespace      github.com/ush-ruff
 @homepageURL    https://github.com/ush-ruff/Kenmei-Midnight-Blue
 @updateURL      https://github.com/ush-ruff/Kenmei-Midnight-Blue/raw/main/kenmei.user.css
-@version        0.15.4
+@version        0.15.5
 @description    A new userstyle
 @author         ushruff
 @preprocessor   stylus
@@ -137,8 +137,8 @@
   .list-row__regular:hover .bg-gray-400 {
     background-color: var(--bg-4);
   }
-  #app {
-    .skeleton-loader, .skeleton-loader--text, .skeleton-loader--badge {
+  #app, .vfm__content {
+    .skeleton-loader, .skeleton-loader--text, .skeleton-loader--badge, .skeleton-text, .skeleton--subtitle, .skeleton--badge {
       background-color: var(--bg-5);
     }
   }
@@ -747,19 +747,34 @@
           --tw-ring-offset-color: var(--bg-1);
         }
       }
+    }
   }
 
   /* Search */
-  #app .modal-body {
+  .vfm__content .modal-body {
     .panel {
-      background-color: transparent;
+      background-color: var(--bg-3);
     }
     .wrapper--search-input {
-      background-color: var(--bg-4);
-      background-color: transparent;
+      background-color: var(--bg-3);
+      
+      input {
+        background-color: var(--bg-1);
+      }
+    }
+    .wrapper--title {
+      background-color: var(--bg-3);
+      border-color: var(--bg-1);
+    }
+    .icon--back {
+      color: #9dabbe;
+      
+      &:hover {
+        color: #d4dce6;
+      }
     }
   }
-  #app .modal-body .wrapper--search-input + div {
+  .vfm__content .modal-body .wrapper--search-input + div {
     .list--item:hover {
       background-color: var(--bg-1);
     }
@@ -783,6 +798,11 @@
     }
     .img-wrapper {
       background-color: var(--bg-5);
+    }
+  }
+  .vfm__content .modal-body .wrapper--title + div {
+    .actions {
+      background-color: transparent;
     }
   }
 

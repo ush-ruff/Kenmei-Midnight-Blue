@@ -3,7 +3,7 @@
 @namespace      github.com/ush-ruff
 @homepageURL    https://github.com/ush-ruff/Kenmei-Midnight-Blue
 @updateURL      https://github.com/ush-ruff/Kenmei-Midnight-Blue/raw/main/kenmei.user.css
-@version        0.16.1
+@version        0.16.2
 @description    A new userstyle
 @author         ushruff
 @preprocessor   stylus
@@ -102,6 +102,9 @@
   }
   .border-gray-300 {
     border-color: #6d798a;
+  }
+  .dark_border-gray-700 {
+    border-color: var(--bg-1);
   }
   .text-blue-600 {
     color: #4EA8DE;
@@ -1283,6 +1286,10 @@
         color: #4EA8DE;
       }
     }
+    div:has(.filter-popover--button):focus-visible, 
+    div:has(.menu--button):focus-visible {
+      outline: none;
+    }
     .filter-icon--chevron, .icon--chevron {
       color: inherit;
     }
@@ -1351,6 +1358,14 @@
           --tw-ring-offset-width: 2px;
         }
       }
+    }
+
+    /* Card Skeleton */
+    .bg-gray-400.animate-pulse {
+      background-color: var(--bg-4);
+    }
+    ul > li > a > div > .bg-gray-400 {
+      background-color: var(--bg-4);
     }
   }
 }

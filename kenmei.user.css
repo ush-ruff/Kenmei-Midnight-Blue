@@ -3,7 +3,7 @@
 @namespace      github.com/ush-ruff
 @homepageURL    https://github.com/ush-ruff/Kenmei-Midnight-Blue
 @updateURL      https://github.com/ush-ruff/Kenmei-Midnight-Blue/raw/main/kenmei.user.css
-@version        0.15.5
+@version        0.16.0
 @description    A new userstyle
 @author         ushruff
 @preprocessor   stylus
@@ -1232,6 +1232,122 @@
       background-size: 150px;
       background-position: center;
       background-repeat: no-repeat;
+    }
+  }
+}
+
+@-moz-document url("https://www.kenmei.co/discovery"), url-prefix("https://www.kenmei.co/search?") {
+  /* DISCOVERY & BROWSE/SEARCH */
+  #app #home .router--wrapper > div {
+    a {
+      color: #4EA8DE;
+
+      &:hover, &:focus {
+        color: #48BFE3;
+      }
+    }
+    #collection-heading {
+      color: #e3eaf2;
+    }
+
+    /* Series Cards */
+    .series-title {
+      color: #d4dce6;
+    }
+    .series-subtitle {
+      color: #9dabbe;
+    }
+    [data-tippy-root] {
+      inset: auto auto -3px 0 !important;
+    }
+    .tippy-box {
+      background-color: var(--bg-4)
+      border-radius: 0 0 4px 4px;
+    }
+    .splide__slide--wrapper {    
+      background-color: var(--bg-5);
+    }
+
+    /* Filter */
+    .filter-popover--button, .menu--button {
+      color: #9dabbe;
+      
+      &:hover {
+        color: #d4dce6;
+      }
+      
+      &[aria-expanded="true"] {
+        color: #4EA8DE;
+      }
+    }
+    .filter-icon--chevron, .icon--chevron {
+      color: inherit;
+    }
+    .menu--button-selected {
+      background-color: #4EA8DE;
+    }
+    .button--clear-filters {
+      color: #9dabbe;
+      
+      &:hover {
+        color: #4EA8DE;
+      }
+    }
+    .filter-popover--selected {
+      background-color: #4EA8DE;
+      color: #d4dce6;
+    }
+    
+    /* Dropdown */
+    .filter-popover--panel, .menu-items {
+      background-color: var(--bg-4);
+      border: 1px solid var(--bg-4);
+      --tw-shadow: 0 25px 50px -12px rgba(black, 0.5);
+      
+      a {
+        color: #9dabbe;
+      }
+      a:hover {
+        background-color: var(--bg-2);
+        color: #d4dce6;
+      }
+      h3 {
+        color #d4dce6;
+      }
+    }
+    .os-scrollbar .os-scrollbar-handle {
+      background-color: hsla($bg5, 0.8);
+    }
+    
+    /* Checkboxes */
+    input[type="checkbox"] {
+      background-color: var(--bg-1);
+      border-color: var(--bg-4);
+      color: #8f9db0;
+      
+      &:focus {
+        background-color: var(--bg-1);
+        border-color: var(--bg-4);
+        --tw-ring-color: #4EA8DE;
+        --tw-ring-offset-color: var(--bg-5);
+        --tw-ring-offset-width: 0px;
+      }
+      &:checked, &:checked:focus, &:checked:hover {
+        background-color: #4EA8DE;
+        border-color: #4EA8DE;
+        --tw-ring-offset-color: var(--bg-4);
+        --tw-ring-offset-width: 2px;
+      }
+      &:indeterminate {
+        background-color: #4EA8DE;
+        
+        &:focus, &:hover {
+          background-color: #4EA8DE;
+          border-color: #4EA8DE;
+          outline-color: transparent;
+          --tw-ring-offset-width: 2px;
+        }
+      }
     }
   }
 }

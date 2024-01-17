@@ -3,7 +3,7 @@
 @namespace      github.com/ush-ruff
 @homepageURL    https://github.com/ush-ruff/Kenmei-Midnight-Blue
 @updateURL      https://github.com/ush-ruff/Kenmei-Midnight-Blue/raw/main/kenmei.user.css
-@version        0.15.3
+@version        0.15.4
 @description    A new userstyle
 @author         ushruff
 @preprocessor   stylus
@@ -637,7 +637,7 @@
   }
 
   /* Modals - Edit, Import, Add Manga, Report, Delete */
-  #app {
+  .vfm__content {
     .modal-body {
       background-color: var(--bg-3);
       box-shadow: 0 0 10px 4px var(--bg-4);
@@ -645,64 +645,44 @@
       .bg-white {
         background-color: inherit;
       }
-      .modal-actions {
-        background-color: var(--bg-1);
-      }
-      .online-indicator-ping, .online-indicator {
-        background-color: #29c778;
-      }
-      .offline-indicator {
-        background-color: #7a8696;
-      }
       h3, label, .label {
         color: #d4dce6;
       }
-      .tab {
-        color: #9dabbe;
-
-        &:hover {
-          border-color: #d4dce6;
-          color: #d4dce6;
-        }
-      }
-      .active-tab {
-        border-color: #4EA8DE;
-        color: #4EA8DE;
-      }
-      .not-found, .selector-toggle {
-        color: #7a8696;
-      }
-      a {
+      .selector-toggle a {
         color: #4EA8DE;
 
         &:hover, &:focus {
           color: #48BFE3;
         }
       }
-      .dropdown-body {
-        background-color: var(--bg-4);
-        border: 1px solid var(--bg-4);
-
-        .dropdown-body_content {
-          background-color: transparent;
-        }
-        a {
-          color: #9dabbe;
-
-          &:focus, &:hover {
-            background-color: var(--bg-2);
-            color: #d4dce6;
-          }
-        }
+      .not-found, .selector-toggle {
+        color: #7a8696;
       }
-      .vs__dropdown-toggle {
+      
+      .online-indicator-ping, .online-indicator {
+        background-color: #29c778;
+      }
+      .offline-indicator {
+        background-color: #7a8696;
+      }
+      .os-scrollbar .os-scrollbar-handle {
+        background-color: hsla($bg5, 0.4);
+      }
+      
+      /* Dropdown */
+      .list-button, .multiselect .vs__dropdown-toggle {
         background-color: var(--bg-1);
         border-color: var(--bg-3);
         
         &[aria-expanded="true"] {
           border-color: #4EA8DE;
         }
-        
+        &:focus {
+          --tw-ring-color: #4EA8DE;
+          border-color: var(--tw-ring-color);
+        }
+      }
+      .multiselect .vs__dropdown-toggle {
         .vs__selected {
           color: #9dabbe;
           
@@ -711,9 +691,13 @@
           }
         }
       }
-      .vs__dropdown-menu {
+      
+      /* Dropdown Body */
+      .options, .vs__dropdown-menu {
         background-color: var(--bg-4);
         border: 1px solid var(--bg-4);
+        scrollbar-width: thin;
+        scrollbar-color: var(--bg-4) var(--bg-1);
         
         span:not(.checkmark) {
           color: #9dabbe;
@@ -722,32 +706,15 @@
           color: #4EA8DE;
         }
       }
-      .vs__dropdown-option--highlight {
+      .options-active, .multiselect .vs__dropdown-option--highlight, .multiselect .vs__dropdown-option:hover {
         background-color: var(--bg-2);
         
         span:not(.checkmark) {
           color: #d4dce6;
         }
       }
-      .os-scrollbar .os-scrollbar-handle {
-        background-color: hsla($bg5, 0.4);
-      }
-      .selection-button {
-        background-color: var(--bg-1);
-        border-color: var(--bg-4);
-      }
-      .selected-value {
-        color: #d4dce6;
-      }
-      .button--disclosure {
-        span {
-          background-color: var(--bg-3);
-          color: #9dabbe;
-        }
-        .icon--chevron {
-          color: #9dabbe;
-        }
-      }
+      
+      /* Number Input */
       .vue-number-input {
         .vue-number-input__input {
           background-color: var(--bg-1);
@@ -762,6 +729,11 @@
           background-color: #4EA8DE;
         }
       }
+      
+      /* Footer */
+      .modal-actions {
+        background-color: var(--bg-1);
+      }
       .btn-danger {
         background-color: #822222;
         color: #d8d0d0;
@@ -775,7 +747,6 @@
           --tw-ring-offset-color: var(--bg-1);
         }
       }
-    }
   }
 
   /* Search */
@@ -988,7 +959,7 @@
   }
 
   /* --- Primary Button --- */
-  #app {
+  #app, .vfm__content {
     .btn-primary {
       background-color: #4EA8DE;
       
@@ -1002,7 +973,7 @@
   }
 
   /* --- Secondary Button --- */
-  #app {
+  #app, .vfm__content {
     .btn-secondary {
       background: var(--bg-5);
       border-color: var(--bg-5);

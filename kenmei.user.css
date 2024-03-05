@@ -3,7 +3,7 @@
 @namespace      github.com/ush-ruff
 @homepageURL    https://github.com/ush-ruff/Kenmei-Midnight-Blue
 @updateURL      https://github.com/ush-ruff/Kenmei-Midnight-Blue/raw/main/kenmei.user.css
-@version        0.16.2
+@version        0.16.3
 @description    A new userstyle
 @author         ushruff
 @preprocessor   stylus
@@ -399,7 +399,8 @@
 
   /* Checkboxes */
   .the-dashboard, 
-  .top-drawer + div > div:nth-child(2) {
+  .top-drawer + div > div:nth-child(2), 
+  .vfm__content {
     input[type="checkbox"] {
       background-color: var(--bg-1);
       border-color: var(--bg-4);
@@ -814,65 +815,65 @@
 
 
   /* SERIES DETAILS */
-#app .series-details--wrapper {
-  /* Sidebar */
-  dl {
-    background-color: var(--bg-3);
-  }
-  dt > p {
-    color: #9dabbe;
-  }
-  dd > p {
-    color: #d4dce6;
-  }
-  .image-wrapper img {
-    background-color: var(--bg-4);
-  }
-  
-  /* Header Tabs */
-  .tab {
-    color: #9dabbe;
-    
-    &:not(.disabled):hover {
-      border-color: #d4dce6;
+  #app .series-details--wrapper {
+    /* Sidebar */
+    dl {
+      background-color: var(--bg-3);
+    }
+    dt > p {
+      color: #9dabbe;
+    }
+    dd > p {
       color: #d4dce6;
     }
-  }
-  .active-tab {
-    border-color: #4EA8DE;
-    color: #4EA8DE;
-  }
-  
-  /* Main Content */
-  .divide-gray-200 > :not([hidden]) ~ :not([hidden]) {
-    border-color: var(--bg-1);
-  }
-  h1 {
-    color: #e3eaf2;
-  }
-  h2, .series-title {
-    color: #d4dce6;
-  }
-  .prose, .series-subtitle {
-    color: #9dabbe;
-  }
-  .title--link {
-    color: #4EA8DE;
+    .image-wrapper img {
+      background-color: var(--bg-4);
+    }
     
-    &:hover {
-      color: #48BFE3;
+    /* Header Tabs */
+    .tab {
+      color: #9dabbe;
+      
+      &:not(.disabled):hover {
+        border-color: #d4dce6;
+        color: #d4dce6;
+      }
+    }
+    .active-tab {
+      border-color: #4EA8DE;
+      color: #4EA8DE;
+    }
+    
+    /* Main Content */
+    .divide-gray-200 > :not([hidden]) ~ :not([hidden]) {
+      border-color: var(--bg-1);
+    }
+    h1 {
+      color: #e3eaf2;
+    }
+    h2, .series-title {
+      color: #d4dce6;
+    }
+    .prose, .series-subtitle {
+      color: #9dabbe;
+    }
+    .title--link {
+      color: #4EA8DE;
+      
+      &:hover {
+        color: #48BFE3;
+      }
+    }
+    .primary {
+      background-color: var(--bg-5);
+      color: #b4c3d7;
+    }
+    
+    /* Card Skeleton */
+    .bg-gray-400.animate-pulse, .subtitle {
+      background-color: var(--bg-4);
     }
   }
-  .primary {
-    background-color: var(--bg-5);
-    color: #b4c3d7;
-  }
-  
-  /* Card Skeleton */
-  .bg-gray-400.animate-pulse, .subtitle {
-    background-color: var(--bg-4);
-  }
-}
 
 
   /* SETTINGS */
@@ -961,7 +962,7 @@
   }
 
   /* --- Inputs --- */
-  #app {
+  #app, .vfm__content {
     input[type="text"], input[type="password"] {
       background: var(--bg-1);
       border-color: var(--bg-4);

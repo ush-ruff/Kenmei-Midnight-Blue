@@ -3,7 +3,7 @@
 @namespace      github.com/ush-ruff
 @homepageURL    https://github.com/ush-ruff/Kenmei-Midnight-Blue
 @updateURL      https://github.com/ush-ruff/Kenmei-Midnight-Blue/raw/main/kenmei.user.css
-@version        0.17.0
+@version        0.18.0
 @description    A new userstyle
 @author         ushruff
 @preprocessor   stylus
@@ -1096,59 +1096,70 @@
 @-moz-document url("https://www.kenmei.co/pricing") {
   /* ---- Pricing ---- */
   #app {
-    h1 {
-      color: #9dabbe;
+    .text-gray-600 {
+      color: #8f9db0;
     }
-    .bg-gray-100 {
-      background-color: var(--bg-1);
-    }
-    .billing-switch {
-      color: #9dabbe;
-    }
-    .billing-switch__active {
-      background-color: var(--bg-4);
+    .text-gray-900, .text-white, h2, 
+    .testimonials--header p, 
+    .text-blue-100 {
       color: #d4dce6;
     }
-    .tier-box-wrapper {
-      border-width: 2px;
-      border-color: var(--bg-5);
+    .dark_text-white {
+      color: #cbd2db;
     }
-    .tier-box-wrapper .bg-white,
-    .middle-tier-box .bg-white {
-      background-color: var(--bg-1);
-    }
-    .text-gray-900 {
-      color: #d4dce6;
-    }
-    .text-gray-500 {
+    blockquote, p {
       color: #9dabbe;
     }
-    .border-blue-600 {
-      border-color: #4EA8DE;
-    }
-    .bg-blue-600 {
+    .bg-blue-500 {
       background-color: #4EA8DE;
     }
-    .features-list-body {
-      background-color: var(--bg-4);
-      border-color: var(--bg-5);
+    .plan-picker--wrapper .bg-white {
+      background-color: var(--bg-3);
+      background-image: radial-gradient(circle, var(--bg-5) 35%, var(--bg-2));
       
-      p.bg-gray-400 {
-        padding: 0.25rem 1rem;
-        font-weight: 200;
+      .text-gray-600 {
         color: #d4dce6;
-        border-radius: 100vw;
+      }  
+      .border-t > :not([hidden]) ~ :not([hidden]) {
+        border-color: #8f9db033;
       }
     }
-    .feature-text {
-      color: #9dabbe;
-    }
-    .discount-badge {
+    .bg-green-500 {
       background-color: #29c778;
       color: #193f41;
     }
-    .text-green-500 {
-      color: #29c778;
+    .feature-highlight {
+      background-color: var(--bg-4);
+    }
+    .feature-highlight--wrapper {
+      h2, dt {
+        color: #4EA8DE;
+      }
+      dl {
+        color: inherit;
+      }
+    }
+    .tabs--wrapper {
+      .bg-white {
+        background-color: #ffffff1a;
+      }
+      .text-blue-600 {
+        color: #d4dce6;
+      }
+    }
+    .testimonials--header h2 {
+      color: #4EA8DE;
+    }
+    .testimonials--wrapper {
+      .sm_bg-white {
+        background-color: var(--bg-4);
+      }
+    }
+    .button--disclosure {
+      color: #9dabbe;
+    }
+    dl > :not([hidden]) ~ :not([hidden]) {
+      border-color: #8f9db033;
     }
   }
 }

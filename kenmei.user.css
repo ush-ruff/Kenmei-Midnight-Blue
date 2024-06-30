@@ -3,7 +3,7 @@
 @namespace      github.com/ush-ruff
 @homepageURL    https://github.com/ush-ruff/Kenmei-Midnight-Blue
 @updateURL      https://github.com/ush-ruff/Kenmei-Midnight-Blue/raw/main/kenmei.user.css
-@version        0.19.1
+@version        0.19.2
 @description    A new userstyle
 @author         ushruff
 @preprocessor   stylus
@@ -270,30 +270,28 @@
         color: #4EA8DE;
       }
     }
-
-    .btn--search {
-      --_size: 32px;
-      display: grid;
-      place-items: center;
-      width: var(--_size);
-      height: var(--_size);
+    
+    .profile .btn--input {
       background-color: var(--bg-1);
-      color: #9dabbe;
       
-      &:hover, &:active, &:focus {
-        color: #d4dce6;
-      }
-
-      &:focus {
-        border-color: #4EA8DE;
+      &:hover, &:focus {
         --tw-ring-color: #4EA8DE;
-        --tw-ring-offset-color: var(--bg-4);
-        --tw-ring-offset-width: 3px;
       }
+      
+      kbd {
+        background-color: var(--bg-3);
+        border-color: var(--bg-4);
+      }
+    }
+    
+    .profile .btn-avatar:focus {
+      --tw-ring-offset-color: var(--bg-4);
+      --tw-ring-color: #4EA8DE;
     }
 
     .dropdown-wrapper {
       background-color: var(--bg-2);
+      
       .dark_text-white:not(.text-gray-900) {
         color: #d4dce6;
       }
@@ -305,6 +303,10 @@
           background-color: var(--bg-5);
           color: #d4dce6;
         }
+      }
+      
+      .header {
+        border-color: var(--bg-5);
       }
     }
   }

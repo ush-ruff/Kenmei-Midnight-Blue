@@ -3,7 +3,7 @@
 @namespace      github.com/ush-ruff
 @homepageURL    https://github.com/ush-ruff/Kenmei-Midnight-Blue
 @updateURL      https://github.com/ush-ruff/Kenmei-Midnight-Blue/raw/main/kenmei.user.css
-@version        0.19.0
+@version        0.19.1
 @description    A new userstyle
 @author         ushruff
 @preprocessor   stylus
@@ -1117,6 +1117,10 @@
       }
     }
   }
+  
+  .settings h3 {
+    color: #d4dce6;
+  }
 
   .settings .primary {
     background-color: var(--bg-5);
@@ -1187,6 +1191,53 @@
 
     .icon {
       color: #9dabbe;
+    }
+  }
+  
+  #home {
+    .list-button {
+      background-color: var(--bg-1);
+      border-color: var(--bg-3);
+
+      &[aria-expanded="true"] {
+        border-color: #4EA8DE;
+      }
+
+      &:focus {
+        --tw-ring-color: #4EA8DE;
+        border-color: var(--tw-ring-color);
+      }
+    }
+    
+    .options {
+      background-color: var(--bg-4);
+      border: 1px solid var(--bg-4);
+      scrollbar-width: thin;
+      
+      li {
+        color: #9dabbe;
+        
+        &:focus, &:hover {
+          background-color: var(--bg-2);
+          color: #d4dce6;
+        }
+      }
+      
+      li:first-child {
+        border-radius: .375rem .375rem 0 0;
+      }
+      
+      li:last-child {
+        border-radius: 0 0 .375rem .375rem;
+      }
+      
+      .checkmark {
+        color: #4EA8DE;
+      }
+      
+      &-active {
+        background-color: var(--bg-3);
+      }
     }
   }
 
@@ -1676,7 +1727,7 @@
     .bg-gray-400.animate-pulse {
       background-color: var(--bg-4);
     }
-    
+
     ul > li > a > div > .bg-gray-400 {
       background-color: var(--bg-4);
     }

@@ -3,7 +3,7 @@
 @namespace      github.com/ush-ruff
 @homepageURL    https://github.com/ush-ruff/Kenmei-Midnight-Blue
 @updateURL      https://github.com/ush-ruff/Kenmei-Midnight-Blue/raw/main/kenmei.user.css
-@version        0.19.2
+@version        0.19.3
 @description    A new userstyle
 @author         ushruff
 @preprocessor   stylus
@@ -151,8 +151,8 @@
   }
 
   /* LOGIN */
-  [data-form-type="login"] {
-    a {
+  .modal-body[data-v-7fb6ed76] {
+    .btn--link {
       color: #4EA8DE;
       
       &:hover {
@@ -160,12 +160,8 @@
       }
     }
 
-    label {
+    label, .dark_text-white {
       color: #9dabbe !important;
-    }
-
-    input[data-v-e32367a8]:focus {
-      --tw-ring-offset-color: var(--bg-4);
     }
   }
 

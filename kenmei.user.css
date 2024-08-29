@@ -3,7 +3,7 @@
 @namespace      github.com/ush-ruff
 @homepageURL    https://github.com/ush-ruff/Kenmei-Midnight-Blue
 @updateURL      https://github.com/ush-ruff/Kenmei-Midnight-Blue/raw/main/kenmei.user.css
-@version        0.19.3
+@version        0.20.0
 @description    A new userstyle
 @author         ushruff
 @preprocessor   stylus
@@ -403,7 +403,9 @@
   /* TOP DRAWER */
   /* Header Buttons - Select, Filter, Sort, Add, Etc. */
   #app {
-    .container--actions button {
+    .container--actions button,
+    .container--actions + div > div > button,
+    [aria-labelledby="filter-heading"] button {
       background-color: var(--bg-1);
       border-color: var(--bg-3);
       color: #9dabbe;
@@ -418,30 +420,41 @@
         --tw-ring-shadow: 0 0 0 1px var(--tw-ring-color);
         --tw-ring-offset-shadow: unset;
       }
+      
+      .dark_text-white {
+        color: inherit;
+      }
     }
 
-    .container--actions + div > div > button {
-      background-color: var(--bg-1);
-      border-color: var(--bg-3);
-      color: #9dabbe;
-      
-      &:hover, &:active, &[aria-expanded="true"] {
-        color: #d4dce6;
-      }
-
+    .container--actions + div > div > button,
+    [aria-labelledby="filter-heading"] button {
       /* Button with Tags selected */
       &:has(> div) {
-        color: #d4dce6;
+        color: #9dabbe;
         
         .bg-gray-100 {
+          font-weight: 500;
           background-color: #4EA8DE;
           color: var(--bg-4);
+          
+          &:hover {
+            filter: brightness(0.85);
+          }
+        }
+        
+        [role="separator"] {
+          background-color: #9dabbe;
         }
       }
 
       /* Reset Button */
-      &:has(path[d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"]) {
+      &.reset-button {
+				background-color: #b55151;
         color: #d4dce6;
+        
+        &:hover {
+          filter: brightness(1.15);
+        }
       }
     }
     
@@ -459,10 +472,16 @@
   /* Dropdown */
   #radix-vue-select-content-1,
   #radix-vue-select-content-2,
+  #radix-vue-select-content-3,
+	#radix-vue-select-content-123,
+	#radix-vue-select-content-124,
   #radix-vue-popover-content-4,
   #radix-vue-popover-content-5,
   #radix-vue-popover-content-6,
-  #radix-vue-popover-content-27 {
+  #radix-vue-popover-content-27,
+  #radix-vue-popover-content-125,
+  #radix-vue-popover-content-126,
+  #radix-vue-popover-content-127 {
     background-color: var(--bg-4);
     border: 1px solid var(--bg-4);
     scrollbar-width: thin;

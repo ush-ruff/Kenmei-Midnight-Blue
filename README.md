@@ -16,14 +16,13 @@ This is a dark userstyle for Kenmei with a blue color palette. It completely res
 ![Style Settings](images/style-settings.png)
 
 ## Install and setup
-In order to use this theme or any other userstyles you will need to install a browser extension. I recommend using the following.
+In order to use this theme or any other userstyles you will need to install a browser extension. I recommend using the Stylus extension.
 
-### Stylus Browser extension: 
-Stylus - Get the addon for: 
+### Browser extension:
+Get the Stylus addon for:
 
-[![Firefox](https://github.com/ush-ruff/YouTube-Ash-Dark/raw/main/images/firefox.png)](https://addons.mozilla.org/en-US/firefox/addon/styl-us/)
-[![Chrome](https://github.com/ush-ruff/YouTube-Ash-Dark/raw/main/images/chrome.png)](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne) 
-[![Opera](https://github.com/ush-ruff/YouTube-Ash-Dark/raw/main/images/opera.png)](https://addons.opera.com/en-gb/extensions/details/stylus/)
+[![Firefox](https://raw.githubusercontent.com/ush-ruff/Common/refs/heads/main/Icons/Browsers/firefox.png)](https://addons.mozilla.org/en-US/firefox/addon/styl-us/)
+[![Chrome](https://raw.githubusercontent.com/ush-ruff/Common/refs/heads/main/Icons/Browsers/chrome.png)](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne)
 
 ### Install this theme:
 Once you have installed the browser extension click on the link below to install this theme.

@@ -3,7 +3,7 @@
 @namespace      github.com/ush-ruff
 @homepageURL    https://github.com/ush-ruff/Kenmei-Midnight-Blue
 @updateURL      https://github.com/ush-ruff/Kenmei-Midnight-Blue/raw/main/kenmei.user.css
-@version        0.21.1
+@version        0.21.2
 @description    A new userstyle
 @author         ushruff
 @preprocessor   stylus
@@ -501,6 +501,8 @@
   #radix-vue-select-content-v-1,
   #radix-vue-select-content-v-33,
   #radix-vue-select-content-v-34, 
+  #radix-vue-select-content-v-54, 
+  #radix-vue-select-content-v-55, 
   #radix-vue-popover-content-v-9, 
   #radix-vue-popover-content-v-10, 
   #radix-vue-popover-content-v-11, 
@@ -513,7 +515,11 @@
   #radix-vue-popover-content-v-59, 
   #radix-vue-popover-content-v-60, 
   #radix-vue-popover-content-v-61, 
-  #radix-vue-popover-content-v-62, 
+  #radix-vue-popover-content-v-62,
+  #radix-vue-popover-content-v-80,
+  #radix-vue-popover-content-v-81,
+  #radix-vue-popover-content-v-82,
+  #radix-vue-popover-content-v-83,
   #radix-vue-popover-content-v-389 {
     background-color: var(--bg-4);
     border: 1px solid var(--bg-4);
@@ -1146,6 +1152,10 @@
   }
 
   /* SERIES DETAILS */
+  .prose {
+    --tw-prose-bold: #e3eaf2;
+  }
+
   #app .series-details--wrapper {
     /* Sidebar */
     dl {
@@ -1223,6 +1233,11 @@
     .bg-gray-400.animate-pulse,
     .subtitle {
       background-color: var(--bg-4);
+    }
+
+    /* Rating */
+    .rating {
+      background-color: var(--bg-3);
     }
   }
 

@@ -3,7 +3,7 @@
 @namespace      github.com/ush-ruff
 @homepageURL    https://github.com/ush-ruff/Kenmei-Midnight-Blue
 @updateURL      https://github.com/ush-ruff/Kenmei-Midnight-Blue/raw/main/kenmei.user.css
-@version        0.21.0
+@version        0.21.1
 @description    A new userstyle
 @author         ushruff
 @preprocessor   stylus
@@ -417,7 +417,8 @@
   #app {
     .container--actions button,
     .container--actions + div > div > button,
-    [aria-labelledby="filter-heading"] button {
+    [aria-labelledby="filter-heading"] button, 
+    .container--actions + div > div.flex-none span.inline-flex > button {
       background-color: var(--bg-1);
       border-color: var(--bg-3);
       color: #9dabbe;
@@ -433,7 +434,8 @@
         --tw-ring-offset-shadow: unset;
       }
       
-      .dark_text-white {
+      .dark_text-white, 
+      .group-hover_text-gray-800 {
         color: inherit;
       }
     }
@@ -494,14 +496,24 @@
   #radix-vue-popover-content-125,
   #radix-vue-popover-content-126,
   #radix-vue-popover-content-127,
- 
+
   #radix-vue-select-content-v-0, 
   #radix-vue-select-content-v-1,
+  #radix-vue-select-content-v-33,
+  #radix-vue-select-content-v-34, 
   #radix-vue-popover-content-v-9, 
   #radix-vue-popover-content-v-10, 
   #radix-vue-popover-content-v-11, 
   #radix-vue-popover-content-v-12, 
+  #radix-vue-popover-content-v-13, 
+  #radix-vue-popover-content-v-14, 
+  #radix-vue-popover-content-v-15, 
   #radix-vue-popover-content-v-33, 
+  #radix-vue-popover-content-v-36, 
+  #radix-vue-popover-content-v-59, 
+  #radix-vue-popover-content-v-60, 
+  #radix-vue-popover-content-v-61, 
+  #radix-vue-popover-content-v-62, 
   #radix-vue-popover-content-v-389 {
     background-color: var(--bg-4);
     border: 1px solid var(--bg-4);

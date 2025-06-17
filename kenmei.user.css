@@ -3,7 +3,7 @@
 @namespace      github.com/ush-ruff
 @homepageURL    https://github.com/ush-ruff/Kenmei-Midnight-Blue
 @updateURL      https://github.com/ush-ruff/Kenmei-Midnight-Blue/raw/main/kenmei.user.css
-@version        0.22.1.1
+@version        0.22.1.2
 @description    A new userstyle
 @author         ushruff
 @preprocessor   stylus
@@ -15,7 +15,7 @@
 ==/UserStyle== */
 @-moz-document domain("kenmei.co") {
   /* ----- COMMON ----- */
-
+  /* ---- SETUP ---- */
   $bg1=#2e3947;
   $bg2=#222f41;
   $bg3=#1c2633;
@@ -71,6 +71,7 @@
     scrollbar-width: thin;
   }
 
+  /* ---- COMMON STYLING ---- */
   html {
     background: var(--bg-4);
   }
@@ -174,7 +175,7 @@
     border-color: var(--bg-1);
   }
 
-  /* LOGIN */
+  /* ---- LOGIN ---- */
   .modal-body[data-v-7fb6ed76] {
     .btn--link {
       color: var(--accent-1);
@@ -209,7 +210,7 @@
     }
   }
 
-  /* FOOTER */
+  /* ---- FOOTER ---- */
   #app footer {
     background-color: var(--bg-4);
     border-color: var(--bg-3);
@@ -227,7 +228,7 @@
     }
   }
 
-  /* POPUP */
+  /* ---- POPUP ---- */
   .el-message {
     background-color: var(--bg-5);
     border-color: var(--bg-1);
@@ -239,7 +240,7 @@
     color: inherit;
   }
 
-  /* UPDATE PROMPT */
+  /* ---- UPDATE PROMPT ---- */
   #app .prompt-wrapper {
     background-color: var(--bg-4);
     box-shadow: 0 0 10px rgba(black, 0.4);
@@ -271,7 +272,7 @@
     }
   }
 
-  /* HEADER */
+  /* ---- HEADER ---- */
   #app header {
     .desktop-links > div:first-child img {
       filter: brightness(2);
@@ -335,7 +336,69 @@
     filter: brightness(1.65)
   }
 
-  /* --- Dropdown --- */
+  /* ---- DROPDOWNS ---- */
+  [id^="radix-vue-select-content-v"], [id^="radix-vue-popover-content-v"] {
+    background-color: var(--bg-4);
+    border: 1px solid var(--bg-4);
+    scrollbar-width: thin;
+    
+    .bg-white {
+      background-color: var(--bg-4);
+    }
+
+    /* Search */
+    [cmdk-input-wrapper] {
+      border-color: var(--bg-1);
+      color: var(--cl-3);
+    }
+
+    /* Options*/
+    [role="listbox"],
+    [role="group"] {
+      color: var(--cl-3);
+    }
+
+    [role="option"] {
+      color: var(--cl-3);
+      
+      &:hover, &:focus, &[data-highlighted] {
+        background-color: var(--bg-2);
+        color: var(--cl-2);
+      }
+    }
+    
+    .os-scrollbar .os-scrollbar-handle {
+      background-color: hsla($bg5, 0.4);
+    }
+
+    /* Tabs - Desc/Asc   */
+    [role="tablist"] {
+      gap: 0.25rem;
+      background-color: var(--bg-4);
+      
+      [data-active="true"],
+      [data-active="false"]:hover {
+        background-color: var(--bg-2);
+        color: var(--cl-2);
+      }
+    }
+
+    /* Checkbox */
+    .checkbox {
+      background-color: var(--bg-1);
+      border-color: var(--bg-4);
+    }
+
+    .checkbox.bg-blue-600 {
+      background-color: var(--accent-1);
+    }
+
+    /* Separator*/
+    .bg-gray-200 {
+      background-color: var(--bg-1);
+    }
+  }
+
   .base-dropdown {
     button {
       color: var(--cl-3);
@@ -412,7 +475,7 @@
     }
   }
 
-  /* --- Inputs --- */
+  /* ---- INPUTS ---- */
   #app,
   .vfm__content {
     input[type="text"],
@@ -441,7 +504,7 @@
     }
   }
 
-  /* --- Primary Button --- */
+  /* ---- PRIMARY BUTTON ---- */
   #app,
   .vfm__content {
     .btn-primary,
@@ -458,7 +521,7 @@
     }
   }
 
-  /* --- Secondary Button --- */
+  /* ---- SECONDARY BUTTON ---- */
   #app,
   .vfm__content {
     .btn-secondary {
@@ -481,98 +544,13 @@
 @-moz-document domain("kenmei.co") {
   /* LANDING PAGE */
   #landing-page {
-    h1 {
-      color: var(--cl-1);
-    }
 
-    h2, h3, h4, h5 {
-      color: var(--cl-2);
-    }
-
-    p {
-      color: var(--cl-3);
-    }
-
-    .secondary-text {
-      color: var(--cl-5);
-    }
-
-    .btn-action {
-      background-color: var(--accent-1);
-      color: var(--cl-1);
-      
-      &:hover {
-        background-color: var(--accent-2);
-      }
-
-      &:focus {
-        --tw-ring-offset-color: var(--bg-3);
-      }
-    }
-
-    .icon {
-      background-color: var(--accent-1);
-      color: var(--cl-1);
-    }
-
-    .stats-container {
-      background-color: var(--bg-2);
-      border: 1px solid var(--bg-1);
-      
-      .stat-count {
-        color: var(--accent-1);
-      }
-
-      .stat-text {
-        color: var(--cl-3);
-      }
-    }
-
-    .card {
-      background-color: var(--accent-1);
-      .text-blue-200 {
-        color: var(--cl-1);
-      }
-
-      h2 {
-        color: #fff;
-      }
-
-      a {
-        font-weight: 600;
-        background-color: var(--cl-1);
-        color: var(--accent-1);
-        &:hover {
-          background-color: var(--cl-2);
-        }
-      }
-    }
-  }
-
-  /* Hero Image */
-  .hero-text + div {
-    .svg--wrapper {
-      background-color: var(--bg-2);
-    }
-
-    .img-wrapper {
-      margin-inline-start: 3rem;
-      padding: unset;
-      background-image: url(https://raw.githubusercontent.com/ush-ruff/Kenmei-Midnight-Blue/main/images/sc-01.png);
-      border-radius: 0.25rem;
-      box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
-      
-      picture {
-        display: none;
-      }
-    }
   }
 }  
 
 @-moz-document domain("kenmei.co") {
   /* ----- DASHBOARD ----- */
-
-  /* TOP DRAWER */
+  /* ---- TOP DRAWER ---- */
   /* Header Buttons - Select, Filter, Sort, Add, Etc. */
   #app {
     .container--actions button,
@@ -643,69 +621,6 @@
     }
   }
 
-  /* Dropdown */
-  [id^="radix-vue-select-content-v"], [id^="radix-vue-popover-content-v"] {
-    background-color: var(--bg-4);
-    border: 1px solid var(--bg-4);
-    scrollbar-width: thin;
-    
-    .bg-white {
-      background-color: var(--bg-4);
-    }
-
-    /* Search */
-    [cmdk-input-wrapper] {
-      border-color: var(--bg-1);
-      color: var(--cl-3);
-    }
-
-    /* Options*/
-    [role="listbox"],
-    [role="group"] {
-      color: var(--cl-3);
-    }
-
-    [role="option"] {
-      color: var(--cl-3);
-      
-      &:hover, &:focus, &[data-highlighted] {
-        background-color: var(--bg-2);
-        color: var(--cl-2);
-      }
-    }
-    
-    .os-scrollbar .os-scrollbar-handle {
-      background-color: hsla($bg5, 0.4);
-    }
-
-    /* Tabs - Desc/Asc   */
-    [role="tablist"] {
-      gap: 0.25rem;
-      background-color: var(--bg-4);
-      
-      [data-active="true"],
-      [data-active="false"]:hover {
-        background-color: var(--bg-2);
-        color: var(--cl-2);
-      }
-    }
-
-    /* Checkbox */
-    .checkbox {
-      background-color: var(--bg-1);
-      border-color: var(--bg-4);
-    }
-
-    .checkbox.bg-blue-600 {
-      background-color: var(--accent-1);
-    }
-
-    /* Separator*/
-    .bg-gray-200 {
-      background-color: var(--bg-1);
-    }
-  }
-
   /* Smart Suggestions Button */
   #app {
     .btn--icon {
@@ -746,7 +661,7 @@
     }
   }
 
-  /* DASHBOARD */
+  /* ---- DASHBOARD ---- */
   #app {
     .top-drawer {
       background-color: var(--bg-3);
@@ -957,6 +872,7 @@
       
       &:hover {
         color: var(--cl-3);
+
         .group-hover_text-gray-800 {
           color: var(--cl-2);
         }
@@ -1277,7 +1193,7 @@
 }
 
 @-moz-document domain("kenmei.co") {
-  /* SERIES DETAILS */
+  /* ----- SERIES DETAILS ----- */
   .prose {
     --tw-prose-bold: var(--cl-1);
   }
@@ -1369,7 +1285,7 @@
 }
 
 @-moz-document domain("kenmei.co") {
-  /* PROFILE */
+  /* ----- PROFILE ----- */
   #app .profile--header {
     h2 {
       color: var(--cl-1);
@@ -1457,13 +1373,13 @@
       }
     }
     
-    /* Library */
+    /* --- Library --- */
     .series-title {
       font-size: 0.85rem;
       color: var(--cl-2);
     }
     
-    /* Filter */
+    /* --- Filter --- */
     button[aria-expanded] {
       background-color: var(--bg-1);
       border-color: var(--bg-3);
@@ -1479,22 +1395,7 @@
       }
     }
     
-    select {
-      background-color: var(--bg-4);
-      border: 1px solid var(--bg-4);
-      scrollbar-width: thin;
-      
-      option {
-        color: var(--cl-3);
-        
-        &:focus, &:hover {
-          background-color: var(--bg-2);
-          color: var(--cl-2);
-        }
-      }
-    }
-    
-    /* Skeleton */
+    /* --- Skeleton --- */
     .skeleton-card {
       background-color: var(--bg-5);
     }
@@ -1531,7 +1432,7 @@
 }
 
 @-moz-document domain("kenmei.co") {
-  /* SETTINGS */
+  /* ----- SETTINGS ----- */
   #home .router--wrapper > div nav {
     .desktop-link {
       color: var(--cl-2);
@@ -1606,7 +1507,7 @@
 }
 
 @-moz-document url-prefix("https://www.kenmei.co/dashboard") {
-  /* Dashboard Custom Background */
+  /* ----- CUSTOM DASHBOARD BACKGROUND ----- */
   if customBG==1 {
     #home .router--wrapper {
       // background-image: url(https://images.hdqwalls.com/wallpapers/anime-dark-witch-nm.jpg);background-blend-mode: darken;
@@ -1668,7 +1569,7 @@
 }
 
 @-moz-document url("https://www.kenmei.co/pricing") {
-  /* ---- Pricing ---- */
+  /* ----- PRICING ----- */
   #app {
     .text-gray-600 {
       color: var(--cl-4);
@@ -1756,7 +1657,7 @@
 }
 
 @-moz-document url("https://www.kenmei.co/privacy"), url("https://www.kenmei.co/terms") {
-  /* ---- Privacy & Terms of Service ---- */
+  /* ----- PRIVACY & TERMS OF SERVICE ----- */
   .prose h2, 
   .prose h3, 
   .prose h4, 
@@ -1784,7 +1685,7 @@
 }
 
 @-moz-document url("https://status.kenmei.co/") {
-  /* ---- Status ---- */
+  /* ----- STATUS ----- */
   .card {
     background-color: var(--bg-2);
     color: var(--cl-3);
@@ -1819,7 +1720,7 @@
 }
 
 @-moz-document url("https://www.kenmei.co/supported-sites") {
-  /* ---- Supported Sites ---- */
+  /* ----- SUPPORTED SITES ----- */
   .grid-container > a {
     background-color: var(--bg-3);
     color: var(--cl-2);
@@ -1895,7 +1796,7 @@
 }
 
 @-moz-document url("https://www.kenmei.co/discovery"), url-prefix("https://www.kenmei.co/search?") {
-  /* DISCOVERY & BROWSE/SEARCH */
+  /* ----- DISCOVERY & BROWSE/SEARCH ----- */
   #app #home .router--wrapper > div {
     a {
       color: var(--accent-1);

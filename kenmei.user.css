@@ -3,7 +3,7 @@
 @namespace      github.com/ush-ruff
 @homepageURL    https://github.com/ush-ruff/Kenmei-Midnight-Blue
 @updateURL      https://github.com/ush-ruff/Kenmei-Midnight-Blue/raw/main/kenmei.user.css
-@version        0.21.2
+@version        0.22.0
 @description    A new userstyle
 @author         ushruff
 @preprocessor   stylus
@@ -484,43 +484,44 @@
   }
 
   /* Dropdown */
-  #radix-vue-select-content-1,
-  #radix-vue-select-content-2,
-  #radix-vue-select-content-3,
-	#radix-vue-select-content-123,
-	#radix-vue-select-content-124,
-  #radix-vue-popover-content-4,
-  #radix-vue-popover-content-5,
-  #radix-vue-popover-content-6,
-  #radix-vue-popover-content-27,
-  #radix-vue-popover-content-125,
-  #radix-vue-popover-content-126,
-  #radix-vue-popover-content-127,
+  // #radix-vue-select-content-1,
+  // #radix-vue-select-content-2,
+  // #radix-vue-select-content-3,
+	// #radix-vue-select-content-123,
+	// #radix-vue-select-content-124,
+  // #radix-vue-popover-content-4,
+  // #radix-vue-popover-content-5,
+  // #radix-vue-popover-content-6,
+  // #radix-vue-popover-content-27,
+  // #radix-vue-popover-content-125,
+  // #radix-vue-popover-content-126,
+  // #radix-vue-popover-content-127,
 
-  #radix-vue-select-content-v-0, 
-  #radix-vue-select-content-v-1,
-  #radix-vue-select-content-v-33,
-  #radix-vue-select-content-v-34, 
-  #radix-vue-select-content-v-54, 
-  #radix-vue-select-content-v-55, 
-  #radix-vue-popover-content-v-9, 
-  #radix-vue-popover-content-v-10, 
-  #radix-vue-popover-content-v-11, 
-  #radix-vue-popover-content-v-12, 
-  #radix-vue-popover-content-v-13, 
-  #radix-vue-popover-content-v-14, 
-  #radix-vue-popover-content-v-15, 
-  #radix-vue-popover-content-v-33, 
-  #radix-vue-popover-content-v-36, 
-  #radix-vue-popover-content-v-59, 
-  #radix-vue-popover-content-v-60, 
-  #radix-vue-popover-content-v-61, 
-  #radix-vue-popover-content-v-62,
-  #radix-vue-popover-content-v-80,
-  #radix-vue-popover-content-v-81,
-  #radix-vue-popover-content-v-82,
-  #radix-vue-popover-content-v-83,
-  #radix-vue-popover-content-v-389 {
+  // #radix-vue-select-content-v-0, 
+  // #radix-vue-select-content-v-1,
+  // #radix-vue-select-content-v-33,
+  // #radix-vue-select-content-v-34, 
+  // #radix-vue-select-content-v-54, 
+  // #radix-vue-select-content-v-55, 
+  // #radix-vue-popover-content-v-9, 
+  // #radix-vue-popover-content-v-10, 
+  // #radix-vue-popover-content-v-11, 
+  // #radix-vue-popover-content-v-12, 
+  // #radix-vue-popover-content-v-13, 
+  // #radix-vue-popover-content-v-14, 
+  // #radix-vue-popover-content-v-15, 
+  // #radix-vue-popover-content-v-33, 
+  // #radix-vue-popover-content-v-36, 
+  // #radix-vue-popover-content-v-59, 
+  // #radix-vue-popover-content-v-60, 
+  // #radix-vue-popover-content-v-61, 
+  // #radix-vue-popover-content-v-62,
+  // #radix-vue-popover-content-v-80,
+  // #radix-vue-popover-content-v-81,
+  // #radix-vue-popover-content-v-82,
+  // #radix-vue-popover-content-v-83,
+  // #radix-vue-popover-content-v-389 
+  [id^="radix-vue-select-content-v"], [id^="radix-vue-popover-content-v"] {
     background-color: var(--bg-4);
     border: 1px solid var(--bg-4);
     scrollbar-width: thin;
@@ -1238,6 +1239,166 @@
     /* Rating */
     .rating {
       background-color: var(--bg-3);
+    }
+  }
+
+  /* PROFILE */
+  #app .profile--header {
+    h2 {
+      color: #e3eaf2;
+    }
+    
+    .avatar-wrapper {
+      background-color: var(--bg-5);
+    }
+    
+    .avatar-wrapper, .avatar {
+      --tw-ring-color: var(--bg-1);
+    }
+    
+    .desktop-link {
+      background-color: var(--bg-1);
+    }
+    
+    .desktop-link.router-link-active {
+      background-color: var(--bg-1);
+    }
+    
+    .router-link-exact-active.desktop-link > span {
+      background-color: #4EA8DE;
+    }
+  }
+  
+  /* Search Button - Profile page */
+  .profile .btn--input {
+    --tw-ring-color: var(--bg-4);
+    color: #94a3b8; 
+  }
+  
+  /* --- Body --- */
+  #app .profile--body {
+    .section-wrapper {
+      background-color: var(--bg-3);
+    }
+    
+    .divide-gray-100 > :not([hidden]) ~ :not([hidden]), 
+    .divide-gray-200 > :not([hidden]) ~ :not([hidden]) {
+      border-color: var(--bg-1);
+    }
+    
+    .os-scrollbar .os-scrollbar-handle {
+      background-color: var(--bg-5)
+    }
+    
+    h2, h3 {
+      color: #d4dce6;
+    }
+    
+    .activity-text {
+      color: #9dabbe;
+    }
+    
+    .activity-text a {
+      color: #4EA8DE;
+      
+      &:hover {
+        color: #48BFE3;
+      }
+    }
+    
+    .legend-text {
+      color: #8f9db0;
+    }
+    
+    path[d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"] {
+      fill: var(--bg-5);
+    }
+    
+    canvas {
+      background-color: hsla($bg5, 0.5);
+      border-radius: 50%;
+    }
+    
+    /* Edit Button */
+    button[aria-haspopup="dialog"] {
+      background-color: var(--bg-1);
+      border-color: var(--bg-4);
+      color: #9dabbe;
+      
+      &:hover {
+        color: #d4dce6;
+      }
+    }
+    
+    /* Library */
+    .series-title {
+      font-size: 0.85rem;
+      color: #d4dce6;
+    }
+    
+    /* Filter */
+    button[aria-expanded] {
+      background-color: var(--bg-1);
+      border-color: var(--bg-3);
+      color: #9dabbe;
+      
+      &[aria-expanded="true"] {
+        border-color: #4EA8DE;
+      }
+
+      &:focus {
+        --tw-ring-color: #4EA8DE;
+        border-color: var(--tw-ring-color);
+      }
+    }
+    
+    select {
+      background-color: var(--bg-4);
+      border: 1px solid var(--bg-4);
+      scrollbar-width: thin;
+      
+      option {
+        color: #9dabbe;
+        
+        &:focus, &:hover {
+          background-color: var(--bg-2);
+          color: #d4dce6;
+        }
+      }
+    }
+    
+    /* Skeleton */
+    .skeleton-card {
+      background-color: var(--bg-5);
+    }
+    
+    path[d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"] {
+      fill: var(--bg-5);
+    }
+    
+    .animate-pulse.bg-gray-500 {
+      background-color: var(--bg-5);
+    }
+    
+    .skeleton-activity-feed > :not([hidden]) ~ :not([hidden]) {
+      border-color: var(--bg-1);
+    }
+  }
+  
+  /* --- Edit Favourites --- */
+  #radix-vue-dialog-content-v-19 {
+    .bg-gray-50 {
+      background-color: var(--bg-4);
+    }
+    
+    .dark_bg-gray-700 > div > button:first-child {
+      background-color: var(--bg-1);
+      border-color: var(--bg-4);
+      color: #9dabbe;
+      
+      &:hover {
+        color: #d4dce6;
+      }
     }
   }
 

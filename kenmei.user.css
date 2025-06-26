@@ -3,7 +3,7 @@
 @namespace      github.com/ush-ruff
 @homepageURL    https://github.com/ush-ruff/Kenmei-Midnight-Blue
 @updateURL      https://github.com/ush-ruff/Kenmei-Midnight-Blue/raw/main/kenmei.user.css
-@version        0.22.1.2
+@version        0.22.2
 @description    A new userstyle
 @author         ushruff
 @preprocessor   stylus
@@ -1517,7 +1517,7 @@
       background-position: center top;
       background-size: 100vw auto;
       background-repeat: no-repeat;
-      background-attachment: unset;
+      background-attachment: fixed;
       background-image: url(customBgImage);
     }
   }

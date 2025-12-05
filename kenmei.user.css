@@ -3,7 +3,7 @@
 @namespace      github.com/ush-ruff
 @homepageURL    https://github.com/ush-ruff/Kenmei-Midnight-Blue
 @updateURL      https://github.com/ush-ruff/Kenmei-Midnight-Blue/raw/main/kenmei.user.css
-@version        0.22.2
+@version        0.22.3
 @description    A new userstyle
 @author         ushruff
 @preprocessor   stylus
@@ -779,8 +779,9 @@
     }
 
     .primary {
-      background-color: #203ea2;
-      color: #b4c3d7;
+      /* background-color: #203ea2; */
+      background-color: #376cb0;
+      color: #d7e4f5;
     }
 
     .success {

@@ -3,7 +3,7 @@
 @namespace      github.com/ush-ruff
 @homepageURL    https://github.com/ush-ruff/Kenmei-Midnight-Blue
 @updateURL      https://github.com/ush-ruff/Kenmei-Midnight-Blue/raw/main/kenmei.user.css
-@version        0.22.3
+@version        0.23.0
 @description    A new userstyle
 @author         ushruff
 @preprocessor   stylus
@@ -238,6 +238,30 @@
   .el-message .el-icon-info,
   .el-message--info .el-message__content {
     color: inherit;
+  }
+  
+  [data-sonner-toast][data-styled="true"] {
+    background-color: var(--bg-2);
+    border-color: var(--bg-5);
+    color: var(--cl-2);
+  }
+  
+  @css {
+    .group.toast .group-\[\.toast\]_text-gray-500 {
+      color: var(--cl-4);
+    }
+    
+    .group.toast .group-\[\.toast\]_bg-blue-600 {
+      background-color: var(--accent-1);
+      
+      &:hover {
+        background-color: var(--accent-2);
+      }
+
+      &:focus {
+        --tw-ring-offset-color: var(--bg-4);
+      }
+    }
   }
 
   /* ---- UPDATE PROMPT ---- */
@@ -544,7 +568,75 @@
 @-moz-document domain("kenmei.co") {
   /* LANDING PAGE */
   #landing-page {
-
+    #social {
+      background-color: var(--bg-1);
+      border-color: var(--bg-1);
+    }
+    
+    h2 {
+      color: var(--cl-1);
+    }
+    
+    .nav-container {
+      border-color: var(--bg-1);
+    }
+    
+    .nav-link {
+      color: var(--cl-3);
+    }
+    
+    .dashboard-button {
+      background: var(--accent-1);
+    }
+    
+    .hero-text h3 {
+      color: var(--cl-2);
+    }
+    
+    .feature-heading {
+      color: var(--cl-2);
+    }
+    
+    .feature-subheading {
+      color: var(--cl-3);
+    }
+    
+    .feature-text {
+      color: var(--cl-3);
+    }
+    
+    .feature-description {
+      color: var(--cl-4);
+    }
+    
+    .feature-icon-wrapper {
+      background-image: linear-gradient(to bottom, var(--bg-2), var(--bg-3));
+      border-color: var(--bg-2);
+      
+      circle, path {
+        color: var(--cl-2);
+      }
+    }
+    
+    .feature-item .feature-icon-wrapper {
+      background-image: linear-gradient(to bottom, var(--bg-1), var(--bg-4));
+    }
+    
+    #discover .feature-item .feature-icon-wrapper img {
+      filter: invert(0.8);
+    }
+    
+    .dark_divide-slate-700 .feature-item {
+      border-color: var(--bg-1);
+    }
+    
+    #track .button {
+      color: var(--cl-1);
+      
+      &:hover {
+        color: var(--bg-4);
+      }
+    }
   }
 }  
 
@@ -1217,6 +1309,25 @@
       background-color: var(--bg-4);
     }
     
+    .link {
+      background-color: var(--accent-1);
+      border-color: var(--accent-1);
+      color: var(--cl-1);
+      
+      &:hover {
+        background-color: var(--accent-2);
+        border-color: var(--accent-2);
+        color: var(--bg-4);
+      }
+
+      &:focus {
+        --tw-ring-color: var(--accent-2);
+        --tw-ring-offset-color: var(--bg-4);
+        color: var(--bg-4);
+        
+      }
+    }
+    
     /* Summary */
     section:has(> #tags) .dark_bg-gray-900 {
       padding: 0.2rem 0.7rem;
@@ -1281,6 +1392,19 @@
     /* Rating */
     .rating {
       background-color: var(--bg-3);
+      
+      .bar {
+        background-color: var(--bg-4);
+        border-color: var(--bg-4);
+      }
+      
+      dd {
+        color: var(--cl-5);
+      }
+    }
+    
+    .main-score {
+      color: var(--cl-2);
     }
   }
 }
@@ -1820,7 +1944,8 @@
       color: var(--cl-2);
     }
 
-    .series-subtitle {
+    .series-subtitle, 
+    .subtitle {
       color: var(--cl-3);
     }
 

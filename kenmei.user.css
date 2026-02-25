@@ -3,7 +3,7 @@
 @namespace      github.com/ush-ruff
 @homepageURL    https://github.com/ush-ruff/Kenmei-Midnight-Blue
 @updateURL      https://github.com/ush-ruff/Kenmei-Midnight-Blue/raw/main/kenmei.user.css
-@version        0.23.0
+@version        0.23.1
 @description    A new userstyle
 @author         ushruff
 @preprocessor   stylus
@@ -528,9 +528,11 @@
     }
   }
 
-  /* ---- PRIMARY BUTTON ---- */
   #app,
-  .vfm__content {
+  .vfm__content, 
+  [id^="radix-vue-dialog-content-"] {
+    
+  /* ---- PRIMARY BUTTON ---- */
     .btn-primary,
     a.button--link {
       background-color: var(--accent-1);
@@ -543,11 +545,8 @@
         --tw-ring-offset-color: var(--bg-4);
       }
     }
-  }
-
+    
   /* ---- SECONDARY BUTTON ---- */
-  #app,
-  .vfm__content {
     .btn-secondary {
       background: var(--bg-5);
       border-color: var(--bg-5);
@@ -815,7 +814,8 @@
   /* Checkboxes */
   .the-dashboard,
   .top-drawer + div > div:nth-child(2),
-  .vfm__content {
+  .vfm__content, 
+  [id^="radix-vue-dialog-content-"] {
     input[type="checkbox"] {
       background-color: var(--bg-1);
       border-color: var(--bg-4);
@@ -1002,13 +1002,17 @@
 
 
   /* Modals - Edit, Import, Add Manga, Report, Delete */
-  .vfm__content {
-    .modal-body {
+  .vfm__content, [id^="radix-vue-dialog-content-"] {
+    .modal-body, #upsert-entry-panel {
       background-color: var(--bg-3);
       box-shadow: 0 0 10px 4px var(--bg-4);
       
-      .bg-white {
+      .bg-white, .wrapper--title, .actions {
         background-color: inherit;
+      }
+      
+      .wrapper--title {
+        border-color: var(--bg-1);
       }
 
       h1:not(.dark_text-white) {

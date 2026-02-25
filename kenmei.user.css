@@ -3,7 +3,7 @@
 @namespace      github.com/ush-ruff
 @homepageURL    https://github.com/ush-ruff/Kenmei-Midnight-Blue
 @updateURL      https://github.com/ush-ruff/Kenmei-Midnight-Blue/raw/main/kenmei.user.css
-@version        0.23.2
+@version        0.24.0
 @description    A new userstyle
 @author         ushruff
 @preprocessor   stylus
@@ -22,235 +22,249 @@
   $bg4=#141d29;
   $bg5=#3c5474;
   
-  :root {
-    /*
-    --bg-1: #7400B8;
-    --bg-2: #6930C3;
-    --bg-3: #5E60CE;
-    --bg-4: #5390D9;
-    --bg-5: #4EA8DE;
-    --bg-6: #48BFE3;
-    --bg-7: #56CFE1;
-    --bg-8: #64DFDF;
-    --bg-9: #72EFDD;
-    --bg-10: #80FFDB;
-    */
-    
-    /*
-    --bg-1: #334154;
-    --bg-2: #1f2936;
-    --bg-3: #23262c;
-    --bg-4: #1a1d21;
-    */
-    
-    /*
-    --bg-1: #2e3947;
-    --bg-2: #222f41;
-    --bg-3: #1c2633;
-    --bg-4: #141d29;
-    --bg-5: #3c5474;
-    */
-    
-    --bg-1: $bg1;
-    --bg-2: $bg2;
-    --bg-3: $bg3;
-    --bg-4: $bg4;
-    --bg-5: $bg5;
-
-    --cl-1: #e3eaf2;
-    --cl-2: #d4dce6;
-    --cl-3: #9dabbe;
-    --cl-4: #8f9db0;
-    --cl-5: #7a8696;
-    --cl-6: #6d798a;
-
-    --accent-1: #4EA8DE;
-    --accent-2: #48BFE3;
-    
-    scrollbar-color: var(--bg-5) var(--bg-3);
-    scrollbar-width: thin;
-  }
-
-  /* ---- COMMON STYLING ---- */
-  html {
-    background: var(--bg-4);
-  }
-
-  #app .router--wrapper {
-    background-color: var(--bg-1)
-  }
-
-  .bg-white {
-    background-color: var(--bg-3);
-  }
-
-  .dark_bg-blueGray-700,
-  .dark_bg-slate-700 {
-    background-color: var(--bg-1);
-  }
-
-  .dark_bg-gray-900 {
-    background-color: var(--bg-4);
-  }
-  
-  .bg-gray-100 {
-    background-color: var(--bg-1);
-  }
-  
-  .hover_bg-gray-100:hover {
-    background-color: var(--bg-4);
-  }
-
-  .bg-blue-500 {
-    background-color: var(--accent-1);
-  }
-  
-  .bg-blue-600 {
-    background-color: var(--accent-1);
-  }
-  
   @css {
+      
+    :root {
+      /*
+      --bg-1: #7400B8;
+      --bg-2: #6930C3;
+      --bg-3: #5E60CE;
+      --bg-4: #5390D9;
+      --bg-5: #4EA8DE;
+      --bg-6: #48BFE3;
+      --bg-7: #56CFE1;
+      --bg-8: #64DFDF;
+      --bg-9: #72EFDD;
+      --bg-10: #80FFDB;
+      */
+      
+      /*
+      --bg-1: #334154;
+      --bg-2: #1f2936;
+      --bg-3: #23262c;
+      --bg-4: #1a1d21;
+      */
+      
+      /*
+      --bg-1: #2e3947;
+      --bg-2: #222f41;
+      --bg-3: #1c2633;
+      --bg-4: #141d29;
+      --bg-5: #3c5474;
+      */
+
+      --bg-1: #2e3947;
+      --bg-2: #222f41;
+      --bg-3: #1c2633;
+      --bg-4: #141d29;
+      --bg-5: #3c5474;
+
+      --cl-1: #e3eaf2;
+      --cl-2: #d4dce6;
+      --cl-3: #9dabbe;
+      --cl-4: #8f9db0;
+      --cl-5: #7a8696;
+      --cl-6: #6d798a;
+
+      --accent-1: #4EA8DE;
+      --accent-2: #48BFE3;
+      
+      scrollbar-color: var(--bg-5) var(--bg-3);
+      scrollbar-width: thin;
+    }
+
+    /* ---- COMMON STYLING ---- */
+    html {
+      background: var(--bg-4);
+    }
+
+    #app .router--wrapper {
+      background-color: var(--bg-1)
+    }
+
+    .bg-white {
+      background-color: var(--bg-3);
+    }
+
+    .dark_bg-blueGray-700,
+    .dark_bg-slate-700 {
+      background-color: var(--bg-1);
+    }
+
+    .dark_bg-gray-900 {
+      background-color: var(--bg-4);
+    }
+    
+    .bg-gray-100 {
+      background-color: var(--bg-1);
+    }
+    
+    .hover_bg-gray-100:hover {
+      background-color: var(--bg-4);
+    }
+
+    .bg-blue-500 {
+      background-color: var(--accent-1);
+    }
+    
+    .bg-blue-600 {
+      background-color: var(--accent-1);
+    }
+    
     .hover_bg-blue-600\/90:hover {
       background-color: var(--accent-2);
     }
-  }
 
-  .text-black {
-    color: var(--cl-1);
-  }
-
-  .hover_text-gray-300:hover {
-    color: var(--cl-2);
-  }
-  
-  .hover_text-gray-900:hover {
-    color: var(--cl-1);
-  }
-
-  .text-gray-400 {
-    color: var(--cl-3);
-  }
-
-  .text-gray-500 {
-    color: var(--cl-4);
-  }
-
-  .text-gray-700 {
-    color: var(--cl-5);
-  }
-
-  .text-gray-900 {
-    color: var(--cl-6);
-  }
-
-  .dark_text-white {
-    color: var(--cl-2);
-  }
-
-  .border-gray-100 {
-    border-color: var(--bg-5);
-  }
-
-  .border-gray-200 {
-    border-color: var(--bg-1);
-  }
-
-  .border-gray-300 {
-    border-color: var(--cl-6);
-  }
-
-  .dark_border-gray-700 {
-    border-color: var(--bg-1);
-  }
-
-  .text-blue-500 {
-    color: var(--accent-1);
-  }
-
-  .text-blue-600 {
-    color: var(--accent-1);
-  }
-
-  .sm_bg-transparent {
-    background-color: transparent;
-  }
-
-  .sm_divide-gray-100 > :not([hidden]) ~ :not([hidden]) {
-    border-color: var(--bg-1);
-  }
-
-  /* ---- LOGIN ---- */
-  .modal-body[data-v-7fb6ed76] {
-    .btn--link {
-      color: var(--accent-1);
-      
-      &:hover {
-        color: var(--accent-2);
-      }
+    .sm_bg-transparent {
+      background-color: transparent;
     }
-
-    label, .dark_text-white {
-      color: var(--cl-3) !important;
-    }
-  }
-
-  /* SKELETON LOADING */
-  .bg-gray-400 {
-    background-color: var(--bg-5);
-  }
-
-  .list-row__regular:hover .bg-gray-400 {
-    background-color: var(--bg-4);
-  }
-
-  #app, .vfm__content {
-    .skeleton-loader,
-    .skeleton-loader--text,
-    .skeleton-loader--badge,
-    .skeleton-text,
-    .skeleton--subtitle,
-    .skeleton--badge {
+    
+    .focus_bg-gray-100:focus {
       background-color: var(--bg-5);
     }
-  }
 
-  /* ---- FOOTER ---- */
-  #app footer {
-    background-color: var(--bg-4);
-    border-color: var(--bg-3);
+    /* Text */
+    .text-black {
+      color: var(--cl-1);
+    }
+
+    .hover_text-gray-300:hover {
+      color: var(--cl-2);
+    }
     
-    h5 {
+    .hover_text-gray-900:hover {
+      color: var(--cl-1);
+    }
+
+    .text-gray-400 {
+      color: var(--cl-3);
+    }
+
+    .text-gray-500 {
+      color: var(--cl-4);
+    }
+
+    .text-gray-700 {
+      color: var(--cl-5);
+    }
+
+    .text-gray-900 {
+      color: var(--cl-6);
+    }
+    
+    .text-gray-950 {
+      color: var(--cl-6);
+    }
+
+    .dark_text-white {
       color: var(--cl-2);
     }
 
-    .link {
-      color: var(--cl-5);
-      
-      &:hover {
-        color: var(--cl-3);
+    .text-blue-500 {
+      color: var(--accent-1);
+    }
+
+    .text-blue-600 {
+      color: var(--accent-1);
+    }
+    
+    .focus_text-gray-900:focus {
+      color: var(--cl-1);
+    }
+
+    /* Borders */
+    .border-gray-100 {
+      border-color: var(--bg-5);
+    }
+
+    .border-gray-200 {
+      border-color: var(--bg-1);
+    }
+
+    .border-gray-300 {
+      border-color: var(--cl-6);
+    }
+
+    .dark_border-gray-700 {
+      border-color: var(--bg-1);
+    }
+
+    .sm_divide-gray-100 > :not([hidden]) ~ :not([hidden]) {
+      border-color: var(--bg-1);
+    }
+
+    /* ---- LOGIN ---- */
+    .modal-body[data-v-7fb6ed76] {
+      .btn--link {
+        color: var(--accent-1);
+        
+        &:hover {
+          color: var(--accent-2);
+        }
+      }
+
+      label, .dark_text-white {
+        color: var(--cl-3) !important;
       }
     }
-  }
 
-  /* ---- POPUP ---- */
-  .el-message {
-    background-color: var(--bg-5);
-    border-color: var(--bg-1);
-    color: var(--cl-2);
-  }
+    /* SKELETON LOADING */
+    .bg-gray-400 {
+      background-color: var(--bg-5);
+    }
 
-  .el-message .el-icon-info,
-  .el-message--info .el-message__content {
-    color: inherit;
-  }
-  
-  [data-sonner-toast][data-styled="true"] {
-    background-color: var(--bg-2);
-    border-color: var(--bg-5);
-    color: var(--cl-2);
-  }
-  
-  @css {
+    .list-row__regular:hover .bg-gray-400 {
+      background-color: var(--bg-4);
+    }
+
+    #app, 
+    .vfm__content {
+      .skeleton-loader,
+      .skeleton-loader--text,
+      .skeleton-loader--badge,
+      .skeleton-text,
+      .skeleton--subtitle,
+      .skeleton--badge {
+        background-color: var(--bg-5);
+      }
+    }
+
+    /* ---- FOOTER ---- */
+    #app footer {
+      background-color: var(--bg-4);
+      border-color: var(--bg-3);
+      
+      h5 {
+        color: var(--cl-2);
+      }
+
+      .link {
+        color: var(--cl-5);
+        
+        &:hover {
+          color: var(--cl-3);
+        }
+      }
+    }
+
+    /* ---- POPUP ---- */
+    .el-message {
+      background-color: var(--bg-5);
+      border-color: var(--bg-1);
+      color: var(--cl-2);
+    }
+
+    .el-message .el-icon-info,
+    .el-message--info .el-message__content {
+      color: inherit;
+    }
+    
+    [data-sonner-toast][data-styled="true"] {
+      background-color: var(--bg-2);
+      border-color: var(--bg-5);
+      color: var(--cl-2);
+    }
+    
     .group.toast .group-\[\.toast\]_text-gray-500 {
       color: var(--cl-4);
     }
@@ -266,217 +280,182 @@
         --tw-ring-offset-color: var(--bg-4);
       }
     }
-  }
 
-  /* ---- UPDATE PROMPT ---- */
-  #app .prompt-wrapper {
-    background-color: var(--bg-4);
-    box-shadow: 0 0 10px rgba(black, 0.4);
-    
-    button {
-      padding: 0.25rem 0.5rem;
+    /* ---- UPDATE PROMPT ---- */
+    #app .prompt-wrapper {
       background-color: var(--bg-4);
+      box-shadow: 0 0 10px rgba(0 0 0 / 0.4);
       
-      &:focus {
-        --tw-ring-offset-color: var(--bg-4);
-        --tw-ring-color: var(--accent-1);
-      }
-    }
-
-    .button--primary {
-      color: var(--accent-1);
-      
-      &:hover, &:focus {
-        color: var(--accent-2);
-      }
-    }
-
-    .button--secondary {
-      color: var(--cl-3);
-      
-      &:hover, &:focus {
-        color: var(--cl-2);
-      }
-    }
-  }
-
-  /* ---- HEADER ---- */
-  #app header {
-    .desktop-links > div:first-child img {
-      filter: brightness(2);
-    }
-
-    .desktop-link {
-      color: var(--cl-3);
-      
-      &:focus, &:hover {
-        border-color: currentColor;
-        color: var(--cl-2);
+      button {
+        padding: 0.25rem 0.5rem;
+        background-color: var(--bg-4);
+        
+        &:focus {
+          --tw-ring-offset-color: var(--bg-4);
+          --tw-ring-color: var(--accent-1);
+        }
       }
 
-      &.router-link-active {
-        border-color: var(--accent-1);
+      .button--primary {
         color: var(--accent-1);
-      }
-    }
-    
-    .profile .btn--input {
-      background-color: var(--bg-1);
-      
-      &:hover, &:focus {
-        --tw-ring-color: var(--accent-1);
-      }
-      
-      kbd {
-        background-color: var(--bg-3);
-        border-color: var(--bg-4);
-      }
-    }
-    
-    .profile .btn-avatar:focus {
-      --tw-ring-offset-color: var(--bg-4);
-      --tw-ring-color: var(--accent-1);
-    }
-
-    .dropdown-wrapper {
-      background-color: var(--bg-2);
-      
-      .dark_text-white:not(.text-gray-900) {
-        color: var(--cl-2);
+        
+        &:hover, &:focus {
+          color: var(--accent-2);
+        }
       }
 
-      .profile-link {
+      .button--secondary {
         color: var(--cl-3);
         
-        &:focus, &:hover {
-          background-color: var(--bg-5);
+        &:hover, &:focus {
           color: var(--cl-2);
         }
       }
+    }
+
+    /* ---- HEADER ---- */
+    #app header {
+      .desktop-links > div:first-child img {
+        filter: brightness(2);
+      }
+
+      .desktop-link {
+        color: var(--cl-3);
+        
+        &:focus, &:hover {
+          border-color: currentColor;
+          color: var(--cl-2);
+        }
+
+        &.router-link-active {
+          border-color: var(--accent-1);
+          color: var(--accent-1);
+        }
+      }
       
-      .header {
-        border-color: var(--bg-5);
+      .profile .btn--input {
+        background-color: var(--bg-1);
+        
+        &:hover, &:focus {
+          --tw-ring-color: var(--accent-1);
+        }
+        
+        kbd {
+          background-color: var(--bg-3);
+          border-color: var(--bg-4);
+        }
       }
-    }
-  }
-
-  .router-link-active img {
-    filter: brightness(1.65)
-  }
-
-  /* ---- DROPDOWNS ---- */
-  [id^="radix-vue-select-content-v"], [id^="radix-vue-popover-content-v"] {
-    background-color: var(--bg-4);
-    border: 1px solid var(--bg-4);
-    scrollbar-width: thin;
-    
-    .bg-white {
-      background-color: var(--bg-4);
-    }
-
-    /* Search */
-    [cmdk-input-wrapper] {
-      border-color: var(--bg-1);
-      color: var(--cl-3);
-    }
-
-    /* Options*/
-    [role="listbox"],
-    [role="group"] {
-      color: var(--cl-3);
-    }
-
-    [role="option"] {
-      color: var(--cl-3);
       
-      &:hover, &:focus, &[data-highlighted] {
-        background-color: var(--bg-2);
-        color: var(--cl-2);
-      }
-    }
-    
-    .os-scrollbar .os-scrollbar-handle {
-      background-color: hsla($bg5, 0.4);
-    }
-
-    /* Tabs - Desc/Asc   */
-    [role="tablist"] {
-      gap: 0.25rem;
-      background-color: var(--bg-4);
-      
-      [data-active="true"],
-      [data-active="false"]:hover {
-        background-color: var(--bg-2);
-        color: var(--cl-2);
-      }
-    }
-
-    /* Checkbox */
-    .checkbox {
-      background-color: var(--bg-1);
-      border-color: var(--bg-4);
-    }
-
-    .checkbox.bg-blue-600 {
-      background-color: var(--accent-1);
-    }
-
-    /* Separator*/
-    .bg-gray-200 {
-      background-color: var(--bg-1);
-    }
-  }
-
-  .base-dropdown {
-    button {
-      color: var(--cl-3);
-      
-      &:focus, &:hover {
-        color: var(--cl-2);
-      }
-    }
-
-    .dropdown-content {
-      background-color: var(--bg-4);
-      border: 1px solid var(--bg-4);
-    }
-
-    a {
-      color: var(--cl-3);
-      
-      &:focus, &:hover {
-        background-color: var(--bg-2);
-        color: var(--cl-2);
-      }
-    }
-
-    .icon {
-      color: var(--cl-3);
-    }
-  }
-  
-  #home {
-    .list-button {
-      background-color: var(--bg-1);
-      border-color: var(--bg-3);
-      color: var(--cl-3);
-
-      &[aria-expanded="true"] {
-        border-color: var(--accent-1);
-      }
-
-      &:focus {
+      .profile .btn-avatar:focus {
+        --tw-ring-offset-color: var(--bg-4);
         --tw-ring-color: var(--accent-1);
-        border-color: var(--tw-ring-color);
+      }
+
+      .dropdown-wrapper {
+        background-color: var(--bg-2);
+        
+        .dark_text-white:not(.text-gray-900) {
+          color: var(--cl-2);
+        }
+
+        .profile-link {
+          color: var(--cl-3);
+          
+          &:focus, &:hover {
+            background-color: var(--bg-5);
+            color: var(--cl-2);
+          }
+        }
+        
+        .header {
+          border-color: var(--bg-5);
+        }
       }
     }
-    
-    .options {
+
+    .router-link-active img {
+      filter: brightness(1.65);
+    }
+
+    /* ---- DROPDOWNS ---- */
+    [id^="radix-vue-select-content-v"], 
+    [id^="radix-vue-popover-content-v"] {
       background-color: var(--bg-4);
       border: 1px solid var(--bg-4);
       scrollbar-width: thin;
       
-      li {
+      .bg-white {
+        background-color: var(--bg-4);
+      }
+
+      /* Search */
+      [cmdk-input-wrapper] {
+        border-color: var(--bg-1);
+        color: var(--cl-3);
+      }
+
+      /* Options*/
+      [role="listbox"],
+      [role="group"] {
+        color: var(--cl-3);
+      }
+
+      [role="option"] {
+        color: var(--cl-3);
+        
+        &:hover, &:focus, &[data-highlighted] {
+          background-color: var(--bg-2);
+          color: var(--cl-2);
+        }
+      }
+      
+      .os-scrollbar .os-scrollbar-handle {
+        background-color: rgba(from var(--bg-5) r g b / 0.4);
+      }
+
+      /* Tabs - Desc/Asc   */
+      [role="tablist"] {
+        gap: 0.25rem;
+        background-color: var(--bg-4);
+        
+        [data-active="true"],
+        [data-active="false"]:hover {
+          background-color: var(--bg-2);
+          color: var(--cl-2);
+        }
+      }
+
+      /* Checkbox */
+      .checkbox {
+        background-color: var(--bg-1);
+        border-color: var(--bg-4);
+      }
+
+      .checkbox.bg-blue-600 {
+        background-color: var(--accent-1);
+      }
+
+      /* Separator*/
+      .bg-gray-200 {
+        background-color: var(--bg-1);
+      }
+    }
+
+    .base-dropdown {
+      button {
+        color: var(--cl-3);
+        
+        &:focus, &:hover {
+          color: var(--cl-2);
+        }
+      }
+
+      .dropdown-content {
+        background-color: var(--bg-4);
+        border: 1px solid var(--bg-4);
+      }
+
+      a {
         color: var(--cl-3);
         
         &:focus, &:hover {
@@ -484,89 +463,125 @@
           color: var(--cl-2);
         }
       }
-      
-      li:first-child {
-        border-radius: .375rem .375rem 0 0;
+
+      .icon {
+        color: var(--cl-3);
+      }
+    }
+    
+    #home {
+      .list-button {
+        background-color: var(--bg-1);
+        border-color: var(--bg-3);
+        color: var(--cl-3);
+
+        &[aria-expanded="true"] {
+          border-color: var(--accent-1);
+        }
+
+        &:focus {
+          --tw-ring-color: var(--accent-1);
+          border-color: var(--tw-ring-color);
+        }
       }
       
-      li:last-child {
-        border-radius: 0 0 .375rem .375rem;
+      .options {
+        background-color: var(--bg-4);
+        border: 1px solid var(--bg-4);
+        scrollbar-width: thin;
+        
+        li {
+          --_br: 0.375rem;
+          color: var(--cl-3);
+          
+          &:focus, &:hover {
+            background-color: var(--bg-2);
+            color: var(--cl-2);
+          }
+        }
+        
+        li:first-child {
+          border-radius: var(--_br) var(--_br) 0 0;
+        }
+        
+        li:last-child {
+          border-radius: 0 0 var(--_br) var(--_br);
+        }
+        
+        .checkmark {
+          color: var(--accent-1);
+        }
+        
       }
-      
-      .checkmark {
-        color: var(--accent-1);
-      }
-      
-      &-active {
+
+      .options-active {
         background-color: var(--bg-3);
       }
+
     }
+
+    #app,
+    .vfm__content {
+      /* ---- INPUTS ---- */
+      input[type="text"],
+      input[type="password"] {
+        background: var(--bg-1);
+        border-color: var(--bg-4);
+        color: var(--cl-3);
+        
+        &:focus, &:hover {
+          --tw-ring-color: var(--accent-1);
+          border-color: var(--accent-1);
+        }
+
+        &::placeholder {
+          color: var(--cl-6);
+        }
+      }
+
+      label {
+        color: var(--cl-3);
+      }
+
+      .error {
+        border-color: #dc2626;
+        color: #dc2626;
+      }
+      
+      /* ---- PRIMARY BUTTON ---- */
+      .btn-primary,
+      a.button--link {
+        background-color: var(--accent-1);
+        
+        &:hover {
+          background-color: var(--accent-2);
+        }
+
+        &:focus {
+          --tw-ring-offset-color: var(--bg-4);
+        }
+      }
+      
+      /* ---- SECONDARY BUTTON ---- */
+      .btn-secondary, 
+      a.button--link + button.button--outline  {
+        background: var(--bg-5);
+        border-color: var(--bg-5);
+        color: var(--cl-2);
+        
+        &:hover {
+          color: var(--cl-1);
+        }
+
+        &:focus {
+          --tw-ring-color: var(--accent-1);
+          --tw-ring-offset-color: var(--bg-2);
+        }
+      }
+    }
+
   }
 
-  /* ---- INPUTS ---- */
-  #app,
-  .vfm__content {
-    input[type="text"],
-    input[type="password"] {
-      background: var(--bg-1);
-      border-color: var(--bg-4);
-      color: var(--cl-3);
-      
-      &:focus, &:hover {
-        border-color: var(--accent-1);
-        --tw-ring-color: var(--accent-1);
-      }
-
-      &::placeholder {
-        color: var(--cl-6);
-      }
-    }
-
-    label {
-      color: var(--cl-3);
-    }
-
-    .error {
-      border-color: #dc2626;
-      color: #dc2626;
-    }
-  }
-
-  #app,
-  .vfm__content, 
-  [id^="radix-vue-dialog-content-"] {
-    
-  /* ---- PRIMARY BUTTON ---- */
-    .btn-primary,
-    a.button--link {
-      background-color: var(--accent-1);
-      
-      &:hover {
-        background-color: var(--accent-2);
-      }
-
-      &:focus {
-        --tw-ring-offset-color: var(--bg-4);
-      }
-    }
-    
-  /* ---- SECONDARY BUTTON ---- */
-    .btn-secondary, 
-    a.button--link + button.button--outline  {
-      background: var(--bg-5);
-      border-color: var(--bg-5);
-      color: var(--cl-2);
-      
-      &:hover {
-        color: var(--cl-1);
-      }
-
-      &:focus {
-        --tw-ring-color: var(--accent-1);
-        --tw-ring-offset-color: var(--bg-2);
-      }
-    }
-  }
 }
 
 @-moz-document domain("kenmei.co") {
@@ -648,430 +663,889 @@
   /* ----- DASHBOARD ----- */
   /* ---- TOP DRAWER ---- */
   /* Header Buttons - Select, Filter, Sort, Add, Etc. */
-  #app {
-    .container--actions button,
-    .container--actions + div > div > button,
-    [aria-labelledby="filter-heading"] button, 
-    .container--actions + div > div.flex-none span.inline-flex > button {
-      background-color: var(--bg-1);
-      border-color: var(--bg-3);
-      color: var(--cl-3);
-      
-      &:hover, &:active, &[aria-expanded="true"] {
-        color: var(--cl-2);
+  @css {
+
+    #app {
+      .container--actions button,
+      .container--actions + div > div > button,
+      [aria-labelledby="filter-heading"] button, 
+      .container--actions + div > div.flex-none span.inline-flex > button {
+        background-color: var(--bg-1);
+        border-color: var(--bg-3);
+        color: var(--cl-3);
+        
+        &:hover, &:active, &[aria-expanded="true"] {
+          color: var(--cl-2);
+        }
+
+        &:focus {
+          border-color: var(--accent-1);
+          --tw-ring-color: var(--accent-1);
+          --tw-ring-shadow: 0 0 0 1px var(--tw-ring-color);
+          --tw-ring-offset-shadow: unset;
+        }
+        
+        .dark_text-white, 
+        .group-hover_text-gray-800 {
+          color: inherit;
+        }
       }
 
-      &:focus {
-        border-color: var(--accent-1);
-        --tw-ring-color: var(--accent-1);
-        --tw-ring-shadow: 0 0 0 1px var(--tw-ring-color);
-        --tw-ring-offset-shadow: unset;
+      .container--actions + div > div > button,
+      [aria-labelledby="filter-heading"] button {
+        /* Button with Tags selected */
+        &:has(> div) {
+          color: var(--cl-3);
+          
+          .bg-gray-100 {
+            font-weight: 500;
+            background-color: var(--accent-1);
+            color: var(--bg-4);
+            
+            &:hover {
+              filter: brightness(0.85);
+            }
+          }
+          
+          [role="separator"] {
+            background-color: var(--cl-3);
+          }
+        }
+
+        /* Reset Button */
+        &.reset-button {
+          background-color: #b55151;
+          color: var(--cl-2);
+          
+          &:hover {
+            filter: brightness(1.15);
+          }
+        }
       }
       
-      .dark_text-white, 
-      .group-hover_text-gray-800 {
-        color: inherit;
+      .container--actions + div > div.flex-none button:first-of-type {
+        background-color: var(--bg-1);
+        border-color: var(--bg-1);
+        color: var(--cl-3);
+        
+        &:hover {
+          color: var(--cl-1);
+        }
       }
     }
 
-    .container--actions + div > div > button,
-    [aria-labelledby="filter-heading"] button {
-      /* Button with Tags selected */
-      &:has(> div) {
+    /* Smart Suggestions Button */
+    #app {
+      .btn--icon {
+        background-color: var(--bg-1);
+        border-color: var(--bg-3);
         color: var(--cl-3);
         
-        .bg-gray-100 {
-          font-weight: 500;
-          background-color: var(--accent-1);
-          color: var(--bg-4);
-          
-          &:hover {
-            filter: brightness(0.85);
-          }
+        &:hover, &:active, &:focus {
+          color: var(--cl-2);
         }
-        
-        [role="separator"] {
-          background-color: var(--cl-3);
+
+        &:focus {
+          border-color: var(--accent-1);
+          box-shadow: var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+          --tw-ring-color: var(--accent-1);
+          --tw-ring-shadow: 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
         }
       }
+    }
 
-      /* Reset Button */
-      &.reset-button {
-				background-color: #b55151;
+    /* List Style Switch Button */
+    #app {
+      .switch {
+        background-color: var(--bg-1);
+      }
+
+      .mode-select-btn {
+        color: var(--cl-3);
+      }
+
+      .mode-select-btn:is(:hover, :focus, .mode-select-btn__active) {
+        background-color: var(--bg-3);
+      }
+
+      .mode-select-btn:focus {
+        border-color: var(--accent-1);
+        --tw-ring-color: var(--accent-1);
+      }
+    }
+
+    /* ---- DASHBOARD ---- */
+    #app {
+      .top-drawer {
+        background-color: var(--bg-3);
+        border-color: var(--bg-4);
+      }
+
+      .the-dashboard {
+        background-color: var(--bg-2);
+      }
+
+      .the-dashboard,
+      .the-dashboard-header,
+      .the-dashboard-footer,
+      .divide-gray-200 > :not([hidden]) ~ :not([hidden]) {
+        border-color: var(--bg-4);
+      }
+
+      /* List Style */
+      .list-row__regular:hover {
+        background-color: var(--bg-5);
+      }
+
+      .list-row__selected {
+        background-color: var(--bg-4);
+      }
+
+      .series-link {
         color: var(--cl-2);
         
         &:hover {
-          filter: brightness(1.15);
+          color: var(--accent-1)
         }
       }
-    }
-    
-    .container--actions + div > div.flex-none button:first-of-type {
-      background-color: var(--bg-1);
-      border-color: var(--bg-1);
-      color: var(--cl-3);
-      
-      &:hover {
-        color: var(--cl-1);
-      }
-    }
-  }
 
-  /* Smart Suggestions Button */
-  #app {
-    .btn--icon {
-      background-color: var(--bg-1);
-      border-color: var(--bg-3);
-      color: var(--cl-3);
-      
-      &:hover, &:active, &:focus {
-        color: var(--cl-2);
+      /* Card Style */
+      .skeleton-card {
+        background-color: var(--bg-4);
       }
 
-      &:focus {
-        border-color: var(--accent-1);
-        box-shadow: var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
-        --tw-ring-color: var(--accent-1);
-        --tw-ring-shadow: 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+      .shadow-card {
+        --tw-shadow: 0 3px 10px 2px rgba(0 0 0 / 0.35);
       }
-    }
-  }
 
-  /* List Style Switch Button */
-  #app {
-    .switch {
-      background-color: var(--bg-1);
-    }
-
-    .mode-select-btn {
-      color: var(--cl-3);
-    }
-
-    .mode-select-btn:is(:hover, :focus, .mode-select-btn__active) {
-      background-color: var(--bg-3);
-    }
-
-    .mode-select-btn:focus {
-      border-color: var(--accent-1);
-      --tw-ring-color: var(--accent-1);
-    }
-  }
-
-  /* ---- DASHBOARD ---- */
-  #app {
-    .top-drawer {
-      background-color: var(--bg-3);
-      border-color: var(--bg-4);
-    }
-
-    .the-dashboard {
-      background-color: var(--bg-2);
-    }
-
-    .the-dashboard,
-    .the-dashboard-header,
-    .the-dashboard-footer,
-    .divide-gray-200 > :not([hidden]) ~ :not([hidden]) {
-      border-color: var(--bg-4);
-    }
-
-    /* List Style */
-    .list-row__regular:hover {
-      background-color: var(--bg-5);
-    }
-
-    .list-row__selected {
-      background-color: var(--bg-4);
-    }
-
-    .series-link {
-      color: var(--cl-2);
-      
-      &:hover {
-        color: var(--accent-1)
-      }
-    }
-
-    /* Card Style */
-    .skeleton-card {
-      background-color: var(--bg-4);
-    }
-
-    .shadow-card {
-      --tw-shadow: 0 3px 10px 2px rgba(0, 0, 0, 0.35);
-    }
-
-    .shadow-card.cover__selected {
-      --tw-ring-color: var(--accent-1);
-      --tw-ring-offset-color: var(--bg-5);
-      --tw-ring-offset-width: 3px;
-    }
-
-    .cover__indicator {
-      border-radius: unset;
-    }
-
-    .group .overlay {
-      background-color: hsla($bg2, 0.5);
-    }
-  }
-
-  /* Checkboxes */
-  .the-dashboard,
-  .top-drawer + div > div:nth-child(2),
-  .vfm__content, 
-  [id^="radix-vue-dialog-content-"] {
-    input[type="checkbox"] {
-      background-color: var(--bg-1);
-      border-color: var(--bg-4);
-      color: var(--cl-4);
-      
-      &:focus {
-        background-color: var(--bg-1);
-        border-color: var(--bg-4);
+      .shadow-card.cover__selected {
         --tw-ring-color: var(--accent-1);
         --tw-ring-offset-color: var(--bg-5);
-        --tw-ring-offset-width: 0px;
+        --tw-ring-offset-width: 3px;
       }
 
-      &:checked, &:checked:focus, &:checked:hover {
-        background-color: var(--accent-1);
-        border-color: var(--accent-1);
-        --tw-ring-offset-color: var(--bg-4);
-        --tw-ring-offset-width: 2px;
+      .cover__indicator {
+        border-radius: unset;
       }
 
-      &:indeterminate {
-        background-color: var(--accent-1);
+      .group .overlay {
+        background-color: rgba(from var(--bg-2) r g b / 0.5);
+      }
+    }
+
+    /* Checkboxes */
+    .the-dashboard,
+    .top-drawer + div > div:nth-child(2),
+    .vfm__content, 
+    [id^="radix-vue-dialog-content-"] {
+      input[type="checkbox"] {
+        background-color: var(--bg-1);
+        border-color: var(--bg-4);
+        color: var(--cl-4);
         
-        &:focus, &:hover {
+        &:focus {
+          --tw-ring-color: var(--accent-1);
+          --tw-ring-offset-color: var(--bg-5);
+          --tw-ring-offset-width: 0px;
+          background-color: var(--bg-1);
+          border-color: var(--bg-4);
+        }
+
+        &:checked, &:checked:focus, &:checked:hover {
+          --tw-ring-offset-color: var(--bg-4);
+          --tw-ring-offset-width: 2px;
           background-color: var(--accent-1);
           border-color: var(--accent-1);
-          outline-color: transparent;
-          --tw-ring-offset-width: 2px;
+        }
+
+        &:indeterminate {
+          background-color: var(--accent-1);
+          
+          &:focus, &:hover {
+            --tw-ring-offset-width: 2px;
+            background-color: var(--accent-1);
+            border-color: var(--accent-1);
+            outline-color: transparent;
+          }
         }
       }
     }
-  }
 
-  /* Unread */
-  .the-dashboard,
-  .top-drawer + div > div:nth-child(2) {
-    .unread-indicator-ping,
-    .unread-indicator {
-      background-color: var(--accent-1);
-    }
-  }
-
-  /* Status */
-  .the-dashboard,
-  .top-drawer + div > div:nth-child(2) {
-    .primary,
-    .success,
-    .warning,
-    .warning-light,
-    .danger {
-      padding: 0.25rem 0.75rem;
-      font-size: 0.8rem;
-    }
-
-    .primary {
-      /* background-color: #203ea2; */
-      background-color: #376cb0;
-      color: #d7e4f5;
-    }
-
-    .success {
-      background-color: #144a44;
-      color: #34d399;
-    }
-
-    .warning {
-      background-color: #bb5031;
-      color: #fdc;
-    }
-
-    .warning-light {
-      background-color: #cb733e;
-      color: #f9f8c9;
-    }
-
-    .danger {
-      background-color: #822222;
-      color: #d8b7b7;
-    }
-  }
-
-  /* Chapters */
-  .the-dashboard,
-  .top-drawer + div > div:nth-child(2) {
-    .chapter,
-    .chapter-classes {
-      background-color: #133a8b;
-      color: #79a7e1;
-      
-      &:hover {
-        background-color: #135ff9;
-        color: #a2cafb;
+    /* Unread */
+    .the-dashboard,
+    .top-drawer + div > div:nth-child(2) {
+      .unread-indicator-ping,
+      .unread-indicator {
+        background-color: var(--accent-1);
       }
     }
 
-    .chapter__none {
-      background-color: #294684;
-      color: #9ec4f5;
+    /* Status */
+    .the-dashboard,
+    .top-drawer + div > div:nth-child(2) {
+      .primary,
+      .success,
+      .warning,
+      .warning-light,
+      .danger {
+        padding: 0.25rem 0.75rem;
+        font-size: 0.8rem;
+      }
+
+      .primary {
+        background-color: #376cb0;
+        color: #d7e4f5;
+      }
+
+      .success {
+        background-color: #144a44;
+        color: #34d399;
+      }
+
+      .warning {
+        background-color: #bb5031;
+        color: #fdc;
+      }
+
+      .warning-light {
+        background-color: #cb733e;
+        color: #f9f8c9;
+      }
+
+      .danger {
+        background-color: #822222;
+        color: #d8b7b7;
+      }
     }
 
-    .chapter-meta {
-      color: var(--cl-3);
-    }
-  }
+    /* Chapters */
+    .the-dashboard,
+    .top-drawer + div > div:nth-child(2) {
+      .chapter,
+      .chapter-classes {
+        background-color: #133a8b;
+        color: #79a7e1;
+        
+        &:hover {
+          background-color: #135ff9;
+          color: #a2cafb;
+        }
+      }
 
-  /* Row Actions */
-  .the-dashboard .row-actions,
-  .top-drawer + div > div:nth-child(2) .lg_group-hover_block {
-    button.group {
-      background-color: var(--bg-3);
-      border-color: var(--bg-1);
-      color: var(--cl-3);
-    }
+      .chapter__none {
+        background-color: #294684;
+        color: #9ec4f5;
+      }
 
-    button:active {
-      background-color: var(--bg-4);
-      color: var(--cl-2);
-    }
-
-    .button__primary:hover {
-      color: var(--cl-2);
-    }
-
-    .button__success:hover {
-      color: #34d399;
-    }
-
-    .button__warning:hover {
-      color: #f6d47e;
-    }
-
-    .button__danger:hover {
-      color: #ff6565;
-    }
-
-    .disabled:active {
-      background-color: var(--bg-4);
-    }
-  }
-
-  /* Actions */
-  .the-dashboard {
-    button.group {
-      background-color: var(--bg-4);
-      border-color: var(--bg-1);
-      color: var(--cl-3);
-      
-      &:hover {
+      .chapter-meta {
         color: var(--cl-3);
-
-        .group-hover_text-gray-800 {
-          color: var(--cl-2);
-        }
       }
     }
-  }
 
-  /* Tooltip */
-  .tippy-tooltip.light-theme,
-  .tippy-box[data-theme~="light"] {
-    background-color: var(--bg-5);
-    color: var(--cl-2);
-    box-shadow: 0 0 20px 4px rgba(63, 66, 73, .15), 0 4px 80px -8px rgba(36, 40, 47, .25), 0 4px 4px -2px rgba(36, 36, 37, .15);
-  }
+    /* Row Actions */
+    .the-dashboard .row-actions,
+    .top-drawer + div > div:nth-child(2) .lg_group-hover_block {
+      button.group {
+        background-color: var(--bg-3);
+        border-color: var(--bg-1);
+        color: var(--cl-3);
+      }
 
-  /* Notification */
-  .notification .notification-content {
-    background-color: var(--bg-4);
-    
-    button {
-      background-color: transparent;
-      
-      &:hover {
+      button:active {
+        background-color: var(--bg-4);
         color: var(--cl-2);
       }
 
-      &:focus {
-        --tw-ring-offset-color: var(--bg-4);
-        --tw-ring-color: var(--accent-1);
-        --tw-ring-offset-width: 0px;
+      .button__primary:hover {
+        color: var(--cl-2);
+      }
+
+      .button__success:hover {
+        color: #34d399;
+      }
+
+      .button__warning:hover {
+        color: #f6d47e;
+      }
+
+      .button__danger:hover {
+        color: #ff6565;
+      }
+
+      .disabled:active {
+        background-color: var(--bg-4);
       }
     }
-  }
 
+    /* Actions */
+    .the-dashboard {
+      button.group {
+        background-color: var(--bg-4);
+        border-color: var(--bg-1);
+        color: var(--cl-3);
+        
+        &:hover {
+          color: var(--cl-3);
 
-  /* Modals - Edit, Import, Add Manga, Report, Delete */
-  .vfm__content, [id^="radix-vue-dialog-content-"] {
-    .modal-body, #upsert-entry-panel {
-      background-color: var(--bg-3);
-      box-shadow: 0 0 10px 4px var(--bg-4);
-      
-      .bg-white, .wrapper--title, .actions {
-        background-color: inherit;
+          .group-hover_text-gray-800 {
+            color: var(--cl-2);
+          }
+        }
       }
+    }
+
+    /* Tooltip */
+    .tippy-tooltip.light-theme,
+    .tippy-box[data-theme~="light"] {
+      background-color: var(--bg-5);
+      color: var(--cl-2);
+      box-shadow: 0 0 20px 4px rgba(63 66 73 / 0.15), 0 4px 80px -8px rgba(36 40 47 / 0.25), 0 4px 4px -2px rgba(36 36 37 / 0.15);
+    }
+
+    /* Notification */
+    .notification .notification-content {
+      background-color: var(--bg-4);
       
+      button {
+        background-color: transparent;
+        
+        &:hover {
+          color: var(--cl-2);
+        }
+
+        &:focus {
+          --tw-ring-offset-color: var(--bg-4);
+          --tw-ring-color: var(--accent-1);
+          --tw-ring-offset-width: 0px;
+        }
+      }
+    }
+
+
+    /* Modals - Edit, Import, Add Manga, Report, Delete */
+    .vfm__content, [id^="radix-vue-dialog-content-"] {
+      .modal-body, #upsert-entry-panel {
+        background-color: var(--bg-3);
+        box-shadow: 0 0 10px 4px var(--bg-4);
+        
+        .bg-white, .wrapper--title, .actions {
+          background-color: inherit;
+        }
+        
+        .wrapper--title {
+          border-color: var(--bg-1);
+        }
+
+        h1:not(.dark_text-white) {
+          color: var(--accent-1);
+        }
+
+        h3,
+        label,
+        .label {
+          color: var(--cl-2);
+        }
+
+        p {
+          color: var(--cl-3);
+        }
+
+        .selector-toggle a, 
+        .helper-text a {
+          color: var(--accent-1);
+          
+          &:hover, &:focus {
+            color: var(--accent-2);
+          }
+        }
+        
+        textarea {
+          --tw-ring-color: var(--accent-1);
+          background-color: var(--bg-1);
+          color: var(--cl-3);
+        }
+
+        .not-found,
+        .selector-toggle {
+          color: var(--cl-5);
+        }
+
+        .online-indicator-ping,
+        .online-indicator {
+          background-color: #29c778;
+        }
+
+        .offline-indicator {
+          background-color: var(--cl-5);
+        }
+
+        .os-scrollbar .os-scrollbar-handle {
+          background-color: rgba(from var(--bg-5) r g b / 0.4);
+        }
+
+        /* Dropdown */
+        .list-button,
+        .multiselect .vs__dropdown-toggle {
+          background-color: var(--bg-1);
+          border-color: var(--bg-3);
+          
+          &[aria-expanded="true"] {
+            border-color: var(--accent-1);
+          }
+
+          &:focus {
+            --tw-ring-color: var(--accent-1);
+            border-color: var(--tw-ring-color);
+          }
+          
+          span:not(.text-gray-500) {
+            color: var(--cl-2);
+          }
+        }
+
+        .multiselect .vs__dropdown-toggle {
+          .vs__selected {
+            color: var(--cl-3);
+            
+            &:hover, &:focus {
+              color: var(--cl-2);
+            }
+          }
+        }
+
+        /* Dropdown Body */
+        .options,
+        .vs__dropdown-menu {
+          background-color: var(--bg-4);
+          border: 1px solid var(--bg-4);
+          scrollbar-width: thin;
+          scrollbar-color: var(--bg-4) var(--bg-1);
+          
+          span:not(.checkmark) {
+            color: var(--cl-3);
+          }
+
+          .checkmark {
+            color: var(--accent-1);
+          }
+          
+          li:hover {
+            background-color: var(--bg-5);
+          }
+        }
+
+        .options-active,
+        .multiselect .vs__dropdown-option--highlight,
+        .multiselect .vs__dropdown-option:hover {
+          background-color: var(--bg-2);
+          
+          span:not(.checkmark) {
+            color: var(--cl-2);
+          }
+        }
+
+        /* Number Input */
+        .vue-number-input {
+          .vue-number-input__input {
+            background-color: var(--bg-1);
+            border-color: var(--bg-4);
+            color: var(--cl-3);
+            
+            &:hover {
+              color: var(--cl-2);
+            }
+          }
+
+          .vue-number-input__button:hover::before,
+          .vue-number-input__button:hover::after {
+            background-color: var(--accent-1);
+          }
+        }
+        
+        /* Button - Notes */
+        div.flex:has(.w-full > .button--score) .w-full:nth-child(1) > button {
+          background-color: var(--bg-5);
+          border-color: var(--bg-5);
+        }
+        
+        /* Button - Score */
+        .button--score {
+          background-color: var(--bg-1);
+          border-color: var(--bg-1);
+          color: var(--cl-3);
+          
+          button.dark_bg-gray-700[aria-expanded="true"]:hover {
+            background-color: rgba(from var(--bg-4) r g b / 0.3);
+            color: var(--cl-2);
+          }
+          
+          button > svg path {
+            fill: var(--cl-2);
+            transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+          }
+          
+          button:has(svg):hover {
+            background-color: transparent;
+            
+            svg path {
+              fill: var(--accent-1);
+            }
+          }
+          
+          /* Separator */
+          div.bg-gray-200 {
+            background-color: var(--cl-3);
+          }
+        }
+        
+        /* Tabs */
+        .tab {
+          color: var(--cl-3);
+            
+          &:hover {
+            color: var(--cl-2);
+          }
+        }
+        
+        .active-tab {
+          border-color: var(--accent-1);
+          color: var(--accent-1);
+        }
+        
+        /* Tags */
+        .primary {
+          background-color: var(--bg-5);
+          color: #b4c3d7;
+        }
+
+        /* Footer */
+        .modal-actions {
+          background-color: var(--bg-1);
+        }
+
+        .btn-danger {
+          background-color: #822222;
+          color: #d8d0d0;
+          
+          &:hover, &:focus {
+            background-color: #972222;
+            color: #edd5d5;
+          }
+
+          &:focus {
+            --tw-ring-color: #ff6565;
+            --tw-ring-offset-color: var(--bg-1);
+          }
+        }
+      }
+    }
+
+    /* Search */
+    [id^="radix-vue-dialog-content-v-"] #upsert-entry-panel {
+      .panel {
+        background-color: var(--bg-3);
+      }
+
+      .wrapper--search-input {
+        background-color: var(--bg-3);
+        
+        input {
+          background-color: var(--bg-1);
+          color: var(--cl-4);
+        }
+      }
+
       .wrapper--title {
+        background-color: var(--bg-3);
         border-color: var(--bg-1);
       }
 
-      h1:not(.dark_text-white) {
-        color: var(--accent-1);
+      .icon--back {
+        color: var(--cl-3);
+        
+        &:hover {
+          color: var(--cl-2);
+        }
       }
 
-      h3,
-      label,
-      .label {
-        color: var(--cl-2);
+      .wrapper--image {
+        background-color: var(--bg-5);
+      }
+    }
+
+    [id^="radix-vue-dialog-content-v-"] #upsert-entry-panel {
+      .list--item:hover {
+        background-color: var(--bg-1);
       }
 
-      p {
+      .list--item_title {
         color: var(--cl-3);
       }
 
-      .selector-toggle a, 
-      .helper-text a {
+      .highlight {
         color: var(--accent-1);
+      }
+
+      .primary {
+        background-color: var(--bg-5);
+        color: #b4c3d7;
+      }
+
+      .actions svg {
+        color: var(--cl-3);
         
         &:hover, &:focus {
+          background-color: var(--bg-4);
+          color: #b4c3d7;
+        }
+      }
+
+      .img-wrapper {
+        background-color: var(--bg-5);
+      }
+    }
+
+    .vfm__content .modal-body .wrapper--title + div {
+      .actions {
+        background-color: transparent;
+      }
+    }
+
+  }
+
+}
+
+@-moz-document domain("kenmei.co") {
+  /* ----- SERIES DETAILS ----- */
+  @css {
+
+    .prose {
+      --tw-prose-bold: var(--cl-1);
+    }
+
+    #app .series-details--wrapper {
+      /* Sidebar */
+      dl {
+        background-color: var(--bg-3);
+      }
+
+      dt > p {
+        color: var(--cl-3);
+      }
+
+      dd > p {
+        color: var(--cl-2);
+      }
+
+      .image-wrapper img {
+        background-color: var(--bg-4);
+      }
+      
+      .link {
+        background-color: var(--accent-1);
+        border-color: var(--accent-1);
+        color: var(--cl-1);
+        
+        &:hover {
+          background-color: var(--accent-2);
+          border-color: var(--accent-2);
+          color: var(--bg-4);
+        }
+
+        &:focus {
+          --tw-ring-color: var(--accent-2);
+          --tw-ring-offset-color: var(--bg-4);
+          color: var(--bg-4);
+          
+        }
+      }
+      
+      /* Summary */
+      section:has(> #tags) .dark_bg-gray-900 {
+        padding: 0.2rem 0.7rem;
+        background-color: rgba(from #4EA8DE r g b / 0.3);
+        border-color: var(--accent-1);
+        color: var(--cl-2);
+      }
+
+      /* Header Tabs */
+      .tab {
+        color: var(--cl-3);
+        
+        &:not(.disabled):hover {
+          border-color: var(--cl-2);
+          color: var(--cl-2);
+        }
+      }
+
+      .active-tab, .router-link-active.router-link-exact-active {
+        border-color: var(--accent-1);
+        color: var(--accent-1);
+      }
+
+      /* Main Content */
+      .divide-gray-200 > :not([hidden]) ~ :not([hidden]) {
+        border-color: var(--bg-1);
+      }
+
+      h1 {
+        color: var(--cl-1);
+      }
+
+      h2,
+      .series-title {
+        color: var(--cl-2);
+      }
+
+      .prose,
+      .series-subtitle {
+        color: var(--cl-3);
+      }
+
+      .title--link {
+        color: var(--accent-1);
+        
+        &:hover {
+          color: var(--accent-2);
+        }
+      }
+
+      .primary {
+        background-color: var(--bg-5);
+        color: #b4c3d7;
+      }
+
+      /* Card Skeleton */
+      .bg-gray-400.animate-pulse,
+      .subtitle {
+        background-color: var(--bg-4);
+      }
+
+      /* Rating */
+      .rating {
+        background-color: var(--bg-3);
+        
+        .bar {
+          background-color: var(--bg-4);
+          border-color: var(--bg-4);
+        }
+        
+        dd {
+          color: var(--cl-5);
+        }
+      }
+      
+      .main-score {
+        color: var(--cl-2);
+      }
+    }
+
+  }
+  
+}
+
+@-moz-document domain("kenmei.co") {
+  /* ----- PROFILE ----- */
+  @css {
+
+    #app .profile--header {
+      h2 {
+        color: var(--cl-1);
+      }
+      
+      .avatar-wrapper {
+        background-color: var(--bg-5);
+      }
+      
+      .avatar-wrapper, .avatar {
+        --tw-ring-color: var(--bg-1);
+      }
+      
+      .desktop-link {
+        background-color: var(--bg-1);
+      }
+      
+      .desktop-link.router-link-active {
+        background-color: var(--bg-1);
+      }
+      
+      .router-link-exact-active.desktop-link > span {
+        background-color: var(--accent-1);
+      }
+    }
+    
+    /* Search Button - Profile page */
+    .profile .btn--input {
+      --tw-ring-color: var(--bg-4);
+      color: #94a3b8; 
+    }
+    
+    /* --- Body --- */
+    #app .profile--body {
+      .section-wrapper {
+        background-color: var(--bg-3);
+      }
+      
+      .divide-gray-100 > :not([hidden]) ~ :not([hidden]), 
+      .divide-gray-200 > :not([hidden]) ~ :not([hidden]) {
+        border-color: var(--bg-1);
+      }
+      
+      .os-scrollbar .os-scrollbar-handle {
+        background-color: var(--bg-5)
+      }
+      
+      h2, h3 {
+        color: var(--cl-2);
+      }
+      
+      .activity-text {
+        color: var(--cl-3);
+      }
+      
+      .activity-text a {
+        color: var(--accent-1);
+        
+        &:hover {
           color: var(--accent-2);
         }
       }
       
-      textarea {
-        --tw-ring-color: var(--accent-1);
+      .legend-text {
+        color: var(--cl-4);
+      }
+      
+      path[d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"] {
+        fill: var(--bg-5);
+      }
+      
+      canvas {
+        background-color: rgba(from var(--bg-5) r g b / 0.5);
+        border-radius: 50%;
+      }
+      
+      /* Edit Button */
+      button[aria-haspopup="dialog"] {
         background-color: var(--bg-1);
+        border-color: var(--bg-4);
         color: var(--cl-3);
+        
+        &:hover {
+          color: var(--cl-2);
+        }
       }
-
-      .not-found,
-      .selector-toggle {
-        color: var(--cl-5);
+      
+      /* --- Library --- */
+      .series-title {
+        font-size: 0.85rem;
+        color: var(--cl-2);
       }
-
-      .online-indicator-ping,
-      .online-indicator {
-        background-color: #29c778;
-      }
-
-      .offline-indicator {
-        background-color: var(--cl-5);
-      }
-
-      .os-scrollbar .os-scrollbar-handle {
-        background-color: hsla($bg5, 0.4);
-      }
-
-      /* Dropdown */
-      .list-button,
-      .multiselect .vs__dropdown-toggle {
+      
+      /* --- Filter --- */
+      button[aria-expanded] {
         background-color: var(--bg-1);
         border-color: var(--bg-3);
+        color: var(--cl-3);
         
         &[aria-expanded="true"] {
           border-color: var(--accent-1);
@@ -1081,570 +1555,130 @@
           --tw-ring-color: var(--accent-1);
           border-color: var(--tw-ring-color);
         }
-        
-        span:not(.text-gray-500) {
-          color: var(--cl-2);
-        }
-      }
-
-      .multiselect .vs__dropdown-toggle {
-        .vs__selected {
-          color: var(--cl-3);
-          
-          &:hover, &:focus {
-            color: var(--cl-2);
-          }
-        }
-      }
-
-      /* Dropdown Body */
-      .options,
-      .vs__dropdown-menu {
-        background-color: var(--bg-4);
-        border: 1px solid var(--bg-4);
-        scrollbar-width: thin;
-        scrollbar-color: var(--bg-4) var(--bg-1);
-        
-        span:not(.checkmark) {
-          color: var(--cl-3);
-        }
-
-        .checkmark {
-          color: var(--accent-1);
-        }
-        
-        li:hover {
-          background-color: var(--bg-5);
-        }
-      }
-
-      .options-active,
-      .multiselect .vs__dropdown-option--highlight,
-      .multiselect .vs__dropdown-option:hover {
-        background-color: var(--bg-2);
-        
-        span:not(.checkmark) {
-          color: var(--cl-2);
-        }
-      }
-
-      /* Number Input */
-      .vue-number-input {
-        .vue-number-input__input {
-          background-color: var(--bg-1);
-          border-color: var(--bg-4);
-          color: var(--cl-3);
-          
-          &:hover {
-            color: var(--cl-2);
-          }
-        }
-
-        .vue-number-input__button:hover::before,
-        .vue-number-input__button:hover::after {
-          background-color: var(--accent-1);
-        }
       }
       
-      /* Button - Notes */
-      div.flex:has(.w-full > .button--score) .w-full:nth-child(1) > button {
+      /* --- Skeleton --- */
+      .skeleton-card {
         background-color: var(--bg-5);
-        border-color: var(--bg-5);
       }
       
-      /* Button - Score */
-      .button--score {
-        background-color: var(--bg-1);
+      path[d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"] {
+        fill: var(--bg-5);
+      }
+      
+      .animate-pulse.bg-gray-500 {
+        background-color: var(--bg-5);
+      }
+      
+      .skeleton-activity-feed > :not([hidden]) ~ :not([hidden]) {
         border-color: var(--bg-1);
-        color: var(--cl-3);
-        
-        button.dark_bg-gray-700[aria-expanded="true"]:hover {
-          background-color: hsla($bg4, 0.3);
-          color: var(--cl-2);
-        }
-        
-        button > svg path {
-          fill: var(--cl-2);
-          transition: fill 250ms cubic-bezier(.4,0,.2,1);
-        }
-        
-        button:has(svg):hover {
-          background-color: transparent;
-          
-          svg path {
-            fill: var(--accent-1);
-          }
-        }
-        
-        /* Separator */
-        div.bg-gray-200 {
-          background-color: var(--cl-3);
-        }
+      }
+    }
+    
+    /* --- Edit Favourites --- */
+    [id^="radix-vue-dialog-content-v-"] {
+      .bg-gray-50 {
+        background-color: var(--bg-4);
       }
       
-      /* Tabs */
-      .tab {
+      .dark_bg-gray-700 > div > button:first-child {
+        background-color: var(--bg-1);
+        border-color: var(--bg-4);
         color: var(--cl-3);
-          
+        
         &:hover {
           color: var(--cl-2);
         }
       }
-      
-      .active-tab {
-        border-color: var(--accent-1);
-        color: var(--accent-1);
-      }
-      
-      /* Tags */
-      .primary {
-        background-color: var(--bg-5);
-        color: #b4c3d7;
-      }
-
-      /* Footer */
-      .modal-actions {
-        background-color: var(--bg-1);
-      }
-
-      .btn-danger {
-        background-color: #822222;
-        color: #d8d0d0;
-        
-        &:hover, &:focus {
-          background-color: #972222;
-          color: #edd5d5;
-        }
-
-        &:focus {
-          --tw-ring-color: #ff6565;
-          --tw-ring-offset-color: var(--bg-1);
-        }
-      }
-    }
-  }
-
-  /* Search */
-  [id^="radix-vue-dialog-content-v-"] #upsert-entry-panel {
-    .panel {
-      background-color: var(--bg-3);
     }
 
-    .wrapper--search-input {
-      background-color: var(--bg-3);
-      
-      input {
-        background-color: var(--bg-1);
-        color: var(--cl-4);
-      }
-    }
-
-    .wrapper--title {
-      background-color: var(--bg-3);
-      border-color: var(--bg-1);
-    }
-
-    .icon--back {
-      color: var(--cl-3);
-      
-      &:hover {
-        color: var(--cl-2);
-      }
-    }
-
-    .wrapper--image {
-      background-color: var(--bg-5);
-    }
-  }
-
-  [id^="radix-vue-dialog-content-v-"] #upsert-entry-panel {
-    .list--item:hover {
-      background-color: var(--bg-1);
-    }
-
-    .list--item_title {
-      color: var(--cl-3);
-    }
-
-    .highlight {
-      color: var(--accent-1);
-    }
-
-    .primary {
-      background-color: var(--bg-5);
-      color: #b4c3d7;
-    }
-
-    .actions svg {
-      color: var(--cl-3);
-      
-      &:hover, &:focus {
-        background-color: var(--bg-4);
-        color: #b4c3d7;
-      }
-    }
-
-    .img-wrapper {
-      background-color: var(--bg-5);
-    }
-  }
-
-  .vfm__content .modal-body .wrapper--title + div {
-    .actions {
-      background-color: transparent;
-    }
-  }
-}
-
-@-moz-document domain("kenmei.co") {
-  /* ----- SERIES DETAILS ----- */
-  .prose {
-    --tw-prose-bold: var(--cl-1);
-  }
-
-  #app .series-details--wrapper {
-    /* Sidebar */
-    dl {
-      background-color: var(--bg-3);
-    }
-
-    dt > p {
-      color: var(--cl-3);
-    }
-
-    dd > p {
-      color: var(--cl-2);
-    }
-
-    .image-wrapper img {
-      background-color: var(--bg-4);
-    }
-    
-    .link {
-      background-color: var(--accent-1);
-      border-color: var(--accent-1);
-      color: var(--cl-1);
-      
-      &:hover {
-        background-color: var(--accent-2);
-        border-color: var(--accent-2);
-        color: var(--bg-4);
-      }
-
-      &:focus {
-        --tw-ring-color: var(--accent-2);
-        --tw-ring-offset-color: var(--bg-4);
-        color: var(--bg-4);
-        
-      }
-    }
-    
-    /* Summary */
-    section:has(> #tags) .dark_bg-gray-900 {
-      padding: 0.2rem 0.7rem;
-      background-color: hsla(#4EA8DE, 0.3);
-      border-color: var(--accent-1);
-      color: var(--cl-2);
-    }
-
-    /* Header Tabs */
-    .tab {
-      color: var(--cl-3);
-      
-      &:not(.disabled):hover {
-        border-color: var(--cl-2);
-        color: var(--cl-2);
-      }
-    }
-
-    .active-tab, .router-link-active.router-link-exact-active {
-      border-color: var(--accent-1);
-      color: var(--accent-1);
-    }
-
-    /* Main Content */
-    .divide-gray-200 > :not([hidden]) ~ :not([hidden]) {
-      border-color: var(--bg-1);
-    }
-
-    h1 {
-      color: var(--cl-1);
-    }
-
-    h2,
-    .series-title {
-      color: var(--cl-2);
-    }
-
-    .prose,
-    .series-subtitle {
-      color: var(--cl-3);
-    }
-
-    .title--link {
-      color: var(--accent-1);
-      
-      &:hover {
-        color: var(--accent-2);
-      }
-    }
-
-    .primary {
-      background-color: var(--bg-5);
-      color: #b4c3d7;
-    }
-
-    /* Card Skeleton */
-    .bg-gray-400.animate-pulse,
-    .subtitle {
-      background-color: var(--bg-4);
-    }
-
-    /* Rating */
-    .rating {
-      background-color: var(--bg-3);
-      
-      .bar {
-        background-color: var(--bg-4);
-        border-color: var(--bg-4);
-      }
-      
-      dd {
-        color: var(--cl-5);
-      }
-    }
-    
-    .main-score {
-      color: var(--cl-2);
-    }
-  }
-}
-
-@-moz-document domain("kenmei.co") {
-  /* ----- PROFILE ----- */
-  #app .profile--header {
-    h2 {
-      color: var(--cl-1);
-    }
-    
-    .avatar-wrapper {
-      background-color: var(--bg-5);
-    }
-    
-    .avatar-wrapper, .avatar {
-      --tw-ring-color: var(--bg-1);
-    }
-    
-    .desktop-link {
-      background-color: var(--bg-1);
-    }
-    
-    .desktop-link.router-link-active {
-      background-color: var(--bg-1);
-    }
-    
-    .router-link-exact-active.desktop-link > span {
-      background-color: var(--accent-1);
-    }
   }
   
-  /* Search Button - Profile page */
-  .profile .btn--input {
-    --tw-ring-color: var(--bg-4);
-    color: #94a3b8; 
-  }
-  
-  /* --- Body --- */
-  #app .profile--body {
-    .section-wrapper {
-      background-color: var(--bg-3);
-    }
-    
-    .divide-gray-100 > :not([hidden]) ~ :not([hidden]), 
-    .divide-gray-200 > :not([hidden]) ~ :not([hidden]) {
-      border-color: var(--bg-1);
-    }
-    
-    .os-scrollbar .os-scrollbar-handle {
-      background-color: var(--bg-5)
-    }
-    
-    h2, h3 {
-      color: var(--cl-2);
-    }
-    
-    .activity-text {
-      color: var(--cl-3);
-    }
-    
-    .activity-text a {
-      color: var(--accent-1);
-      
-      &:hover {
-        color: var(--accent-2);
-      }
-    }
-    
-    .legend-text {
-      color: var(--cl-4);
-    }
-    
-    path[d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"] {
-      fill: var(--bg-5);
-    }
-    
-    canvas {
-      background-color: hsla($bg5, 0.5);
-      border-radius: 50%;
-    }
-    
-    /* Edit Button */
-    button[aria-haspopup="dialog"] {
-      background-color: var(--bg-1);
-      border-color: var(--bg-4);
-      color: var(--cl-3);
-      
-      &:hover {
-        color: var(--cl-2);
-      }
-    }
-    
-    /* --- Library --- */
-    .series-title {
-      font-size: 0.85rem;
-      color: var(--cl-2);
-    }
-    
-    /* --- Filter --- */
-    button[aria-expanded] {
-      background-color: var(--bg-1);
-      border-color: var(--bg-3);
-      color: var(--cl-3);
-      
-      &[aria-expanded="true"] {
-        border-color: var(--accent-1);
-      }
-
-      &:focus {
-        --tw-ring-color: var(--accent-1);
-        border-color: var(--tw-ring-color);
-      }
-    }
-    
-    /* --- Skeleton --- */
-    .skeleton-card {
-      background-color: var(--bg-5);
-    }
-    
-    path[d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"] {
-      fill: var(--bg-5);
-    }
-    
-    .animate-pulse.bg-gray-500 {
-      background-color: var(--bg-5);
-    }
-    
-    .skeleton-activity-feed > :not([hidden]) ~ :not([hidden]) {
-      border-color: var(--bg-1);
-    }
-  }
-  
-  /* --- Edit Favourites --- */
-  [id^="radix-vue-dialog-content-v-"] {
-    .bg-gray-50 {
-      background-color: var(--bg-4);
-    }
-    
-    .dark_bg-gray-700 > div > button:first-child {
-      background-color: var(--bg-1);
-      border-color: var(--bg-4);
-      color: var(--cl-3);
-      
-      &:hover {
-        color: var(--cl-2);
-      }
-    }
-  }
 }
 
 @-moz-document domain("kenmei.co") {
   /* ----- SETTINGS ----- */
-  #home .router--wrapper > div nav {
-    .desktop-link {
-      color: var(--cl-2);
-      
-      &:hover {
+  @css {
+
+    #home .router--wrapper > div nav {
+      .desktop-link {
+        color: var(--cl-2);
+        
+        &:hover {
+          background-color: var(--bg-3);
+          color: var(--cl-2);
+        }
+
+        svg {
+          color: var(--cl-3);
+        }
+      }
+
+      .active,
+      .router-link-active {
         background-color: var(--bg-3);
+        color: var(--cl-1);
+        
+        &:hover {
+          color: var(--cl-1);
+        }
+      }
+    }
+    
+    .settings h3 {
+      color: var(--cl-2);
+    }
+
+    .settings .primary {
+      background-color: var(--bg-5);
+      color: var(--cl-2);
+    }
+
+    .settings .btn-danger {
+      background-color: #aa2727;
+      color: #d8d0d0;
+      
+      &:hover, &:focus {
+        background-color: #c72828;
+        color: #edd5d5;
+      }
+
+      &:focus {
+        --tw-ring-color: #ff6565;
+        --tw-ring-offset-color: var(--bg-1);
+      }
+    }
+
+    .vld-overlay .vld-background {
+      background: var(--bg-2);
+    }
+
+    .vl-overlay .vl-background {
+      background: var(--bg-3);
+    }
+
+    .group:hover .group-hover_text-gray-500 {
+      color: var(--cl-3);
+    }
+
+    /* List Export */
+    .settings .bg-white:nth-child(3) {
+      h3 {
         color: var(--cl-2);
       }
 
-      svg {
-        color: var(--cl-3);
+      p {
+        color: var(--cl-4);
       }
     }
 
-    .active,
-    .router-link-active {
-      background-color: var(--bg-3);
-      color: var(--cl-1);
-      
-      &:hover {
-        color: var(--cl-1);
-      }
-    }
   }
   
-  .settings h3 {
-    color: var(--cl-2);
-  }
-
-  .settings .primary {
-    background-color: var(--bg-5);
-    color: var(--cl-2);
-  }
-
-  .settings .btn-danger {
-    background-color: #aa2727;
-    color: #d8d0d0;
-    
-    &:hover, &:focus {
-      background-color: #c72828;
-      color: #edd5d5;
-    }
-
-    &:focus {
-      --tw-ring-color: #ff6565;
-      --tw-ring-offset-color: var(--bg-1);
-    }
-  }
-
-  .vld-overlay .vld-background {
-    background: var(--bg-2);
-  }
-
-  .vl-overlay .vl-background {
-    background: var(--bg-3);
-  }
-
-  .group:hover .group-hover_text-gray-500 {
-    color: var(--cl-3);
-  }
-
-  /* List Export */
-  .settings .bg-white:nth-child(3) {
-    h3 {
-      color: var(--cl-2);
-    }
-
-    p {
-      color: var(--cl-4);
-    }
-  }
 }
 
 @-moz-document url-prefix("https://www.kenmei.co/dashboard") {
   /* ----- CUSTOM DASHBOARD BACKGROUND ----- */
-  if customBG==1 {
+  if customBG == 1 {
     #home .router--wrapper {
       // background-image: url(https://images.hdqwalls.com/wallpapers/anime-dark-witch-nm.jpg);background-blend-mode: darken;
       // background-image: url(https://images6.alphacoders.com/106/thumb-1920-1065654.png);
@@ -1658,7 +1692,7 @@
     }
   }
 
-  if enableTransparency==1 {
+  if enableTransparency == 1 {
     #home {
       .top-drawer {
         background-color: hsla($bg3, topdrawerOpacity);
@@ -1676,7 +1710,7 @@
   }
 
   /* Card Style */
-  if customBG==1 {
+  if customBG == 1 {
     .grid-cols-2 > li > div {
       --_br: 0.25rem;
 
@@ -1697,7 +1731,7 @@
     }
   }
 
-  if customBG==1 && enableTransparency==1 {
+  if customBG == 1 && enableTransparency == 1 {
     .grid-cols-2 > li > div > div:not(:first-child)  {
       background-color: hsla($bg2, dashboardOpacity);
     }
@@ -1706,396 +1740,421 @@
 
 @-moz-document url("https://www.kenmei.co/pricing") {
   /* ----- PRICING ----- */
-  #app {
-    .text-gray-600 {
-      color: var(--cl-4);
-    }
+  @css {
 
-    .text-gray-900, 
-    .text-white, 
-    h2, 
-    .testimonials--header p, 
-    .text-blue-100 {
-      color: var(--cl-2);
-    }
-
-    .dark_text-white {
-      color: #cbd2db;
-    }
-
-    blockquote, p {
-      color: var(--cl-3);
-    }
-
-    .bg-blue-500 {
-      background-color: var(--accent-1);
-    }
-
-    .plan-picker--wrapper .bg-white {
-      background-color: var(--bg-3);
-      background-image: radial-gradient(circle, var(--bg-5) 35%, var(--bg-2));
-      
+    #app {
       .text-gray-600 {
+        color: var(--cl-4);
+      }
+
+      .text-gray-900, 
+      .text-white, 
+      h2, 
+      .testimonials--header p, 
+      .text-blue-100 {
         color: var(--cl-2);
       }
 
-      .border-t > :not([hidden]) ~ :not([hidden]) {
-        border-color: var(--cl-4)33;
+      .dark_text-white {
+        color: #cbd2db;
       }
-    }
-    .bg-green-500 {
-      background-color: #29c778;
-      color: #193f41;
-    }
 
-    .feature-highlight {
-      background-color: var(--bg-4);
-    }
+      blockquote, p {
+        color: var(--cl-3);
+      }
 
-    .feature-highlight--wrapper {
-      h2, dt {
+      .bg-blue-500 {
+        background-color: var(--accent-1);
+      }
+
+      .plan-picker--wrapper .bg-white {
+        background-color: var(--bg-3);
+        background-image: radial-gradient(circle, var(--bg-5) 35%, var(--bg-2));
+        
+        .text-gray-600 {
+          color: var(--cl-2);
+        }
+
+        .border-t > :not([hidden]) ~ :not([hidden]) {
+          border-color: var(--cl-4);
+        }
+      }
+      .bg-green-500 {
+        background-color: #29c778;
+        color: #193f41;
+      }
+
+      .feature-highlight {
+        background-color: var(--bg-4);
+      }
+
+      .feature-highlight--wrapper {
+        h2, dt {
+          color: var(--accent-1);
+        }
+
+        dl {
+          color: inherit;
+        }
+      }
+
+      .tabs--wrapper {
+        .bg-white {
+          background-color: rgba(255 255 255 / 0.10);
+        }
+
+        .text-blue-600 {
+          color: var(--cl-2);
+        }
+      }
+
+      .testimonials--header h2 {
         color: var(--accent-1);
       }
 
-      dl {
-        color: inherit;
-      }
-    }
-
-    .tabs--wrapper {
-      .bg-white {
-        background-color: #ffffff1a;
+      .testimonials--wrapper {
+        .sm_bg-white {
+          background-color: var(--bg-4);
+        }
       }
 
-      .text-blue-600 {
-        color: var(--cl-2);
+      .button--disclosure {
+        color: var(--cl-3);
+      }
+
+      dl > :not([hidden]) ~ :not([hidden]) {
+        border-color: var(--cl-4);
       }
     }
-
-    .testimonials--header h2 {
-      color: var(--accent-1);
-    }
-
-    .testimonials--wrapper {
-      .sm_bg-white {
-        background-color: var(--bg-4);
-      }
-    }
-
-    .button--disclosure {
-      color: var(--cl-3);
-    }
-
-    dl > :not([hidden]) ~ :not([hidden]) {
-      border-color: var(--cl-4)33;
-    }
+    
   }
+  
 }
 
 @-moz-document url("https://www.kenmei.co/privacy"), url("https://www.kenmei.co/terms") {
   /* ----- PRIVACY & TERMS OF SERVICE ----- */
-  .prose h2, 
-  .prose h3, 
-  .prose h4, 
-  .prose strong, 
-  .prose thead {
-    color: var(--cl-2);
-  }
+  @css {
 
-  .prose p {
-    color: var(--cl-3);
-  }
+    .prose h2, 
+    .prose h3, 
+    .prose h4, 
+    .prose strong, 
+    .prose thead {
+      color: var(--cl-2);
+    }
 
-  .prose thead, 
-  .prose tbody tr {
-    border-color: var(--bg-4);
-  }
+    .prose p {
+      color: var(--cl-3);
+    }
 
-  .prose a {
-    color: var(--accent-1);
-  }
+    .prose thead, 
+    .prose tbody tr {
+      border-color: var(--bg-4);
+    }
 
-  .prose ol > li::before {
-    color: var(--cl-3);
+    .prose a {
+      color: var(--accent-1);
+    }
+
+    .prose ol > li::before {
+      color: var(--cl-3);
+    }
+
   }
+  
 }
 
 @-moz-document url("https://status.kenmei.co/") {
   /* ----- STATUS ----- */
-  .card {
-    background-color: var(--bg-2);
-    color: var(--cl-3);
+  @css {
+
+    .card {
+      background-color: var(--bg-2);
+      color: var(--cl-3);
+    }
+
+    a:not(.uk-button):not(.psp-monitor-name), 
+    .uk-link, 
+    .uk-h3 {
+      color: var(--cl-2) !important;
+    }
+
+    .psp-monitor-name {
+      color: var(--cl-3) !important;
+    }
+
+    .uk-text-muted {
+      color: var(--cl-6);
+    }
+
+    .psp-monitor-row,
+    .uk-grid-divider > :not(.uk-first-column)::before {
+      border-color: var(--bg-5);
+    }
+
+    #main-footer a {
+      color: var(--cl-6) !important;
+    }
+
+    .uk-link:hover, a:hover {
+      text-shadow: 0 5px 30px rgba(78 168 222 / 0.3);
+    }
+
   }
 
-  a:not(.uk-button):not(.psp-monitor-name), 
-  .uk-link, 
-  .uk-h3 {
-    color: var(--cl-2) !important;
-  }
-
-  .psp-monitor-name {
-    color: var(--cl-3) !important;
-  }
-
-  .uk-text-muted {
-    color: var(--cl-6);
-  }
-
-  .psp-monitor-row,
-  .uk-grid-divider > :not(.uk-first-column)::before {
-    border-color: var(--bg-5);
-  }
-
-  #main-footer a {
-    color: var(--cl-6) !important;
-  }
-
-  .uk-link:hover, a:hover {
-    text-shadow: 0 5px 30px rgba(78, 168, 222, .3);
-  }
 }
 
 @-moz-document url("https://www.kenmei.co/supported-sites") {
   /* ----- SUPPORTED SITES ----- */
-  .grid-container > a {
-    background-color: var(--bg-3);
-    color: var(--cl-2);
+  @css {
+
+    .grid-container > a {
+      background-color: var(--bg-3);
+      color: var(--cl-2);
+    }
+
+    /* Supported Sites - Header Images */
+    #app #home {
+      a[href*="hunlight-scans"] img.object-cover {
+        padding-left: 176px;
+        background-image: url(https://i.imgur.com/5w4e4w0.png);
+        background-size: 178px;
+        background-position: center -3px;
+      }
+
+      a[href*="kireicake"] img.object-cover {
+        --size: 7px;
+        padding-left: 176px;
+        background-image: url(https://i.imgur.com/TR61TR2.png), linear-gradient(to right,#a458d7d4 1px,transparent 1px),linear-gradient(to bottom,#c353b3b5 1px,transparent 1px);
+        background-size: 250px, var(--size) var(--size), var(--size) var(--size);
+        background-position: bottom center, top left, top left;
+      }
+
+      a[href*="lhtranslation"] img.object-cover {
+        padding-left: 176px;
+        background-color: #164577;
+        background-image: url(https://i.imgur.com/PtuDRek.jpg);
+        background-size: 110px;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      a[href*="mangadex"] img.object-cover {
+        padding-left: 176px;
+        background-image: url(https://i.imgur.com/Cxld8Qk.png);
+        background-size: cover;
+      }
+
+      a[href*="mangahub"] img.object-cover {
+        padding-left: 176px;
+        background-color: #0e131f;
+        background-image: url(https://mangahub.io/logo.png);
+        background-size: 170px;
+        background-position: 20px center;
+        background-repeat: no-repeat;
+      }
+
+      a[href*="mangasushi"] img.object-cover {
+        padding-left: 176px;
+        background-image: url(https://i.imgur.com/MUtGWhP.png), linear-gradient(to right, #eb3349 40%, #f45c43);
+        background-size: 160px, cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      a[href*="naniscans"] img.object-cover {
+        padding-left: 176px;
+        background-color: #0e131f;
+        background-image: url(https://i.imgur.com/gwK1BEV.png);
+        background-size: 145px;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      a[href*="webtoon"] img.object-cover {
+        padding-left: 176px;
+        background-color: #0e131f;
+        background-image: url(https://i.imgur.com/F14hbZz.png);
+        background-size: 150px;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+
   }
 
-  /* Supported Sites - Header Images */
-  #app #home {
-    a[href*="hunlight-scans"] img.object-cover {
-      padding-left: 176px;
-      background-image: url(https://i.imgur.com/5w4e4w0.png);
-      background-size: 178px;
-      background-position: center -3px;
-    }
-
-    a[href*="kireicake"] img.object-cover {
-      --size: 7px;
-      padding-left: 176px;
-      background-image: url(https://i.imgur.com/TR61TR2.png), linear-gradient(to right,#a458d7d4 1px,transparent 1px),linear-gradient(to bottom,#c353b3b5 1px,transparent 1px);
-      background-size: 250px, var(--size) var(--size), var(--size) var(--size);
-      background-position: bottom center, top left, top left;
-    }
-
-    a[href*="lhtranslation"] img.object-cover {
-      padding-left: 176px;
-      background-color: #164577;
-      background-image: url(https://i.imgur.com/PtuDRek.jpg);
-      background-size: 110px;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-
-    a[href*="mangadex"] img.object-cover {
-      padding-left: 176px;
-      background-image: url(https://i.imgur.com/Cxld8Qk.png);
-      background-size: cover;
-    }
-
-    a[href*="mangahub"] img.object-cover {
-      padding-left: 176px;
-      background-color: #0e131f;
-      background-image: url(https://mangahub.io/logo.png);
-      background-size: 170px;
-      background-position: 20px center;
-      background-repeat: no-repeat;
-    }
-
-    a[href*="mangasushi"] img.object-cover {
-      padding-left: 176px;
-      background-image: url(https://i.imgur.com/MUtGWhP.png), linear-gradient(to right, #eb3349 40%, #f45c43);
-      background-size: 160px, cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-
-    a[href*="naniscans"] img.object-cover {
-      padding-left: 176px;
-      background-color: #0e131f;
-      background-image: url(https://i.imgur.com/gwK1BEV.png);
-      background-size: 145px;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-
-    a[href*="webtoon"] img.object-cover {
-      padding-left: 176px;
-      background-color: #0e131f;
-      background-image: url(https://i.imgur.com/F14hbZz.png);
-      background-size: 150px;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-  }
 }
 
 @-moz-document url("https://www.kenmei.co/discovery"), url-prefix("https://www.kenmei.co/search?") {
   /* ----- DISCOVERY & BROWSE/SEARCH ----- */
-  #app #home .router--wrapper > div {
-    a {
-      color: var(--accent-1);
+  @css{
 
-      &:hover, &:focus {
-        color: var(--accent-2);
-      }
-    }
-    
-    h2 {
-      color: var(--cl-1);
-    }
-
-    #collection-heading {
-      color: var(--cl-1);
-    }
-
-    /* Series Cards */
-    .series-title {
-      color: var(--cl-2);
-    }
-
-    .series-subtitle, 
-    .subtitle {
-      color: var(--cl-3);
-    }
-
-    [data-tippy-root] {
-      inset: auto auto -3px 0 !important;
-    }
-
-    .tippy-box {
-      background-color: var(--bg-4)
-      border-radius: 0 0 4px 4px;
-    }
-
-    .splide__slide--wrapper {    
-      background-color: var(--bg-5);
-    }
-
-    /* Filter */
-    .filter-popover--button, 
-    .menu--button, 
-    .button-wrapper {
-      color: var(--cl-3);
-      
-      &:hover {
-        color: var(--cl-2);
-      }
-      
-      &[aria-expanded="true"] {
-        color: var(--accent-1);
-      }
-    }
-
-    div:has(.filter-popover--button):focus-visible, 
-    div:has(.menu--button):focus-visible {
-      outline: none;
-    }
-
-    .filter-icon--chevron, .icon--chevron {
-      color: inherit;
-    }
-
-    .menu--button-selected {
-      background-color: var(--accent-1);
-    }
-
-    .button--clear-filters {
-      color: var(--cl-3);
-      
-      &:hover {
-        color: var(--accent-1);
-      }
-    }
-
-    .filter-popover--selected {
-      background-color: var(--accent-1);
-      color: var(--cl-2);
-    }
-    
-    /* Dropdown */
-    .filter-popover--panel, .menu-items {
-      background-color: var(--bg-4);
-      border: 1px solid var(--bg-4);
-      --tw-shadow: 0 25px 50px -12px rgba(black, 0.5);
-      
+    #app #home .router--wrapper > div {
       a {
-        color: var(--cl-3);
-      }
-      
-      a:hover {
-        background-color: var(--bg-2);
-        color: var(--cl-2);
-      }
-      
-      h3 {
-        color var(--cl-2);
-      }
-    }
+        color: var(--accent-1);
 
-    .os-scrollbar .os-scrollbar-handle {
-      background-color: hsla($bg5, 0.8);
-    }
-    
-    /* Checkboxes */
-    input[type="checkbox"] {
-      background-color: var(--bg-1);
-      border-color: var(--bg-4);
-      color: var(--cl-4);
-      
-      &:focus {
-        background-color: var(--bg-1);
-        border-color: var(--bg-4);
-        --tw-ring-color: var(--accent-1);
-        --tw-ring-offset-color: var(--bg-5);
-        --tw-ring-offset-width: 0px;
-      }
-      
-      &:checked, &:checked:focus, &:checked:hover {
-        background-color: var(--accent-1);
-        border-color: var(--accent-1);
-        --tw-ring-offset-color: var(--bg-4);
-        --tw-ring-offset-width: 2px;
-      }
-
-      &:indeterminate {
-        background-color: var(--accent-1);
-        
-        &:focus, &:hover {
-          background-color: var(--accent-1);
-          border-color: var(--accent-1);
-          outline-color: transparent;
-          --tw-ring-offset-width: 2px;
+        &:hover, &:focus {
+          color: var(--accent-2);
         }
       }
-    }
-    
-    /* Personal Recommendation Cards */
-    .button[data-v-c5ef0bdc] {
-      background-color: var(--accent-1);
-      color var(--cl-2);
-    }
-    
-    .card-wrapper .card {
-      background-color: var(--bg-3);
       
-      h3 {
+      h2 {
+        color: var(--cl-1);
+      }
+
+      #collection-heading {
+        color: var(--cl-1);
+      }
+
+      /* Series Cards */
+      .series-title {
+        color: var(--cl-2);
+      }
+
+      .series-subtitle, 
+      .subtitle {
+        color: var(--cl-3);
+      }
+
+      [data-tippy-root] {
+        inset: auto auto -3px 0 !important;
+      }
+
+      .tippy-box {
+        background-color: var(--bg-4);
+        border-radius: 0 0 4px 4px;
+      }
+
+      .splide__slide--wrapper {    
+        background-color: var(--bg-5);
+      }
+
+      /* Filter */
+      .filter-popover--button, 
+      .menu--button, 
+      .button-wrapper {
+        color: var(--cl-3);
+        
+        &:hover {
+          color: var(--cl-2);
+        }
+        
+        &[aria-expanded="true"] {
+          color: var(--accent-1);
+        }
+      }
+
+      div:has(.filter-popover--button):focus-visible, 
+      div:has(.menu--button):focus-visible {
+        outline: none;
+      }
+
+      .filter-icon--chevron, .icon--chevron {
+        color: inherit;
+      }
+
+      .menu--button-selected {
+        background-color: var(--accent-1);
+      }
+
+      .button--clear-filters {
+        color: var(--cl-3);
+        
+        &:hover {
+          color: var(--accent-1);
+        }
+      }
+
+      .filter-popover--selected {
+        background-color: var(--accent-1);
         color: var(--cl-2);
       }
       
-      .description {
+      /* Dropdown */
+      .filter-popover--panel, .menu-items {
+        --tw-shadow: 0 25px 50px -12px rgba(0 0 0 / 0.5);
+        background-color: var(--bg-4);
+        border: 1px solid var(--bg-4);
+        
+        a {
+          color: var(--cl-3);
+        }
+        
+        a:hover {
+          background-color: var(--bg-2);
+          color: var(--cl-2);
+        }
+        
+        h3 {
+          color: var(--cl-2);
+        }
+      }
+
+      .os-scrollbar .os-scrollbar-handle {
+        background-color: rgba(from var(--bg-5) r g b / 0.8);
+      }
+      
+      /* Checkboxes */
+      input[type="checkbox"] {
+        background-color: var(--bg-1);
+        border-color: var(--bg-4);
         color: var(--cl-4);
+        
+        &:focus {
+          --tw-ring-color: var(--accent-1);
+          --tw-ring-offset-color: var(--bg-5);
+          --tw-ring-offset-width: 0px;
+          background-color: var(--bg-1);
+          border-color: var(--bg-4);
+        }
+        
+        &:checked, &:checked:focus, &:checked:hover {
+          --tw-ring-offset-color: var(--bg-4);
+          --tw-ring-offset-width: 2px;
+          background-color: var(--accent-1);
+          border-color: var(--accent-1);
+        }
+
+        &:indeterminate {
+          background-color: var(--accent-1);
+          
+          &:focus, &:hover {
+            --tw-ring-offset-width: 2px;
+            background-color: var(--accent-1);
+            border-color: var(--accent-1);
+            outline-color: transparent;
+          }
+        }
+      }
+      
+      /* Personal Recommendation Cards */
+      .button[data-v-c5ef0bdc] {
+        background-color: var(--accent-1);
+        color: var(--cl-2);
+      }
+      
+      .card-wrapper .card {
+        background-color: var(--bg-3);
+        
+        h3 {
+          color: var(--cl-2);
+        }
+        
+        .description {
+          color: var(--cl-4);
+        }
+      }
+
+      /* Card Skeleton */
+      .bg-gray-400.animate-pulse {
+        background-color: var(--bg-4);
+      }
+
+      ul > li > a > div > .bg-gray-400 {
+        background-color: var(--bg-4);
       }
     }
 
-    /* Card Skeleton */
-    .bg-gray-400.animate-pulse {
-      background-color: var(--bg-4);
-    }
-
-    ul > li > a > div > .bg-gray-400 {
-      background-color: var(--bg-4);
-    }
   }
+
 }

@@ -3,7 +3,7 @@
 @namespace      github.com/ush-ruff
 @homepageURL    https://github.com/ush-ruff/Kenmei-Midnight-Blue
 @updateURL      https://github.com/ush-ruff/Kenmei-Midnight-Blue/raw/main/kenmei.user.css
-@version        0.23.1
+@version        0.23.2
 @description    A new userstyle
 @author         ushruff
 @preprocessor   stylus
@@ -161,6 +161,10 @@
 
   .dark_border-gray-700 {
     border-color: var(--bg-1);
+  }
+
+  .text-blue-500 {
+    color: var(--accent-1);
   }
 
   .text-blue-600 {
@@ -547,7 +551,8 @@
     }
     
   /* ---- SECONDARY BUTTON ---- */
-    .btn-secondary {
+    .btn-secondary, 
+    a.button--link + button.button--outline  {
       background: var(--bg-5);
       border-color: var(--bg-5);
       color: var(--cl-2);
@@ -1220,15 +1225,17 @@
   }
 
   /* Search */
-  .vfm__content .modal-body {
+  [id^="radix-vue-dialog-content-v-"] #upsert-entry-panel {
     .panel {
       background-color: var(--bg-3);
     }
 
     .wrapper--search-input {
       background-color: var(--bg-3);
+      
       input {
         background-color: var(--bg-1);
+        color: var(--cl-4);
       }
     }
 
@@ -1250,7 +1257,7 @@
     }
   }
 
-  .vfm__content .modal-body .wrapper--search-input + div {
+  [id^="radix-vue-dialog-content-v-"] #upsert-entry-panel {
     .list--item:hover {
       background-color: var(--bg-1);
     }
@@ -1543,7 +1550,7 @@
   }
   
   /* --- Edit Favourites --- */
-  #radix-vue-dialog-content-v-19 {
+  [id^="radix-vue-dialog-content-v-"] {
     .bg-gray-50 {
       background-color: var(--bg-4);
     }

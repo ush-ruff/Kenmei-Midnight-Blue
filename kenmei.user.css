@@ -3,7 +3,7 @@
 @namespace      github.com/ush-ruff
 @homepageURL    https://github.com/ush-ruff/Kenmei-Midnight-Blue
 @updateURL      https://github.com/ush-ruff/Kenmei-Midnight-Blue/raw/main/kenmei.user.css
-@version        0.24.0
+@version        0.25.0
 @description    A new userstyle
 @author         ushruff
 @preprocessor   stylus
@@ -1680,9 +1680,6 @@
   /* ----- CUSTOM DASHBOARD BACKGROUND ----- */
   if customBG == 1 {
     #home .router--wrapper {
-      // background-image: url(https://images.hdqwalls.com/wallpapers/anime-dark-witch-nm.jpg);background-blend-mode: darken;
-      // background-image: url(https://images6.alphacoders.com/106/thumb-1920-1065654.png);
-      // background-image: url(https://i.imgur.com/qLj5Z9b.jpg);
       background-color: var(--bg-1); 
       background-position: center top;
       background-size: 100vw auto;
@@ -1917,7 +1914,7 @@
     #app #home {
       a[href*="hunlight-scans"] img.object-cover {
         padding-left: 176px;
-        background-image: url(https://i.imgur.com/5w4e4w0.png);
+        background-image: url(https://raw.githubusercontent.com/ush-ruff/Kenmei-Midnight-Blue/main/images/supported-sites-covers/hunlight%20scans.png);
         background-size: 178px;
         background-position: center -3px;
       }
@@ -1925,15 +1922,23 @@
       a[href*="kireicake"] img.object-cover {
         --size: 7px;
         padding-left: 176px;
-        background-image: url(https://i.imgur.com/TR61TR2.png), linear-gradient(to right,#a458d7d4 1px,transparent 1px),linear-gradient(to bottom,#c353b3b5 1px,transparent 1px);
+        background-image: url(https://raw.githubusercontent.com/ush-ruff/Kenmei-Midnight-Blue/main/images/supported-sites-covers/kireicake.png), linear-gradient(to right,#a458d7d4 1px,transparent 1px),linear-gradient(to bottom,#c353b3b5 1px,transparent 1px);
         background-size: 250px, var(--size) var(--size), var(--size) var(--size);
         background-position: bottom center, top left, top left;
+      }
+      
+      a[href*="ksgroupscans"] img.object-cover {
+        padding-left: 176px;
+        background-image: url(https://raw.githubusercontent.com/ush-ruff/Kenmei-Midnight-Blue/main/images/supported-sites-covers/ksgroup%20scans.png), linear-gradient(to right, #111, #222);
+        background-size: 220px, auto;
+        background-position: center;
+        background-repeat: no-repeat;
       }
 
       a[href*="lhtranslation"] img.object-cover {
         padding-left: 176px;
         background-color: #164577;
-        background-image: url(https://i.imgur.com/PtuDRek.jpg);
+        background-image: url(https://raw.githubusercontent.com/ush-ruff/Kenmei-Midnight-Blue/main/images/supported-sites-covers/lhtranslation.jpg);
         background-size: 110px;
         background-position: center;
         background-repeat: no-repeat;
@@ -1941,7 +1946,7 @@
 
       a[href*="mangadex"] img.object-cover {
         padding-left: 176px;
-        background-image: url(https://i.imgur.com/Cxld8Qk.png);
+        background-image: url(https://raw.githubusercontent.com/ush-ruff/Kenmei-Midnight-Blue/main/images/supported-sites-covers/mangadex.png);
         background-size: cover;
       }
 
@@ -1956,7 +1961,7 @@
 
       a[href*="mangasushi"] img.object-cover {
         padding-left: 176px;
-        background-image: url(https://i.imgur.com/MUtGWhP.png), linear-gradient(to right, #eb3349 40%, #f45c43);
+        background-image: url(https://raw.githubusercontent.com/ush-ruff/Kenmei-Midnight-Blue/main/images/supported-sites-covers/MangaSushi.png), linear-gradient(to right, #eb3349 40%, #f45c43);
         background-size: 160px, cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -1965,7 +1970,7 @@
       a[href*="naniscans"] img.object-cover {
         padding-left: 176px;
         background-color: #0e131f;
-        background-image: url(https://i.imgur.com/gwK1BEV.png);
+        background-image: url(https://raw.githubusercontent.com/ush-ruff/Kenmei-Midnight-Blue/main/images/supported-sites-covers/naniscans.png);
         background-size: 145px;
         background-position: center;
         background-repeat: no-repeat;
@@ -1974,7 +1979,7 @@
       a[href*="webtoon"] img.object-cover {
         padding-left: 176px;
         background-color: #0e131f;
-        background-image: url(https://i.imgur.com/F14hbZz.png);
+        background-image: url(https://raw.githubusercontent.com/ush-ruff/Kenmei-Midnight-Blue/main/images/supported-sites-covers/webtoon.png);
         background-size: 150px;
         background-position: center;
         background-repeat: no-repeat;

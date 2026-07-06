@@ -3,7 +3,7 @@
 @namespace      github.com/ush-ruff
 @homepageURL    https://github.com/ush-ruff/Kenmei-Midnight-Blue
 @updateURL      https://github.com/ush-ruff/Kenmei-Midnight-Blue/raw/main/kenmei.user.css
-@version        0.25.0
+@version        0.25.1
 @description    A new userstyle
 @author         ushruff
 @preprocessor   stylus
@@ -97,6 +97,10 @@
     
     .bg-gray-100 {
       background-color: var(--bg-1);
+    }
+    
+    .bg-gray-200 {
+      background-color: var(--bg-5);
     }
     
     .hover_bg-gray-100:hover {
@@ -224,7 +228,13 @@
       .skeleton-loader--badge,
       .skeleton-text,
       .skeleton--subtitle,
-      .skeleton--badge {
+      .skeleton--badge, 
+      .skeleton-label, 
+      .skeleton-action, 
+      .skeleton-title, 
+      .skeleton-desc, 
+      .skeleton-toggle, 
+      .bg-skeleton {
         background-color: var(--bg-5);
       }
     }
@@ -369,6 +379,7 @@
         
         .header {
           border-color: var(--bg-5);
+          color: var(--cl-2);
         }
       }
     }
@@ -547,7 +558,11 @@
         border-color: #dc2626;
         color: #dc2626;
       }
-      
+    }
+    
+    #app,
+    #upsert-entry-panel,
+    .vfm__content {
       /* ---- PRIMARY BUTTON ---- */
       .btn-primary,
       a.button--link {
@@ -940,6 +955,26 @@
       .chapter-meta {
         color: var(--cl-3);
       }
+      
+      .ch-now {
+        color: var(--cl-2);
+      }
+      
+      .ch-latest {
+        color: var(--cl-4);
+      }
+      
+      .none-note {
+        color: var(--cl-5);
+      }
+      
+      .pip {
+        background-color: var(--accent-1);
+      }
+      
+      .pip-more {
+        color: var(--accent-1);
+      }
     }
 
     /* Row Actions */
@@ -992,6 +1027,28 @@
           }
         }
       }
+      
+      .actions-bar {
+        background-color: var(--bg-3);
+        color: var(--cl-3);
+        
+        div.bg-gray-200.dark_bg-gray-700 {
+          background-color: var(--bg-1);
+        }
+      }
+    }
+    
+    [id^="radix-vue-dropdown-menu-content"] {
+      color: var(--cl-3);
+      
+      .text-red-600 {
+        color: #ff6565;
+        
+        &:hover, &:focus {
+          background-color: #822222;
+          color: #edd5d5;
+        }
+      }
     }
 
     /* Tooltip */
@@ -1028,7 +1085,7 @@
         background-color: var(--bg-3);
         box-shadow: 0 0 10px 4px var(--bg-4);
         
-        .bg-white, .wrapper--title, .actions {
+        > .bg-white, .wrapper--title, .actions {
           background-color: inherit;
         }
         
@@ -1112,6 +1169,21 @@
             }
           }
         }
+        
+        [aria-controls^="radix-vue-select-content"], 
+        [aria-controls^="radix-vue-popover-content"], 
+        .variant--select {
+          background-color: var(--bg-1);
+          border-color: var(--bg-3);
+          color: var(--cl-2);
+        }
+        
+        .variant--select .selected-values {
+          .bg-gray-100 {
+            background-color: var(--bg-5);
+            color: var(--cl-2);
+          }
+        }
 
         /* Dropdown Body */
         .options,
@@ -1154,6 +1226,10 @@
             &:hover {
               color: var(--cl-2);
             }
+          }
+          
+          .vue-number-input__button {
+            color: var(--cl-3);
           }
 
           .vue-number-input__button:hover::before,
@@ -1299,10 +1375,20 @@
           color: #b4c3d7;
         }
       }
+      
+      .actions button[aria-controls] > svg {
+        background-color: transparent;
+      }
 
       .img-wrapper {
         background-color: var(--bg-5);
       }
+    }
+    
+    [aria-controls^="radix-vue-select-content"] {
+      background-color: var(--bg-1);
+      border-color: var(--bg-1);
+      color: var(--cl-3);
     }
 
     .vfm__content .modal-body .wrapper--title + div {
@@ -1659,6 +1745,70 @@
 
     .group:hover .group-hover_text-gray-500 {
       color: var(--cl-3);
+    }
+    
+    /* -- Fix for new layout -- */
+    .settings .settings-card {
+      --tw-ring-color: var(--bg-3);
+      background-color: var(--bg-3);
+      
+      + .bg-white {
+        --tw-ring-color: var(--bg-3);
+      }
+      
+      h2, h3 {
+        color: var(--cl-2);
+      }
+      
+      .notif-group + .notif-group {
+        border-color: var(--bg-1);
+      }
+      
+      .notif-title {
+        color: var(--cl-3);
+      }
+      
+      .notif-description {
+        color: var(--cl-6);
+      }
+      
+      .enable-all {
+        color: var(--accent-1);
+        
+        &:is(:hover, :focus-visible) {
+          color: var(--accent-2);
+        }
+      }
+      
+      .channel {
+        --tw-ring-color: var(--bg-3);
+        background-color: var(--bg-3);
+        
+        .data-\[state\=unchecked\]_bg-gray-300[data-state="unchecked"] {
+          background-color: var(--bg-1);
+          
+          .bg-white {
+            background-color: var(--cl-4);
+          }
+        }
+        
+        .data-\[state\=checked\]_bg-blue-500[data-state="checked"] {
+          background-color: var(--accent-1);
+          
+          .bg-white {
+            background-color: var(--cl-1);
+          }
+        }
+      }
+      
+      .lock-overlay {
+        background: oklch(from var(--bg-3) l c h / 0.5);
+      }
+      
+      .lock-overlay__icon, 
+      .lock-overlay__hint {
+        color: var(--accent-1);
+      }
     }
 
     /* List Export */

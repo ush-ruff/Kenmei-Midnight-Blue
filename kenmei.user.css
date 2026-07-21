@@ -3,7 +3,7 @@
 @namespace      github.com/ush-ruff
 @homepageURL    https://github.com/ush-ruff/Kenmei-Midnight-Blue
 @updateURL      https://github.com/ush-ruff/Kenmei-Midnight-Blue/raw/main/kenmei.user.css
-@version        0.25.2
+@version        0.26.0
 @description    A new userstyle
 @author         ushruff
 @preprocessor   stylus
@@ -196,6 +196,10 @@
     .sm_divide-gray-100 > :not([hidden]) ~ :not([hidden]) {
       border-color: var(--bg-1);
     }
+    
+    .ring-gray-200 {
+      --tw-ring-color: var(--bg-1);
+    }
 
     /* ---- LOGIN ---- */
     .modal-body[data-v-7fb6ed76] {
@@ -236,6 +240,10 @@
       .skeleton-toggle, 
       .bg-skeleton {
         background-color: var(--bg-5);
+      }
+      
+      .skeleton-block {
+        background-color: var(--bg-3);
       }
     }
 
@@ -288,6 +296,25 @@
 
       &:focus {
         --tw-ring-offset-color: var(--bg-4);
+      }
+    }
+    
+    [id^="radix-vue-dialog-content-v"] {
+      .text-gray-600 {
+        color: var(--cl-3);
+      }
+      
+      .stagger-enter.to-blue-50 {
+        background-image: unset;
+        background-color: var(--bg-1);
+        
+        .text-gray-900 {
+          color: var(--cl-2);
+        }
+        
+        .text-gray-700 {
+          color: var(--cl-3);
+        }
       }
     }
 
@@ -531,9 +558,9 @@
 
     }
 
+    /* ---- INPUTS ---- */
     #app,
     .vfm__content {
-      /* ---- INPUTS ---- */
       input[type="text"],
       input[type="password"] {
         background: var(--bg-1);
@@ -560,10 +587,11 @@
       }
     }
     
+    /* ---- BUTTONS ---- */
     #app,
     #upsert-entry-panel,
     .vfm__content {
-      /* ---- PRIMARY BUTTON ---- */
+      /* --- PRIMARY BUTTON --- */
       .btn-primary,
       a.button--link {
         background-color: var(--accent-1);
@@ -577,7 +605,7 @@
         }
       }
       
-      /* ---- SECONDARY BUTTON ---- */
+      /* --- SECONDARY BUTTON --- */
       .btn-secondary, 
       a.button--link + button.button--outline  {
         background: var(--bg-5);
@@ -591,6 +619,28 @@
         &:focus {
           --tw-ring-color: var(--accent-1);
           --tw-ring-offset-color: var(--bg-2);
+        }
+      }
+      
+      /* --- SEGMENTED BUTTONS --- */
+      .segmented-control {
+        background-color: var(--bg-1);
+
+        .segmented-control__option {
+          color: var(--cl-3);
+          
+          &:is(:hover, :focus-visible):not(.segmented-control__option--active) {
+            color: var(--cl-1);
+          }
+        }
+
+        .segmented-control__option--active {
+          background-color: var(--bg-4);
+          color: var(--cl-2);
+        }
+        
+        .segmented-control__pill {
+          background-color: var(--bg-3);
         }
       }
     }
@@ -1554,16 +1604,21 @@
         --tw-ring-color: var(--bg-1);
       }
       
-      .desktop-link {
+      .profile-nav {
         background-color: var(--bg-1);
       }
       
-      .desktop-link.router-link-active {
-        background-color: var(--bg-1);
+      .profile-nav__link {
+        color: var(--cl-2);
+        
+        &:is(:hover, :focus-visible) {
+          color: var(--cl-1);
+        }
       }
       
-      .router-link-exact-active.desktop-link > span {
+      .profile-nav__indicator {
         background-color: var(--accent-1);
+        color: var(--cl-1);
       }
     }
     
@@ -1575,7 +1630,10 @@
     
     /* --- Body --- */
     #app .profile--body {
-      .section-wrapper {
+      --_filter: hue-rotate(180deg) invert(0.85);
+      
+      .user-section-card {
+        --tw-ring-color: var(--bg-3);
         background-color: var(--bg-3);
       }
       
@@ -1613,8 +1671,11 @@
       }
       
       canvas {
-        background-color: rgba(from var(--bg-5) r g b / 0.5);
-        border-radius: 50%;
+        filter: var(--_filter);
+      }
+      
+      .legend-color-box {
+        filter: var(--_filter);
       }
       
       /* Edit Button */
@@ -1666,6 +1727,52 @@
       .skeleton-activity-feed > :not([hidden]) ~ :not([hidden]) {
         border-color: var(--bg-1);
       }
+      
+      /* --- Statistics --- */
+      .stat-value {
+        color: var(--cl-2);
+      }
+      
+      .section-block,
+      .section-block-inset__inner {
+        border-color: var(--bg-1);
+      }
+      
+      .score-stats {
+        border-color: var(--bg-1);
+      }
+      
+      .score-stats__label {
+        color: var(--cl-6);
+      }
+      
+      .score-stats__value {
+        color: var(--cl-3);
+      }
+      
+      .top-rated-card__title,
+      .top-rated-card__score {
+        color: var(--cl-2);
+      }
+      
+      .legend__item {
+        color: var(--cl-4);
+      }
+      
+      .row__name,
+      .classifications-row__name {
+        color: var(--cl-4);
+      }
+      
+      .row__meta,
+      .classifications-row__meta {
+        color: var(--cl-5);
+      }
+      
+      .row__bar,
+      .classifications-bar {
+        background-color: var(--bg-1);
+      }
     }
     
     /* --- Edit Favourites --- */
@@ -1708,13 +1815,17 @@
       }
 
       .active,
-      .router-link-active {
+      .router-link-active:not(.profile-nav__link) {
         background-color: var(--bg-3);
         color: var(--cl-1);
         
         &:hover {
           color: var(--cl-1);
         }
+      }
+
+      .desktop-nav__indicator {
+        background-color: var(--bg-3);
       }
     }
     
@@ -1917,11 +2028,24 @@
       blockquote, p {
         color: var(--cl-3);
       }
+      
+      dt {
+        color: var(--cl-2);
+      }
+      
+      .bg-gray-50 {
+        background-color: var(--bg-3);
+      }
+      
+      .from-gray-50 {
+        --tw-gradient-from: var(--bg-3) var(--tw-gradient-from-position);
+        --tw-gradient-to: transparent var(--tw-gradient-to-position);
+      }
 
       .bg-blue-500 {
         background-color: var(--accent-1);
       }
-
+      
       .plan-picker--wrapper .bg-white {
         background-color: var(--bg-3);
         background-image: radial-gradient(circle, var(--bg-5) 35%, var(--bg-2));
@@ -1934,6 +2058,7 @@
           border-color: var(--cl-4);
         }
       }
+      
       .bg-green-500 {
         background-color: #29c778;
         color: #193f41;
@@ -1949,7 +2074,7 @@
         }
 
         dl {
-          color: inherit;
+          color: var(--cl-3);
         }
       }
 
@@ -1977,8 +2102,9 @@
         color: var(--cl-3);
       }
 
-      dl > :not([hidden]) ~ :not([hidden]) {
-        border-color: var(--cl-4);
+      dl > :not([hidden]) ~ :not([hidden]),
+      .divide-gray-900\/10 > :not([hidden]) ~ :not([hidden]) {
+        border-color: var(--bg-1);
       }
     }
     
@@ -2066,12 +2192,13 @@
     .grid-container > a {
       background-color: var(--bg-3);
       color: var(--cl-2);
+      container-type: inline-size;
     }
 
     /* Supported Sites - Header Images */
     #app #home {
       a[href*="hunlight-scans"] img.object-cover {
-        padding-left: 176px;
+        padding-left: 100cqw;
         background-image: url(https://raw.githubusercontent.com/ush-ruff/Kenmei-Midnight-Blue/main/images/supported-sites-covers/hunlight%20scans.png);
         background-size: 178px;
         background-position: center -3px;
@@ -2079,14 +2206,14 @@
 
       a[href*="kireicake"] img.object-cover {
         --size: 7px;
-        padding-left: 176px;
+        padding-left: 100cqw;
         background-image: url(https://raw.githubusercontent.com/ush-ruff/Kenmei-Midnight-Blue/main/images/supported-sites-covers/kireicake.png), linear-gradient(to right,#a458d7d4 1px,transparent 1px),linear-gradient(to bottom,#c353b3b5 1px,transparent 1px);
         background-size: 250px, var(--size) var(--size), var(--size) var(--size);
         background-position: bottom center, top left, top left;
       }
       
       a[href*="ksgroupscans"] img.object-cover {
-        padding-left: 176px;
+        padding-left: 100cqw;
         background-image: url(https://raw.githubusercontent.com/ush-ruff/Kenmei-Midnight-Blue/main/images/supported-sites-covers/ksgroup%20scans.png), linear-gradient(to right, #111, #222);
         background-size: 220px, auto;
         background-position: center;
@@ -2094,7 +2221,7 @@
       }
 
       a[href*="lhtranslation"] img.object-cover {
-        padding-left: 176px;
+        padding-left: 100cqw;
         background-color: #164577;
         background-image: url(https://raw.githubusercontent.com/ush-ruff/Kenmei-Midnight-Blue/main/images/supported-sites-covers/lhtranslation.jpg);
         background-size: 110px;
@@ -2103,13 +2230,13 @@
       }
 
       a[href*="mangadex"] img.object-cover {
-        padding-left: 176px;
+        padding-left: 100cqw;
         background-image: url(https://raw.githubusercontent.com/ush-ruff/Kenmei-Midnight-Blue/main/images/supported-sites-covers/mangadex.png);
         background-size: cover;
       }
 
       a[href*="mangahub"] img.object-cover {
-        padding-left: 176px;
+        padding-left: 100cqw;
         background-color: #0e131f;
         background-image: url(https://mangahub.io/logo.png);
         background-size: 170px;
@@ -2118,7 +2245,7 @@
       }
 
       a[href*="mangasushi"] img.object-cover {
-        padding-left: 176px;
+        padding-left: 100cqw;
         background-image: url(https://raw.githubusercontent.com/ush-ruff/Kenmei-Midnight-Blue/main/images/supported-sites-covers/MangaSushi.png), linear-gradient(to right, #eb3349 40%, #f45c43);
         background-size: 160px, cover;
         background-position: center;
@@ -2126,7 +2253,7 @@
       }
 
       a[href*="naniscans"] img.object-cover {
-        padding-left: 176px;
+        padding-left: 100cqw;
         background-color: #0e131f;
         background-image: url(https://raw.githubusercontent.com/ush-ruff/Kenmei-Midnight-Blue/main/images/supported-sites-covers/naniscans.png);
         background-size: 145px;
@@ -2135,7 +2262,7 @@
       }
 
       a[href*="webtoon"] img.object-cover {
-        padding-left: 176px;
+        padding-left: 100cqw;
         background-color: #0e131f;
         background-image: url(https://raw.githubusercontent.com/ush-ruff/Kenmei-Midnight-Blue/main/images/supported-sites-covers/webtoon.png);
         background-size: 150px;
@@ -2291,9 +2418,9 @@
       }
       
       /* Personal Recommendation Cards */
-      .button[data-v-c5ef0bdc] {
+      .collection-wrapper .button {
         background-color: var(--accent-1);
-        color: var(--cl-2);
+        color: var(--cl-1);
       }
       
       .card-wrapper .card {

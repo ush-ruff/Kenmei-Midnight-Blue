@@ -3,7 +3,7 @@
 @namespace      github.com/ush-ruff
 @homepageURL    https://github.com/ush-ruff/Kenmei-Midnight-Blue
 @updateURL      https://github.com/ush-ruff/Kenmei-Midnight-Blue/raw/main/kenmei.user.css
-@version        0.25.1
+@version        0.25.2
 @description    A new userstyle
 @author         ushruff
 @preprocessor   stylus
@@ -796,11 +796,13 @@
         border-color: var(--bg-4);
       }
 
-      .the-dashboard {
+      .the-dashboard, 
+      .the-dashboard-list {
         background-color: var(--bg-2);
       }
 
       .the-dashboard,
+      .the-dashboard-list,
       .the-dashboard-header,
       .the-dashboard-footer,
       .divide-gray-200 > :not([hidden]) ~ :not([hidden]) {
@@ -888,6 +890,7 @@
 
     /* Unread */
     .the-dashboard,
+    .the-dashboard-list,
     .top-drawer + div > div:nth-child(2) {
       .unread-indicator-ping,
       .unread-indicator {
@@ -897,6 +900,7 @@
 
     /* Status */
     .the-dashboard,
+    .the-dashboard-list,
     .top-drawer + div > div:nth-child(2) {
       .primary,
       .success,
@@ -935,6 +939,7 @@
 
     /* Chapters */
     .the-dashboard,
+    .the-dashboard-list,
     .top-drawer + div > div:nth-child(2) {
       .chapter,
       .chapter-classes {
@@ -979,6 +984,7 @@
 
     /* Row Actions */
     .the-dashboard .row-actions,
+    .the-dashboard-list .row-actions,
     .top-drawer + div > div:nth-child(2) .lg_group-hover_block {
       button.group {
         background-color: var(--bg-3);
@@ -1013,7 +1019,8 @@
     }
 
     /* Actions */
-    .the-dashboard {
+    .the-dashboard,
+    .the-dashboard-list {
       button.group {
         background-color: var(--bg-4);
         border-color: var(--bg-1);
@@ -1846,7 +1853,8 @@
         border-color: hsla($bg4, topdrawerOpacity);
       }
 
-      .the-dashboard {
+      .the-dashboard,
+      .the-dashboard-list {
         background-color: hsla($bg2, dashboardOpacity);
       }
 

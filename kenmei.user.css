@@ -3,7 +3,7 @@
 @namespace      github.com/ush-ruff
 @homepageURL    https://github.com/ush-ruff/Kenmei-Midnight-Blue
 @updateURL      https://github.com/ush-ruff/Kenmei-Midnight-Blue/raw/main/kenmei.user.css
-@version        0.26.0
+@version        0.26.1
 @description    A new userstyle
 @author         ushruff
 @preprocessor   stylus
@@ -860,6 +860,10 @@
       }
 
       /* List Style */
+      .list-header {
+        border-color: var(--bg-4);
+      }
+      
       .list-row__regular:hover {
         background-color: var(--bg-5);
       }

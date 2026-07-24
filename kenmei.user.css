@@ -3,7 +3,7 @@
 @namespace      github.com/ush-ruff
 @homepageURL    https://github.com/ush-ruff/Kenmei-Midnight-Blue
 @updateURL      https://github.com/ush-ruff/Kenmei-Midnight-Blue/raw/main/kenmei.user.css
-@version        0.26.1
+@version        0.26.2
 @description    A new userstyle
 @author         ushruff
 @preprocessor   stylus
@@ -906,6 +906,7 @@
 
     /* Checkboxes */
     .the-dashboard,
+    .top-drawer + div > div:nth-child(1),
     .top-drawer + div > div:nth-child(2),
     .vfm__content, 
     [id^="radix-vue-dialog-content-"] {
@@ -940,6 +941,10 @@
           }
         }
       }
+    }
+    
+    .top-drawer + div > div:nth-child(1) input[type="checkbox"] {
+      background-color: var(--bg-3);
     }
 
     /* Unread */

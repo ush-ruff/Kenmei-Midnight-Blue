@@ -3,7 +3,7 @@
 @namespace      github.com/ush-ruff
 @homepageURL    https://github.com/ush-ruff/Kenmei-Midnight-Blue
 @updateURL      https://github.com/ush-ruff/Kenmei-Midnight-Blue/raw/main/kenmei.user.css
-@version        0.26.2
+@version        0.26.3
 @description    A new userstyle
 @author         ushruff
 @preprocessor   stylus
@@ -853,6 +853,7 @@
 
       .the-dashboard,
       .the-dashboard-list,
+      .the-dashboard-list li + li,
       .the-dashboard-header,
       .the-dashboard-footer,
       .divide-gray-200 > :not([hidden]) ~ :not([hidden]) {

@@ -3,7 +3,7 @@
 @namespace      github.com/ush-ruff
 @homepageURL    https://github.com/ush-ruff/Kenmei-Midnight-Blue
 @updateURL      https://github.com/ush-ruff/Kenmei-Midnight-Blue/raw/main/kenmei.user.css
-@version        0.26.3
+@version        0.26.4
 @description    A new userstyle
 @author         ushruff
 @preprocessor   stylus
@@ -836,6 +836,11 @@
       .mode-select-btn:focus {
         border-color: var(--accent-1);
         --tw-ring-color: var(--accent-1);
+      }
+
+      .switch__indicator {
+        background-color: var(--bg-3);
+        box-shadow: unset;
       }
     }
 

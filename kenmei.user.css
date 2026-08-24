@@ -3,8 +3,8 @@
 @namespace      github.com/ush-ruff
 @homepageURL    https://github.com/ush-ruff/Kenmei-Midnight-Blue
 @updateURL      https://github.com/ush-ruff/Kenmei-Midnight-Blue/raw/main/kenmei.user.css
-@version        0.26.5
-@description    A new userstyle
+@version        0.27.0
+@description    A dark blue theme for Kenmei manga tracker
 @author         ushruff
 @preprocessor   stylus
 @var            checkbox customBG "Custom Dashboard Background" 1
@@ -226,7 +226,8 @@
     }
 
     #app, 
-    .vfm__content {
+    .vfm__content, 
+    .panel {
       .skeleton-loader,
       .skeleton-loader--text,
       .skeleton-loader--badge,
@@ -1369,20 +1370,6 @@
           }
         }
         
-        /* Tabs */
-        .tab {
-          color: var(--cl-3);
-            
-          &:hover {
-            color: var(--cl-2);
-          }
-        }
-        
-        .active-tab {
-          border-color: var(--accent-1);
-          color: var(--accent-1);
-        }
-        
         /* Tags */
         .primary {
           background-color: var(--bg-5);
@@ -1410,8 +1397,48 @@
         }
       }
     }
+    
+    [id^="radix-vue-dialog-content-v-"] {
+      /* Add Notes */
+      textarea[id^="textarea"] {
+        --tw-ring-color: var(--bg-4);
+        background-color: var(--bg-1);
+        color: var(--cl-3);
+        
+        &:is(:hover, :focus-visible) {
+          --tw-ring-color: var(--accent-1);
+        }
+      }
+      
+      .helper-text {
+        color: var(--cl-5);
+        
+        a {
+          color: var(--accent-1);
+        }
+      }
+      
+      .dark\:prose-invert {
+        color: var(--cl-2);
+      }
+      
+      /* Tabs */
+      .tab {
+        color: var(--cl-3);
+
+        &:hover {
+          color: var(--cl-2);
+        }
+      }
+
+      .active-tab {
+        border-color: var(--accent-1);
+        color: var(--accent-1);
+      }
+    }
 
     /* Search */
+    [id^="radix-vue-dialog-content-v-"],
     [id^="radix-vue-dialog-content-v-"] #upsert-entry-panel {
       .panel {
         background-color: var(--bg-3);
@@ -1442,9 +1469,7 @@
       .wrapper--image {
         background-color: var(--bg-5);
       }
-    }
-
-    [id^="radix-vue-dialog-content-v-"] #upsert-entry-panel {
+      
       .list--item:hover {
         background-color: var(--bg-1);
       }
@@ -1819,7 +1844,8 @@
         background-color: var(--bg-4);
       }
       
-      .dark_bg-gray-700 > div > button:first-child {
+      .dark_bg-gray-700 > div > button:first-child,
+      .bg-gray-50.dark\:bg-gray-700 > button:first-child {
         background-color: var(--bg-1);
         border-color: var(--bg-4);
         color: var(--cl-3);

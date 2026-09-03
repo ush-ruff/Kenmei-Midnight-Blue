@@ -3,7 +3,7 @@
 @namespace      github.com/ush-ruff
 @homepageURL    https://github.com/ush-ruff/Kenmei-Midnight-Blue
 @updateURL      https://github.com/ush-ruff/Kenmei-Midnight-Blue/raw/main/kenmei.user.css
-@version        0.27.0
+@version        0.27.1
 @description    A dark blue theme for Kenmei manga tracker
 @author         ushruff
 @preprocessor   stylus
@@ -115,6 +115,7 @@
       background-color: var(--accent-1);
     }
     
+    .hover\:bg-blue-600\/90:hover, 
     .hover_bg-blue-600\/90:hover {
       background-color: var(--accent-2);
     }
@@ -353,6 +354,10 @@
 
     /* ---- HEADER ---- */
     #app header {
+      .navigation-top-bar {
+        background-color: var(--bg-4);
+      }
+
       .desktop-links > div:first-child img {
         filter: brightness(2);
       }
@@ -1108,6 +1113,14 @@
         
         div.bg-gray-200.dark_bg-gray-700 {
           background-color: var(--bg-1);
+        }
+        
+        .hover\:bg-gray-100:hover {
+          background-color: var(--bg-5);
+        }
+        
+        .hover\:text-gray-900:hover {
+          color: var(--cl-1);
         }
       }
     }

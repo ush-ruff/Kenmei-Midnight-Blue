@@ -3,7 +3,7 @@
 @namespace      github.com/ush-ruff
 @homepageURL    https://github.com/ush-ruff/Kenmei-Midnight-Blue
 @updateURL      https://github.com/ush-ruff/Kenmei-Midnight-Blue/raw/main/kenmei.user.css
-@version        0.27.1
+@version        0.28.0
 @description    A dark blue theme for Kenmei manga tracker
 @author         ushruff
 @preprocessor   stylus
@@ -126,6 +126,14 @@
     
     .focus_bg-gray-100:focus {
       background-color: var(--bg-5);
+    }
+    
+    .bg-primary {
+      background-color: var(--accent-1);
+    }
+    
+    .hover\:bg-primary-hover:hover {
+      background-color: var(--accent-2);
     }
 
     /* Text */
@@ -301,7 +309,8 @@
       }
     }
     
-    [id^="radix-vue-dialog-content-v"] {
+    [id^="radix-vue-dialog-content-v"], 
+    [id^="reka-dialog-content-v"] {
       .text-gray-600 {
         color: var(--cl-3);
       }
@@ -362,7 +371,8 @@
         filter: brightness(2);
       }
 
-      .desktop-link {
+      .desktop-link, 
+      a[role="tab"] {
         color: var(--cl-3);
         
         &:focus, &:hover {
@@ -374,6 +384,10 @@
           border-color: var(--accent-1);
           color: var(--accent-1);
         }
+      }
+      
+      .bg-highlight {
+        background-color: var(--accent-1);
       }
       
       .profile .btn--input {
@@ -423,7 +437,9 @@
 
     /* ---- DROPDOWNS ---- */
     [id^="radix-vue-select-content-v"], 
-    [id^="radix-vue-popover-content-v"] {
+    [id^="radix-vue-popover-content-v"], 
+    [id^="reka-select-content"], 
+    [id^="reka-dropdown-menu-content"] {
       background-color: var(--bg-4);
       border: 1px solid var(--bg-4);
       scrollbar-width: thin;
@@ -444,12 +460,21 @@
         color: var(--cl-3);
       }
 
-      [role="option"] {
+      [role="option"], 
+      [data-slot="dropdown-menu-item"] {
         color: var(--cl-3);
         
         &:hover, &:focus, &[data-highlighted] {
           background-color: var(--bg-2);
           color: var(--cl-2);
+        }
+        
+        &[data-variant="destructive"] {
+          color: #dc2626;
+          
+          svg {
+            color: currentColor !important;
+          }
         }
       }
       
@@ -480,7 +505,8 @@
       }
 
       /* Separator*/
-      .bg-gray-200 {
+      .bg-gray-200, 
+      .bg-divider {
         background-color: var(--bg-1);
       }
     }
@@ -597,7 +623,8 @@
     #app,
     #upsert-entry-panel,
     .panel,
-    .vfm__content {
+    .vfm__content, 
+    [id^="reka-dialog-content-v"] {
       /* --- PRIMARY BUTTON --- */
       .btn-primary,
       a.button--link {
@@ -877,7 +904,8 @@
         border-color: var(--bg-4);
       }
       
-      .list-row__regular:hover {
+      .list-row__regular:hover, 
+      .list-row__regular:has([data-state="open"]) {
         background-color: var(--bg-5);
       }
 
@@ -922,7 +950,8 @@
     .top-drawer + div > div:nth-child(1),
     .top-drawer + div > div:nth-child(2),
     .vfm__content, 
-    [id^="radix-vue-dialog-content-"] {
+    [id^="radix-vue-dialog-content-"], 
+    [id^="reka-dialog-content-v"] {
       input[type="checkbox"] {
         background-color: var(--bg-1);
         border-color: var(--bg-4);
@@ -1123,9 +1152,25 @@
           color: var(--cl-1);
         }
       }
+      
+      .list-row > div:nth-child(2) {
+        background-color: var(--bg-4);
+        color: var(--cl-3);
+        
+        .bg-divider {
+          background-color: var(--bg-1);
+        }
+        
+        .hover\:bg-control-hover:hover,
+        .data-\[state\=open\]\:bg-control-hover[data-state="open"]{
+          background-color: var(--bg-5);
+          color: var(--cl-1);
+        }
+      }
     }
     
-    [id^="radix-vue-dropdown-menu-content"] {
+    [id^="radix-vue-dropdown-menu-content"], 
+    [id^="reka-dropdown-menu-content-v-"] {
       color: var(--cl-3);
       
       .text-red-600 {
@@ -1135,6 +1180,27 @@
           background-color: #822222;
           color: #edd5d5;
         }
+      }
+    }
+    
+    [data-reka-popper-content-wrapper] > div:not([id^="reka" i]) {
+      background-color: var(--bg-4);
+      
+      button {
+        color: var(--cl-4);
+        
+        &:is(:hover, :focus-visible) {
+          background-color: var(--bg-5);
+          color: var(--cl-1);
+        }
+        
+        &.text-link:not(:hover, :focus-visible) {
+          color: var(--accent-1);
+        }
+      }
+      
+      .bg-divider {
+        background-color: var(--bg-1);
       }
     }
 
@@ -1167,251 +1233,259 @@
 
 
     /* Modals - Edit, Import, Add Manga, Report, Delete */
-    .vfm__content, [id^="radix-vue-dialog-content-"] {
+    .vfm__content, 
+    [id^="radix-vue-dialog-content-"], 
+    [id^="reka-dialog-content-v"] {
+      background-color: var(--bg-3);
+      border-color: var(--bg-3);
+      box-shadow: 0 0 10px 4px var(--bg-4);
+      
       .modal-body, #upsert-entry-panel, .panel {
         background-color: var(--bg-3);
         box-shadow: 0 0 10px 4px var(--bg-4);
-        
-        > .bg-white, .wrapper--title, .actions {
-          background-color: inherit;
+      }
+      
+      > .bg-white, .wrapper--title, .actions {
+        background-color: inherit;
+      }
+
+      .wrapper--title {
+        border-color: var(--bg-1);
+      }
+
+      h1:not(.dark_text-white, .dark\:text-white) {
+        color: var(--accent-1);
+      }
+
+      h1:is(.dark_text-white, .dark\:text-white) {
+        color: var(--cl-2);
+      }
+
+      h3,
+      label,
+      .label {
+        color: var(--cl-2);
+      }
+
+      p {
+        color: var(--cl-3);
+      }
+
+      .selector-toggle a, 
+      .helper-text a {
+        color: var(--accent-1);
+
+        &:hover, &:focus {
+          color: var(--accent-2);
         }
-        
-        .wrapper--title {
-          border-color: var(--bg-1);
+      }
+
+      textarea {
+        --tw-ring-color: var(--accent-1);
+        background-color: var(--bg-1);
+        color: var(--cl-3);
+      }
+
+      .not-found,
+      .selector-toggle {
+        color: var(--cl-5);
+      }
+
+      .online-indicator-ping,
+      .online-indicator {
+        background-color: #29c778;
+      }
+
+      .offline-indicator {
+        background-color: var(--cl-5);
+      }
+
+      .os-scrollbar .os-scrollbar-handle {
+        background-color: rgba(from var(--bg-5) r g b / 0.4);
+      }
+
+      /* Dropdown */
+      .list-button,
+      .multiselect .vs__dropdown-toggle, 
+      button[role="combobox"] {
+        background-color: var(--bg-1);
+        border-color: var(--bg-3);
+
+        &[aria-expanded="true"] {
+          border-color: var(--accent-1);
         }
 
-        h1:not(.dark_text-white, .dark\:text-white) {
-          color: var(--accent-1);
-        }
-        
-        h1:is(.dark_text-white, .dark\:text-white) {
-          color: var(--cl-2);
-        }
-
-        h3,
-        label,
-        .label {
-          color: var(--cl-2);
-        }
-
-        p {
-          color: var(--cl-3);
-        }
-
-        .selector-toggle a, 
-        .helper-text a {
-          color: var(--accent-1);
-          
-          &:hover, &:focus {
-            color: var(--accent-2);
-          }
-        }
-        
-        textarea {
+        &:focus {
           --tw-ring-color: var(--accent-1);
-          background-color: var(--bg-1);
+          border-color: var(--tw-ring-color);
+        }
+
+        span:not(.text-gray-500) {
+          color: var(--cl-2);
+        }
+      }
+
+      .multiselect .vs__dropdown-toggle {
+        .vs__selected {
+          color: var(--cl-3);
+
+          &:hover, &:focus {
+            color: var(--cl-2);
+          }
+        }
+      }
+
+      [aria-controls^="radix-vue-select-content"], 
+      [aria-controls^="radix-vue-popover-content"], 
+      .variant--select {
+        background-color: var(--bg-1);
+        border-color: var(--bg-3);
+        color: var(--cl-2);
+      }
+
+      .variant--select .selected-values {
+        .bg-gray-100 {
+          background-color: var(--bg-5);
+          color: var(--cl-2);
+        }
+      }
+
+      /* Dropdown Body */
+      .options,
+      .vs__dropdown-menu {
+        background-color: var(--bg-4);
+        border: 1px solid var(--bg-4);
+        scrollbar-width: thin;
+        scrollbar-color: var(--bg-4) var(--bg-1);
+
+        span:not(.checkmark) {
           color: var(--cl-3);
         }
 
-        .not-found,
-        .selector-toggle {
-          color: var(--cl-5);
+        .checkmark {
+          color: var(--accent-1);
         }
 
-        .online-indicator-ping,
-        .online-indicator {
-          background-color: #29c778;
+        li:hover {
+          background-color: var(--bg-5);
         }
+      }
 
-        .offline-indicator {
-          background-color: var(--cl-5);
-        }
+      .options-active,
+      .multiselect .vs__dropdown-option--highlight,
+      .multiselect .vs__dropdown-option:hover {
+        background-color: var(--bg-2);
 
-        .os-scrollbar .os-scrollbar-handle {
-          background-color: rgba(from var(--bg-5) r g b / 0.4);
-        }
-
-        /* Dropdown */
-        .list-button,
-        .multiselect .vs__dropdown-toggle {
-          background-color: var(--bg-1);
-          border-color: var(--bg-3);
-          
-          &[aria-expanded="true"] {
-            border-color: var(--accent-1);
-          }
-
-          &:focus {
-            --tw-ring-color: var(--accent-1);
-            border-color: var(--tw-ring-color);
-          }
-          
-          span:not(.text-gray-500) {
-            color: var(--cl-2);
-          }
-        }
-
-        .multiselect .vs__dropdown-toggle {
-          .vs__selected {
-            color: var(--cl-3);
-            
-            &:hover, &:focus {
-              color: var(--cl-2);
-            }
-          }
-        }
-        
-        [aria-controls^="radix-vue-select-content"], 
-        [aria-controls^="radix-vue-popover-content"], 
-        .variant--select {
-          background-color: var(--bg-1);
-          border-color: var(--bg-3);
+        span:not(.checkmark) {
           color: var(--cl-2);
         }
-        
-        .variant--select .selected-values {
-          .bg-gray-100 {
-            background-color: var(--bg-5);
+      }
+
+      /* Number Input */
+      .vue-number-input {
+        .vue-number-input__input {
+          background-color: var(--bg-1);
+          border-color: var(--bg-4);
+          color: var(--cl-3);
+
+          &:hover {
             color: var(--cl-2);
           }
         }
 
-        /* Dropdown Body */
-        .options,
-        .vs__dropdown-menu {
-          background-color: var(--bg-4);
-          border: 1px solid var(--bg-4);
-          scrollbar-width: thin;
-          scrollbar-color: var(--bg-4) var(--bg-1);
-          
-          span:not(.checkmark) {
-            color: var(--cl-3);
-          }
-
-          .checkmark {
-            color: var(--accent-1);
-          }
-          
-          li:hover {
-            background-color: var(--bg-5);
-          }
+        .vue-number-input__button {
+          color: var(--cl-3);
         }
 
-        .options-active,
-        .multiselect .vs__dropdown-option--highlight,
-        .multiselect .vs__dropdown-option:hover {
-          background-color: var(--bg-2);
-          
-          span:not(.checkmark) {
-            color: var(--cl-2);
-          }
+        .vue-number-input__button:hover::before,
+        .vue-number-input__button:hover::after {
+          background-color: var(--accent-1);
         }
+      }
 
-        /* Number Input */
-        .vue-number-input {
-          .vue-number-input__input {
-            background-color: var(--bg-1);
-            border-color: var(--bg-4);
-            color: var(--cl-3);
-            
-            &:hover {
-              color: var(--cl-2);
-            }
-          }
-          
-          .vue-number-input__button {
-            color: var(--cl-3);
-          }
+      /* Button - Notes */
+      div.flex:has(.w-full > .button--score) .w-full:nth-child(1) > button, 
+      .grid:has(> div > .button--score) div:nth-child(1) > button {
+        background-color: var(--bg-2);
+        border-color: var(--bg-5);
+        color: var(--cl-2);
 
-          .vue-number-input__button:hover::before,
-          .vue-number-input__button:hover::after {
-            background-color: var(--accent-1);
-          }
+        &:is(:hover, :focus-visible) {
+          background-color: var(--bg-5);
         }
-        
-        /* Button - Notes */
-        div.flex:has(.w-full > .button--score) .w-full:nth-child(1) > button, 
-        .grid:has(> div > .button--score) div:nth-child(1) > button {
-          background-color: var(--bg-2);
+      }
+
+      /* Button - Score */
+      .button--score {
+        background-color: var(--bg-1);
+        border-color: var(--bg-1);
+        color: var(--cl-2);
+
+        &:is(:hover, :focus-visible) {
+          background-color: var(--bg-5);
           border-color: var(--bg-5);
           color: var(--cl-2);
-          
-          &:is(:hover, :focus-visible) {
-            background-color: var(--bg-5);
-          }
         }
-        
-        /* Button - Score */
-        .button--score {
-          background-color: var(--bg-1);
-          border-color: var(--bg-1);
+
+        > button {
+          background-color: inherit;
+          border: inherit;
+          color: inherit;
+        }
+
+        button.dark_bg-gray-700[aria-expanded="true"]:hover {
+          background-color: rgba(from var(--bg-4) r g b / 0.3);
           color: var(--cl-2);
-          
-          &:is(:hover, :focus-visible) {
-            background-color: var(--bg-5);
-            border-color: var(--bg-5);
-            color: var(--cl-2);
-          }
-          
-          > button {
-            background-color: inherit;
-            border: inherit;
-            color: inherit;
-          }
-          
-          button.dark_bg-gray-700[aria-expanded="true"]:hover {
-            background-color: rgba(from var(--bg-4) r g b / 0.3);
-            color: var(--cl-2);
-          }
-          
-          button > svg path {
-            fill: var(--cl-2);
-            transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-          }
-          
-          button:has(svg):hover {
-            background-color: transparent;
-            
-            svg path {
-              fill: var(--accent-1);
-            }
-          }
-          
-          /* Separator */
-          div.bg-gray-200 {
-            background-color: var(--cl-3);
-          }
-        }
-        
-        /* Tags */
-        .primary {
-          background-color: var(--bg-5);
-          color: #b4c3d7;
         }
 
-        /* Footer */
-        .modal-actions {
-          background-color: var(--bg-1);
+        button > svg path {
+          fill: var(--cl-2);
+          transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        .btn-danger {
-          background-color: #822222;
-          color: #d8d0d0;
-          
-          &:hover, &:focus {
-            background-color: #972222;
-            color: #edd5d5;
-          }
+        button:has(svg):hover {
+          background-color: transparent;
 
-          &:focus {
-            --tw-ring-color: #ff6565;
-            --tw-ring-offset-color: var(--bg-1);
+          svg path {
+            fill: var(--accent-1);
           }
+        }
+
+        /* Separator */
+        div.bg-gray-200 {
+          background-color: var(--cl-3);
+        }
+      }
+
+      /* Tags */
+      .primary {
+        background-color: var(--bg-5);
+        color: #b4c3d7;
+      }
+
+      /* Footer */
+      .modal-actions {
+        background-color: var(--bg-1);
+      }
+
+      .btn-danger {
+        background-color: #822222;
+        color: #d8d0d0;
+
+        &:hover, &:focus {
+          background-color: #972222;
+          color: #edd5d5;
+        }
+
+        &:focus {
+          --tw-ring-color: #ff6565;
+          --tw-ring-offset-color: var(--bg-1);
         }
       }
     }
     
-    [id^="radix-vue-dialog-content-v-"] {
+    [id^="radix-vue-dialog-content-v-"], 
+    [id^="reka-dialog-content-v"] {
       /* Add Notes */
       textarea[id^="textarea"] {
         --tw-ring-color: var(--bg-4);
@@ -1452,7 +1526,9 @@
 
     /* Search */
     [id^="radix-vue-dialog-content-v-"],
-    [id^="radix-vue-dialog-content-v-"] #upsert-entry-panel {
+    [id^="radix-vue-dialog-content-v-"] #upsert-entry-panel, 
+    [id^="reka-dialog-content-v"], 
+    [id^="reka-dialog-content-v"] #upsert-entry-panel {
       .panel {
         background-color: var(--bg-3);
       }
@@ -1603,7 +1679,8 @@
       }
 
       /* Main Content */
-      .divide-gray-200 > :not([hidden]) ~ :not([hidden]) {
+      .divide-gray-200 > :not([hidden]) ~ :not([hidden]), 
+      :where(.divide-gray-200 > :not(:last-child)) {
         border-color: var(--bg-1);
       }
 
@@ -1852,7 +1929,8 @@
     }
     
     /* --- Edit Favourites --- */
-    [id^="radix-vue-dialog-content-v-"] {
+    [id^="radix-vue-dialog-content-v-"], 
+    [id^="reka-dialog-content-v"] {
       .bg-gray-50 {
         background-color: var(--bg-4);
       }
@@ -2371,6 +2449,17 @@
 
       #collection-heading {
         color: var(--cl-1);
+      }
+      
+      .button-wrapper .bg-control {
+        background-color: var(--bg-4);
+        border-color: var(--bg-4);
+        color: var(--cl-2);
+        
+        &:is(:hover, :focus-visible) {
+          background-color: var(--bg-3);
+          border-color: var(--bg-3);
+        }
       }
 
       /* Series Cards */
